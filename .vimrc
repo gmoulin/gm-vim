@@ -279,3 +279,7 @@ set so=7
 
 	" Fast editing of the .vimrc (with autocmd to reload conf on saving)
 	map <leader>vrc :e! ~/.vimrc<cr>
+
+	"VISUAL MODE (easy to add other HTML Tags)
+	":vmap sb "zdi<b><C-R>z</b><ESC>  : wrap <b></b> around VISUALLY selected Text
+	":vmap st "zdi<?= <C-R>z ?><ESC>  : wrap <?=   ?> around VISUALLY selected Text

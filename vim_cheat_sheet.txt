@@ -31,30 +31,128 @@
 	gd - jump from the use of a variable to its local declaration
 	m - mark the line (bookmark)
 	ma mark the line as 'a' bookmark
+	* # g* g#           : find word under cursor (<cword>) (forwards/backwards)
+	[I - show lines matching word under cursor <cword> (super)
+
+
+
+************************************************************************
+* Indenting and formating                                              *
+************************************************************************
+	>> - indent line one column to right
+	<< - indet line one column to left
+	== - auto-indent current line
+	>i{
+	>a{
+	>%
+	<%
+
+	# Re-Formatting text
+	gq}                          : Format a paragraph
+	ggVGgq                       : Reformat entire file
+	Vgq                          : current line
+
+
+
+************************************************************************
+* folding                                                              *
+************************************************************************
+zf}                               : fold paragraph using motion
+v}zf                              : fold paragraph using visual
+zf'a                              : fold to mark
+zo                                : open fold
+zc                                : re-close fold
+
+
+
+************************************************************************
+* Directories Navigation                                               *
+************************************************************************
+	:cd .. - move to parent directory
+	:lcd %:p:h - change to directory of current file
+
+
+
+************************************************************************
+* History                                                              *
+************************************************************************
+	'.               : jump to last modification line (SUPER)
+	`.               : jump to exact spot in last modification line
+	g;               : cycle thru recent changes (oldest first) (new in vim6.3)
+	g,               : reverse direction (new in vim6.3)
+	:changes
+	:h changelist    : help for above
+	<C-O>            : retrace your movements in file (starting from most recent)
+	<C-I>            : retrace your movements in file (reverse direction)
+	:ju(mps)         : list of your movements
+	:help jump-motions
+	:history         : list of all your commands
+	:his c           : commandline history
+	:his s           : search history
+	q/               : Search history Window
+	q:               : commandline history Window
+	:<C-F>           : history Window
 
 
 
 ************************************************************************
 * Macro                                                                *
 ************************************************************************
-qa - start recording into register 'a'
-q - stop recording
-@a - repeat macro in register 'a'
+	qa - start recording into register 'a'
+	q - stop recording
+	@a - repeat macro in register 'a'
 
 
 
 ************************************************************************
 * Copy buffers                                                         *
 ************************************************************************
-"ay - yank in the 'a' register
-"ap - paste from the 'a' register
+	"ay - yank in the 'a' register
+	"ap - paste from the 'a' register
+	:let @a=@b - copy the contents of the b register to a
+	:let @a=@" - copy the contents of the " register to a
+	:ls - list of buffers
+	:reg             : display contents of all registers
+	:reg a           : display content of individual registers
+	"1p....          : retrieve numeric registers one by one
+
+	# appending to registers (use CAPITAL)
+	# yank 5 lines into "a" then add a further 5
+	"a5yy
+	10j
+	"A5yy
+
+
+************************************************************************
+* Changing Case                                                        *
+************************************************************************
+	guu                             : lowercase line
+	gUU                             : uppercase line
+	Vu                              : lowercase line
+	VU                              : uppercase line
+	g~~                             : flip case line
+	vEU                             : Upper Case Word
+	vE~                             : Flip Case Word
+	ggguG                           : lowercase entire file
 
 
 
 ************************************************************************
-* Code Completion                                                      *
+* Columns Selection                                                    *
 ************************************************************************
-	ctrl-N - expand the word using the current document
+	# how to copy a set of columns using VISUAL BLOCK
+	# visual block (AKA columnwise selection) (NOT BY ordinary v command)
+	<C-V> then select "column(s)" with motion commands (win32 <C-Q>)
+	then c,d,y,r etc
+
+
+************************************************************************
+* Number increment                                                     *
+************************************************************************
+	<C-A> - increment number under cursor
+	<C-X> - decrement number under cursor
+
+
 
 ************************************************************************
 * Insert Mode - Inserting/Appending text                               *
@@ -67,6 +165,15 @@ q - stop recording
 	O - open blank line above current line
 	ea - append at end of word
 	Esc - exit insert mode
+
+
+
+************************************************************************
+* Insert Mode - Code Completion                                        *
+************************************************************************
+	ctrl-N - expand the word using the current document
+	<C-N><C-P>          : word completion in insert mode
+	<C-X><C-L>          : Line complete SUPER USEFUL
 
 
 
@@ -88,9 +195,6 @@ q - stop recording
 	g~iw - switch case of current word
 	gUiw - make current word uppercase
 	guiw - make current word lowercase
-	>> - indent line one column to right
-	<< - indet line one column to left
-	== - auto-indent current line
 	ddp - swap current line with next
 	ddkP - swap current line with previous
 
@@ -166,20 +270,98 @@ q - stop recording
 
 
 ************************************************************************
-* Search/Replace                                                       *
+* Search                                                               *
 ************************************************************************
 	/pattern - search for pattern
 	?pattern - search backward for pattern
 	n - repeat search in same direction
 	N - repeat search in opposite direction
-	:%s/old/new/g - replace all old with new throughout file
-	:%s/old/new/gc - replace all old with new throughout file with confirmations
+
+	/<C-R><C-W>         : Pull <cword> onto search/command line
+	/<C-R><C-A>         : Pull <CWORD> onto search/command line
 
 	Combo :
 		* - find the next occurrence of the word
 		cw - change the word
 		n - find the next word
-		. - repeat the cw command.
+		. - repeat the cw command
+
+	/joe/e                      : cursor set to End of match
+	/joe/e+1                    : cursor set to End of match plus 1
+	/joe/s-2                    : cursor set to Start of match minus 2
+	/^joe.*fred.*bill/          : normal
+	/^[A-J]\+/                  : search for lines beginning with one or more A-J
+	/begin\_.*end               : search over possible multiple lines
+	/fred\_s*joe/i              : any whitespace including newline
+	/fred\|joe                  : Search for FRED OR JOE
+	/\([^0-9]\|^\)%.*%          : Search for absence of a digit or beginning of line
+	/.*fred\&.*joe              : Search for FRED AND JOE in any ORDER!
+	/\<fred\>/i                 : search for fred but not alfred or frederick
+	/\<\d\d\d\d\>               : Search for exactly 4 digit numbers
+	/\D\d\d\d\d\D               : Search for exactly 4 digit numbers
+	/\<\d\{4}\>                 : same thing
+	# finding empty lines
+	/^\n\{3}                    : find 3 empty lines
+	# Specify what you are NOT searching for (vowels)
+	/\c\v([^aeiou]&\a){4}       : search for 4 consecutive consanants
+	# using rexexp memory in a search
+	/\(fred\).*\(joe\).*\2.*\1
+	# Repeating the Regexp (rather than what the Regexp finds)
+	/^\([^,]*,\)\{8}
+
+	searching over multiple lines \_ means including newline
+		/<!--\_p\{-}-->                   : search for multiple line comments
+		/fred\_s*joe/i                    : any whitespace including newline
+		/bugs\(\_.\)*bunny                : bugs followed by bunny anywhere in file
+
+
+
+************************************************************************
+* Replace                                                              *
+************************************************************************
+	:%s/old/new/g - replace all old with new throughout file
+	:%s/old/new/gc - replace all old with new throughout file with confirmations
+	:%s/fred/joe/igc            : general substitute command
+	:%s/\r//g                   : Delete DOS returns ^M
+
+	Is your Text File jumbled onto one line? use following
+		:%s/\r/\r/g                 : Turn DOS returns ^M into real returns
+		:%s=  *$==                  : delete end of line blanks
+		:%s= \+$==                  : Same thing
+		:%s#\s*\r\?$##              : Clean both trailing spaces AND DOS returns
+		:%s#\s*\r*$##               : same thing
+
+	deleting empty lines
+		:%s/^\n\{3}//               : delete blocks of 3 empty lines
+		:%s/^\n\+/\r/               : compressing empty lines
+
+	substitute using a register
+		:s/fred/<c-r>a/g            : sub "fred" with contents of register "a"
+		:s/fred/\=@a/g              : better alternative as register not displayed
+
+
+
+************************************************************************
+* Global command display                                               *
+************************************************************************
+	:g/fred.*joe.*dick/         : display all lines fred,joe & dick
+	:g/\<fred\>/                : display all lines fred but not freddy
+	:g/<pattern>/z#.5           : display with context
+	:g/<pattern>/z#.5|echo "=========="  : display beautifully
+	:g/^\s*$/d                  : delete all blank lines
+	:g!/^dd/d                   : delete lines not containing string
+	:v/^dd/d                    : delete lines not containing string
+	:g/fred/,/joe/d             : not line based (very powerfull)
+	:g/{/ ,/}/- s/\n\+/\r/g     : Delete empty lines but only between {...}
+	:v/./.,/./-1join            : compress empty lines
+	:g/^$/,/./-j                : compress empty lines
+	:g/<input\|<form/p          : ORing
+	:g/^/pu _                   : double space file (pu = put)
+	:g/^/m0                     : Reverse file (m = move)
+	:g/fred/t$                  : copy lines matching fred to EOF
+	:g/stage/t'a                : copy lines matching stage to marker a
+	:g/fred/y A                 : append all lines fred to register a
+
 
 
 ************************************************************************
@@ -223,6 +405,31 @@ q - stop recording
 ************************************************************************
 	:setlocal fileformat=dos|unix
 	:setlocal fileencoding=utf-8
+
+
+
+************************************************************************
+* Multiple files                                                       *
+************************************************************************
+	:bn              : goto next buffer
+	:bp              : goto previous buffer
+	:wn              : save file and move to next (super)
+	:wp              : save file and move to previous
+	:bd              : remove file from buffer list (super)
+	:bun             : Buffer unload (remove window but not from list)
+	:b 3             : go to buffer 3
+	:b main          : go to buffer with main in name eg main.c (ultra)
+	:sav php.html    : Save current file as php.html and "move" to php.html
+	:sav! %<.bak     : Save Current file to alternative extension
+	:sav! %:r.cfm    : Save Current file to alternative extension
+	:e!              : return to unmodified file
+	:w c:/aaa/%      : save file elsewhere
+	:e #             : edit alternative file
+	:rew             : return to beginning of editted files list (:args)
+	:brew            : buffer rewind
+	:sp fred.txt     : open fred.txt into a split
+	:sball,:sb       : Split all buffers (super)
+	:set hidden      : Allows to change buffer w/o saving current buffer
 
 
 
