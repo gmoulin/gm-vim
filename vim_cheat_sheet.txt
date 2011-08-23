@@ -438,3 +438,84 @@ zc                                : re-close fold
 ************************************************************************
 	:help - main help portal (with links to more help pages)
 	:viusage - show a huge cheat sheet listing every command
+
+
+
+************************************************************************
+* Shortcuts                                                            *
+************************************************************************
+	<leader><F5> - CheckSyntax
+
+	" Switch to current dir
+	<leader>d - switch to current file dir
+	cd. - switch to current file dir in command line
+
+	<leader>a - Switch to alternate window (mnemonic: ,alternate)
+
+	<F12> to paste in text from other apps
+
+	"navigation between tabs
+	th tab first
+	tj tab next
+	tk tab prev
+	tl tab last
+	tw tab close
+	te tab edit
+
+	" Smart way to move btw. windows
+	<C-j> <C-W>j
+	<C-k> <C-W>k
+	<C-h> <C-W>h
+	<C-l> <C-W>l
+
+	"Plugin: NERDTree - keys to toggle NERDTree
+	<C-e> ou <leader>e - NERDTreeToggle et NERDTreeMirror
+	<leader>nt - NERDTreeFind
+
+	""" Code folding options
+	<leader>f0 foldlevel=0
+	<leader>f1 foldlevel=1
+	<leader>f2 foldlevel=2
+	<leader>f3 foldlevel=3
+	<leader>f4 foldlevel=4
+	<leader>f5 foldlevel=5
+	<leader>f6 foldlevel=6
+	<leader>f7 foldlevel=7
+	<leader>f8 foldlevel=8
+	<leader>f9 foldlevel=9
+
+	"force tabs and retab all
+	<leader>rt - transform spaced tabs into real tabs
+
+	<leader>sl - ViewSession
+	<leader>ss - SaveSession
+
+	<leader>pd PhpDocSingle
+	<leader>pd PhpDocRange
+
+	<A-F11> - TaglistToggle
+
+	" Fast editing of the .vimrc (with autocmd to reload conf on saving)
+	<leader>vrc - open vimrc for editing
+
+
+
+************************************************************************
+* Plugins                                                              *
+************************************************************************
+	" autoclosetag
+	" checksyntax
+	" command-t
+	" delimitMate
+	" easytag
+	" nerdcommenter
+	" nerdtree
+	" PIV
+	" snipmate
+	" tabular
+	" align
+	" fugitive
+	" matchit
+	" session
+	" surround
+	" taglist

@@ -3,7 +3,7 @@ set nocompatible
 filetype off
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#helptags() "activate for new plugins
 syntax on
 
 set visualbell
@@ -13,12 +13,12 @@ set visualbell
 set background=dark			" Assume a dark background
 colorscheme desert
 
-set wildmode=list:longest,full  " completion mode
-set wildmenu                    " command completion
+set wildmode=list:longest,full	" completion mode
+set wildmenu					" command completion
 set wildignore+=*.o,*.obj,*.pyc,*.DS_Store,*.db " Hide irrelevent matches
 
 "set backspace=indent,eol,start
-set backspace=2             " Allow backspacing over anything
+set backspace=2				" Allow backspacing over anything
 set wrap					" turn on word wrapping
 
 " vim conf
@@ -27,14 +27,14 @@ set wrap					" turn on word wrapping
 	set showmode				" display current working mode
 	set title					" show title
 	set number					" enable line numbers
-	set shortmess+=I " Disable intro screen
-	set lazyredraw             " Don't redraw screen during macros
-	set ttyfast                " Improves redrawing for newer computers
-	set history=100            " Only store past 100 commands
-	set undolevels=150         " Only undo up to 150 times
-	set shortmess+=filmnrxoOtT     	" abbrev. of messages (avoids 'hit enter')
-	set titlestring=%f title   " Display filename in terminal window
-	set cursorline " highlight current line
+	set shortmess+=I 			" Disable intro screen
+	set lazyredraw				" Don't redraw screen during macros
+	set ttyfast					" Improves redrawing for newer computers
+	set history=100				" Only store past 100 commands
+	set undolevels=150			" Only undo up to 150 times
+	set shortmess+=filmnrxoOtT	" abbrev. of messages (avoids 'hit enter')
+	set titlestring=%f title	" Display filename in terminal window
+	set cursorline 				" highlight current line
 	if has('cmdline_info')
 		set ruler " show the ruler
 		set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
@@ -87,18 +87,21 @@ set wrap					" turn on word wrapping
 "tags
 	set tags=./tags;$HOME/vimtags;/
 
+set splitbelow    " A new window is put below of the current one
+set splitright    " A new window is put right of the current one
+
 " remove trailing whitespaces on save
 	autocmd BufWritePre * :%s/\s\+$//e
 
 " * Search
-	set incsearch     " search while typing:
-	set hlsearch      " highlight search results:
-	set wrapscan      " restart search from top when bottom hit
-	set ignorecase    " case insesitive search
-	set smartcase     " case sensitive search when searching with upperase letters
-	set gdefault      " imply /g when s///
-	set magic         " ^ and $ are special symbols
-	set showmatch " show matching brackets/parenthesis
+	set incsearch		" search while typing:
+	set hlsearch		" highlight search results:
+	set wrapscan		" restart search from top when bottom hit
+	set ignorecase		" case insesitive search
+	set smartcase		" case sensitive search when searching with upperase letters
+	set gdefault		" imply /g when s///
+	set magic			" ^ and $ are special symbols
+	set showmatch		" show matching brackets/parenthesis
 
 " backups are nice ...
 	set backup
@@ -161,7 +164,7 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_File_Fold_Auto_Close = 1
 
 " Remove trailing whitespaces and ^M chars
-	"autocmd FileType c,cpp,java,php,js,phtml,tpl,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+	"autocmd FileType c,cpp,java,php,js,phtml,tpl,jsp,html,css,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
 let g:checksyntax_auto = 1
 
@@ -171,12 +174,12 @@ let g:easytags_dynamic_files = 1
 
 " AutoCloseTag
 	" Make it so AutoCloseTag works for xml and xhtml files as well
-	au FileType xhtml,phtml,tpl,xml ru ftplugin/html/autoclosetag.vim
+	au FileType xhtml,phtml,tpl,jsp,xml ru bundle/autoclosetag/ftplugin/html/autoclosetag.vim
 
 let g:snips_author = 'Guillaume Moulin <gmoulin.dev@gmail.com>'
 
 " Set to auto read when a file is changed from the outside
-set autoread
+" set autoread
 
 " When vimrc is edited, reload it
 autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
@@ -227,10 +230,10 @@ set so=7
 	nmap <leader><F5> :CheckSyntax<cr>
 
 	" Switch to current dir
-	nmap <leader>D :lcd %:p:h<cr>
+	nmap <leader>d :lcd %:p:h<cr>
 	cmap cd. lcd %:p:h
 
-	nmap ,a <c-^> " Switch to alternate window (mnemonic: ,alternate)
+	nmap <leader>a <c-^> " Switch to alternate window (mnemonic: ,alternate)
 
 	"for pasting from outside vim
 	set pastetoggle=<F12>       " Use <F12> to paste in text from other apps
@@ -247,7 +250,7 @@ set so=7
 	map <C-j> <C-W>j
 	map <C-k> <C-W>k
 	map <C-h> <C-W>h
-	map <C-l> <C-W>ln
+	map <C-l> <C-W>l
 
 	"Plugin: NERDTree - keys to toggle NERDTree
 	map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>

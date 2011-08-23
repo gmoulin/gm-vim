@@ -1,5 +1,5 @@
 " ~/gm-vim/.vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.9 on 21 August 2011 at 18:00:37.
+" Created by session.vim 1.4.9 on 23 August 2011 at 17:16:06.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -29,7 +29,7 @@ badd +1 .vim/after/snippets/smarty.snippets
 badd +15 /var/www/suivfin/inc/class_currency.php
 badd +16 /var/www/suivfin/inc/class_payment.php
 silent! argdel *
-set lines=67 columns=231
+set lines=67 columns=230
 edit /var/www/suivfin/inc/class_payment.php
 set splitbelow splitright
 set nosplitbelow
