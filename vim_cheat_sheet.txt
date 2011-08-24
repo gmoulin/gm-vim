@@ -503,19 +503,239 @@ zc                                : re-close fold
 ************************************************************************
 * Plugins                                                              *
 ************************************************************************
-	" autoclosetag
-	" checksyntax
-	" command-t
-	" delimitMate
-	" easytag
-	" nerdcommenter
-	" nerdtree
-	" PIV
-	" snipmate
-	" tabular
-	" align
-	" fugitive
-	" matchit
-	" session
-	" surround
-	" taglist
+	" autoclosetag (http://www.vim.org/scripts/script.php?script_id=2591)
+
+	" checksyntax (https://github.com/tomtom/checksyntax_vim)
+
+
+	" command-t (https://github.com/wincent/Command-T)
+		https://github.com/wincent/Command-T/blob/master/doc/command-t.txt
+
+		" shortcuts and commands
+		<Leader>t - bring up the Command-T file window
+		<Leader>b - bring up the Command-T buffer window
+		:CommandT
+		:CommandT ../path/to/other/files
+		:CommandTBuffer
+		:CommandTFlush - flush the path cache
+
+		" Force mapping for CommandT
+		nmap <silent> <Leader>t :CommandT<CR>
+		nmap <silent> <Leader>b :CommandTBuffer<CR>
+
+		" The following mappings are active when the prompt has focus:
+			<BS> delete the character to the left of the cursor
+			<Del> delete the character at the cursor
+			<Left> move the cursor one character to the left
+			<C-h> move the cursor one character to the left
+			<Right> move the cursor one character to the right
+			<C-l> move the cursor one character to the right
+			<C-a> move the cursor to the start (left)
+			<C-e> move the cursor to the end (right)
+			<C-u> clear the contents of the prompt
+			<Tab> change focus to the file listing
+		" The following mappings are active when the file listing has focus:
+			<Tab> change focus to the prompt
+		" The following mappings are active when either the prompt or the file listing
+has focus:
+			<CR> open the selected file
+			<C-CR> open the selected file in a new split window
+			<C-s> open the selected file in a new split window
+			<C-v> open the selected file in a new vertical split window
+			<C-t> open the selected file in a new tab
+			<C-j> select next file in the file listing
+			<C-n> select next file in the file listing
+			<Down> select next file in the file listing
+			<C-k> select previous file in the file listing
+			<C-p> select previous file in the file listing
+			<Up> select previous file in the file listing
+			<C-c> cancel (dismisses file listing)
+		" The following is also available on terminals which support it:
+			<Esc> cancel (dismisses file listing)
+
+	" delimitMate (https://github.com/Raimondi/delimitMate)
+		https://github.com/Raimondi/delimitMate/blob/master/doc/delimitMate.txt
+
+		:DelimitMateTest
+		" let delimitMate_expand_cr = 1
+		" let delimitMate_expand_space = 1
+		" let delimitMate_nesting_quotes = ['"','`']
+
+	" easytag (https://github.com/vim-scripts/easytags.vim)
+		https://github.com/vim-scripts/easytags.vim/blob/master/doc/easytags.txt
+
+	" nerdcommenter (https://github.com/scrooloose/nerdcommenter)
+		https://github.com/scrooloose/nerdcommenter/blob/master/doc/NERD_commenter.txt
+
+		<Leader>cc - Comment out the current line or text selected in visual mode.
+		<Leader>cn - Same as <Leader>cc but forces nesting.
+		<Leader>c<space> - Toggles the comment state of the selected line(s). If the topmost selected
+		line is commented, all selected lines are uncommented and vice versa.
+		<Leader>cm - Comments the given lines using only one set of multipart delimiters.
+		<Leader>ci - Toggles the comment state of the selected line(s) individually.
+		<Leader>cs - Comments out the selected lines ``sexily''
+		<Leader>cy - Same as <Leader>cc except that the commented line(s) are yanked first.
+		<Leader>c$ - Comments the current line from the cursor to the end of line.
+		<Leader>cA - Adds comment delimiters to the end of line and goes into insert mode between
+		them.
+		<Leader>ca - Switches to the alternative set of delimiters.
+		<Leader>cl
+		<Leader>cb - Same as |NERDComComment| except that the delimiters are aligned down the
+		left side (<Leader>cl) or both sides (<Leader>cb).
+		<Leader>cu - Uncomments the selected line(s).
+
+	" nerdtree (https://github.com/scrooloose/nerdtree)
+		https://github.com/scrooloose/nerdtree/blob/master/doc/NERD_tree.txt
+
+		:NERDTree [<start-directory> | <bookmark>]
+		:NERDTreeToggle [<start-directory> | <bookmark>]
+		:NERDTreeMirror
+		:NERDTreeClose
+		:NERDTreeFind
+
+		:Bookmark <name>
+			Bookmark the current node as <name>. If there is already a <name>
+			bookmark, it is overwritten. <name> must not contain spaces.
+		:BookmarkToRoot <bookmark>
+			Make the directory corresponding to <bookmark> the new root. If a treenode
+			corresponding to <bookmark> is already cached somewhere in the tree then
+			the current tree will be used, otherwise a fresh tree will be opened.
+			Note that if <bookmark> points to a file then its parent will be used
+			instead.
+		:RevealBookmark <bookmark>
+			If the node is cached under the current root then it will be revealed
+			(i.e. directory nodes above it will be opened) and the cursor will be
+			placed on it.
+		:OpenBookmark <bookmark>
+			<bookmark> must point to a file. The file is opened as though |NERDTree-o|
+			was applied. If the node is cached under the current root then it will be
+			revealed and the cursor will be placed on it.
+		:ClearBookmarks [<bookmarks>]
+			Remove all the given bookmarks. If no bookmarks are given then remove all
+			bookmarks on the current node.
+		:ClearAllBookmarks
+			Remove all bookmarks.
+		:ReadBookmarks
+			Re-read the bookmarks in the |'NERDTreeBookmarksFile'|.
+
+
+		o.......Open files, directories and bookmarks....................|NERDTree-o|
+		go......Open selected file, but leave cursor in the NERDTree.....|NERDTree-go|
+		t.......Open selected node/bookmark in a new tab.................|NERDTree-t|
+		T.......Same as 't' but keep the focus on the current tab........|NERDTree-T|
+		i.......Open selected file in a split window.....................|NERDTree-i|
+		gi......Same as i, but leave the cursor on the NERDTree..........|NERDTree-gi|
+		s.......Open selected file in a new vsplit.......................|NERDTree-s|
+		gs......Same as s, but leave the cursor on the NERDTree..........|NERDTree-gs|
+		O.......Recursively open the selected directory..................|NERDTree-O|
+		x.......Close the current nodes parent...........................|NERDTree-x|
+		X.......Recursively close all children of the current node.......|NERDTree-X|
+		e.......Edit the current dif.....................................|NERDTree-e|
+
+		<CR>...............same as |NERDTree-o|.
+		double-click.......same as the |NERDTree-o| map.
+		middle-click.......same as |NERDTree-i| for files, same as |NERDTree-e| for dirs.
+
+		D.......Delete the current bookmark .............................|NERDTree-D|
+
+		P.......Jump to the root node....................................|NERDTree-P|
+		p.......Jump to current nodes parent.............................|NERDTree-p|
+		K.......Jump up inside directories at the current tree depth.....|NERDTree-K|
+		J.......Jump down inside directories at the current tree depth...|NERDTree-J|
+		<C-J>...Jump down to the next sibling of the current directory...|NERDTree-C-J|
+		<C-K>...Jump up to the previous sibling of the current directory.|NERDTree-C-K|
+
+		C.......Change the tree root to the selected dir.................|NERDTree-C|
+		u.......Move the tree root up one directory......................|NERDTree-u|
+		U.......Same as 'u' except the old root node is left open........|NERDTree-U|
+		r.......Recursively refresh the current directory................|NERDTree-r|
+		R.......Recursively refresh the current root.....................|NERDTree-R|
+		m.......Display the NERD tree menu...............................|NERDTree-m|
+		cd......Change the CWD to the dir of the selected node...........|NERDTree-cd|
+
+		I.......Toggle whether hidden files displayed....................|NERDTree-I|
+		f.......Toggle whether the file filters are used.................|NERDTree-f|
+		F.......Toggle whether files are displayed.......................|NERDTree-F|
+		B.......Toggle whether the bookmark table is displayed...........|NERDTree-B|
+
+		q.......Close the NERDTree window................................|NERDTree-q|
+		A.......Zoom (maximize/minimize) the NERDTree window.............|NERDTree-A|
+		?.......Toggle the display of the quick help.....................|NERDTree-?|
+
+	" PIV (https://github.com/spf13/PIV)
+		https://github.com/spf13/PIV/blob/master/README.md
+		Simply hit K (shift+k) on any function to see full documentation file for that function even offline.
+
+	" snipmate (https://github.com/garbas/vim-snipmate)
+		https://github.com/garbas/vim-snipmate/blob/master/doc/snipMate.txt
+
+		:SnipMateOpenSnippetFiles
+		<c-r><tab>: shows a list of available snippets
+		XX<tab> : will either show a list of all snippets starting with the characters XX or expand the snippet if it matches a snippet name.
+
+	" tabular (https://github.com/godlygeek/tabular)
+		https://github.com/godlygeek/tabular/blob/master/doc/Tabular.txt
+
+		:Tabularize /,/r1c1l0
+		That command would be read as "Align the matching text, splitting fields on commas. Print everything before the first comma right aligned, then 1 space, then the comma center aligned, then 1 space, then everything after the comma left aligned."
+
+	" align (https://github.com/tsaleh/vim-align)
+		https://github.com/tsaleh/vim-align/blob/master/doc/Align.txt
+
+		:AlignCtrl lp0P0 (p0 means zero space before the separator, and P0 means zero space after it)
+		:AlignCtrl r
+		:AlignCtrl lr
+		:1,4Align =
+
+		AlignCtrl w= :=  ignore all selected lines' initial white space
+		AlignCtrl W= :=  retain all selected lines' initial white space
+		AlignCtrl I= :=  retain only the first line's initial white space and re-use it for subsequent lines
+
+		AlignCtrl -l    - : skip treating the separator as a separator. *alignctrl--*
+		AlignCtrl rl+   + : repeat use of the last "lrc" justification *alignctrl-+*
+		AlignCtrl rl+   : : treat the rest of the line as a single field *alignctrl-:*
+
+	" fugitive (https://github.com/tpope/vim-fugitive)
+		https://github.com/tpope/vim-fugitive/blob/master/doc/fugitive.txt
+
+	" matchit (https://github.com/tsaleh/vim-matchit)
+		https://github.com/tsaleh/vim-matchit/blob/master/doc/matchit.txt
+
+		% Cycle forward
+		g% Cycle backwards
+		[% Go to [count] next unmatched group
+		]% Go to [count] next unmatched group
+		a% In Visual mode, select the matching group, as specified by |b:match_words|, containing the cursor
+
+	" session (https://github.com/xolox/vim-session)
+		https://github.com/xolox/vim-session/blob/master/doc/session.txt
+
+		:SaveSession
+		:OpenSession
+		:RestartVim
+		:CloseSession
+		:DeleteSession
+		:ViewSession
+
+	" surround (https://github.com/tpope/vim-surround)
+		https://github.com/tpope/vim-surround/blob/master/doc/surround.txt
+
+		Old text				Command			New text ~
+		"Hello *world!" 		ds"				Hello world!
+		<div>Yo!*</div>			dst				Yo!
+		[123+4*56]/2 			cs]) 			(123+456)/2
+		(123+4*56)/2 			cs)]			[123+456]/2
+		(123+4*56)/2 			cs)[ 			[ 123+456 ]/2
+		"Look ma, I'm *HTML!"	cs"<q> 			<q>Look ma, I'm HTML!</q>
+		if *x>3 { 				ysW( 			if ( x>3 ) {
+		Hello w*orld!			ysiw)			Hello (world)!
+		my $str = *whee!; 		vlllls' 		my $str = 'whee!';
+		Hello w*orld!			yssB			{Hello world!}
+
+		As a special case, *yss* operates on the current line, ignoring leading whitespace.
+		There is also *yS* and *ySS* which indent the surrounded text and place it on a line of its own.
+
+	" taglist (https://github.com/pix/vim-taglist)
+		https://github.com/pix/vim-taglist/blob/master/doc/taglist.txt
+
+		:TlistToggle

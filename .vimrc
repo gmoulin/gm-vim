@@ -187,6 +187,11 @@ autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
 " Set 7 lines to the curors - when moving vertical..
 set so=7
 
+" Plugin DelimitMate
+let delimitMate_nesting_quotes = ['`']
+let delimitMate_expand_cr = 1
+let delimitMate_expand_space = 1
+
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
