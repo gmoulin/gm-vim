@@ -1,5 +1,5 @@
 " ~/gm-vim/.vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.9 on 23 August 2011 at 17:16:06.
+" Created by session.vim 1.4.9 on 24 August 2011 at 17:18:59.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -28,9 +28,10 @@ badd +1 /var/www/suivfin/smarty/templates/clean.tpl
 badd +1 .vim/after/snippets/smarty.snippets
 badd +15 /var/www/suivfin/inc/class_currency.php
 badd +16 /var/www/suivfin/inc/class_payment.php
+badd +0 /var/www/suivfin/js/script.js
 silent! argdel *
-set lines=67 columns=230
-edit /var/www/suivfin/inc/class_payment.php
+set lines=65 columns=229
+edit /var/www/suivfin/js/script.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -41,16 +42,70 @@ setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=3
+setlocal fdl=11
 setlocal fml=1
 setlocal fdn=15
 setlocal fen
-let s:l = 16 - ((7 * winheight(0) + 32) / 65)
+218
+silent! normal zo
+231
+silent! normal zo
+233
+silent! normal zo
+240
+silent! normal zo
+242
+silent! normal zo
+243
+silent! normal zo
+246
+silent! normal zo
+243
+silent! normal zo
+242
+silent! normal zo
+252
+silent! normal zo
+240
+silent! normal zo
+260
+silent! normal zo
+262
+silent! normal zo
+263
+silent! normal zo
+266
+silent! normal zo
+263
+silent! normal zo
+262
+silent! normal zo
+272
+silent! normal zo
+260
+silent! normal zo
+233
+silent! normal zo
+231
+silent! normal zo
+719
+silent! normal zo
+720
+silent! normal zo
+732
+silent! normal zo
+720
+silent! normal zo
+719
+silent! normal zo
+218
+silent! normal zo
+let s:l = 760 - ((7 * winheight(0) + 31) / 63)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-16
-normal! 0
+760
+normal! 04l
 lcd /var/www/suivfin/smarty/templates
 tabnext 1
 if exists('s:wipebuf')

@@ -55,3 +55,9 @@
 [submodule ".vim/bundle/vim-matchit"]
 	path = .vim/bundle/vim-matchit
 	url = https://github.com/tsaleh/vim-matchit.git
+[submodule ".vim/bundle/minibufexpl.vim"]
+	path = .vim/bundle/minibufexpl.vim
+	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule ".vim/bundle/zencoding-vim"]
+	path = .vim/bundle/zencoding-vim
+	url = https://github.com/mattn/zencoding-vim.git

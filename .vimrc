@@ -50,10 +50,8 @@ set wrap					" turn on word wrapping
 		set statusline+=%w%h%m%r " Options
 		set statusline+=%{HasPaste()} "past mode
 		set statusline+=%{fugitive#statusline()} " Git Hotness
-		set statusline+=\ [%{&ff}/%Y] " filetype
+		set statusline+=\ [%{&ff}/%Y/%{&encoding}] " fileformat, filetype and encoding
 		set statusline+=\ [%{getcwd()}] " current dir
-		set statusline+=%{&encoding},                " encoding
-		set statusline+=%{&fileformat}]              " file format
 		"set statusline+=\ [A=\%03.3b/H=\%02.2B] " ASCII / Hexadecimal value of char
 		set statusline+=%=%-14.(%l,%c%V%)\ %p%% " Right aligned file nav info
 	endif
@@ -192,6 +190,15 @@ let delimitMate_nesting_quotes = ['`']
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 
+" MiniBufExplorer plugin
+let g:miniBufExplModSelTarget = 1
+let g:miniBufExplorerMoreThanOne = 0
+let g:miniBufExplUseSingleClick = 1
+let g:miniBufExplVSplit = 0
+let g:miniBufExplSplitBelow=0
+let g:miniBufExplorerDebugMode = 0
+let g:miniBufExplorerDebugLevel = 3
+
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
@@ -291,3 +298,11 @@ let delimitMate_expand_space = 1
 	"VISUAL MODE (easy to add other HTML Tags)
 	":vmap sb "zdi<b><C-R>z</b><ESC>  : wrap <b></b> around VISUALLY selected Text
 	":vmap st "zdi<?= <C-R>z ?><ESC>  : wrap <?=   ?> around VISUALLY selected Text
+
+	" Switch buffers with L and H easily
+	map L :bn<cr>
+	map H :bp<cr>
+
+	" Insert an empty line above or below the cursor
+	" nnoremap <D-j> o<Esc>
+	" nnoremap <D-k> O<Esc>

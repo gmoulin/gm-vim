@@ -739,3 +739,18 @@ has focus:
 		https://github.com/pix/vim-taglist/blob/master/doc/taglist.txt
 
 		:TlistToggle
+
+	" minibufexplorer (https://github.com/fholgado/minibufexpl.vim.git)
+
+	" zen coding (https://github.com/mattn/zencoding-vim.git)
+		http://code.google.com/p/zen-coding/w/list
+
+		insert mode <C-Y> - expend abbreviation
+		visual mode v_<C-Y> - wrap with abbreviation
+		To jump next point that need to edit, type |<C-Y>n| in insert mode
+		To jump previous point that need to edit, type |<C-Y>N| in insert mode
+		To remove tag in the block, type |<C-Y>k|
+		To join multi line text like following, type |J|
+		Comment block Type '<c-y>/' in insert mode
+		To Split/Join Tag, type |<C-Y>j|
+		Type |<C-Y>a| to make link from url
