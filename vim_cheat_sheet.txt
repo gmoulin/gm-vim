@@ -740,9 +740,7 @@ has focus:
 
 		:TlistToggle
 
-	" minibufexplorer (https://github.com/fholgado/minibufexpl.vim.git)
-
-	" zen coding (https://github.com/mattn/zencoding-vim.git)
+	" zen coding (https://github.com/mattn/zencoding-vim)
 		http://code.google.com/p/zen-coding/w/list
 
 		insert mode <C-Y> - expend abbreviation

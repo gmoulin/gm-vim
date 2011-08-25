@@ -190,14 +190,6 @@ let delimitMate_nesting_quotes = ['`']
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 
-" MiniBufExplorer plugin
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplorerMoreThanOne = 0
-let g:miniBufExplUseSingleClick = 1
-let g:miniBufExplVSplit = 0
-let g:miniBufExplSplitBelow=0
-let g:miniBufExplorerDebugMode = 0
-let g:miniBufExplorerDebugLevel = 3
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -265,7 +257,7 @@ let g:miniBufExplorerDebugLevel = 3
 	map <C-l> <C-W>l
 
 	"Plugin: NERDTree - keys to toggle NERDTree
-	map <C-e> :NERDTreeToggle<CR>:NERDTreeMirror<CR>
+	map <C-e> :NERDTreeToggle
 	nmap <leader>e :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 	nmap <leader>nt :NERDTreeFind<CR>
 
