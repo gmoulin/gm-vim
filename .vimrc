@@ -11,7 +11,7 @@ set visualbell
 "set novisualbell
 
 set background=dark			" Assume a dark background
-colorscheme desert
+colorscheme vividchalk
 
 set wildmode=list:longest,full	" completion mode
 set wildmenu					" command completion
@@ -230,7 +230,9 @@ let delimitMate_expand_space = 1
 	"    let @" = l:saved_reg
 	"endfunction
 
+"""""""""""""""""""""""""""""""""""""""""
 """"""""" SHORTCUTS """""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""
 	nmap <leader><F5> :CheckSyntax<cr>
 
 	" Switch to current dir
@@ -274,7 +276,7 @@ let delimitMate_expand_space = 1
 	nmap <leader>f9 :set foldlevel=9<CR>
 
 	"force tabs and retab all
-	nmap <leader>rt :set noexpandtab|retab!<cr>
+	nmap <leader>rt :set noexpandtab<CR>:retab!<CR>
 
 	nmap <leader>sl :ViewSession<CR>
 	nmap <leader>ss :SaveSession<CR>

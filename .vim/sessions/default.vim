@@ -1,5 +1,5 @@
 " ~/gm-vim/.vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.9 on 24 August 2011 at 17:18:59.
+" Created by session.vim 1.4.9 on 25 August 2011 at 17:22:14.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -28,10 +28,74 @@ badd +1 /var/www/suivfin/smarty/templates/clean.tpl
 badd +1 .vim/after/snippets/smarty.snippets
 badd +15 /var/www/suivfin/inc/class_currency.php
 badd +16 /var/www/suivfin/inc/class_payment.php
-badd +0 /var/www/suivfin/js/script.js
+badd +784 /var/www/suivfin/js/script.js
+badd +189 /var/www/lms/ajax/manageBand.php
+badd +60 /var/www/lms/inc/class_band.php
+badd +304 /var/www/lms/js/script.js
+badd +22 /var/www/lms/list/band.html
+badd +50 /var/www/lms/ajax/manageSaga.php
+badd +18 /var/www/lms/inc/class_saga.php
+badd +1 /var/www/lms/list/saga.html
+badd +1 /var/www/lms/tabs/bands.php
+badd +2 /var/www/lms/tabs/sagas.php
+badd +2 /var/www/lms/db/udpdate.sql
+badd +11 /var/www/lms/inc/lms.ini
+badd +1036 /var/www/lms/css/style.css
+badd +458 /var/www/lms/ajax/loadList.php
+badd +104 /media/rts/webapps/rts/WEB-INF/template/rsr/grid/rsr-podcast.jsp
+badd +54 /media/rts/webapps/rts/WEB-INF/tags/rsr/emission-print-calendar.tag
+badd +86 /media/rts/webapps/rts/WEB-INF/tags/rsr/emission-set-calendar.tag
+badd +1 /media/rts/webapps/rts/WEB-INF/classes/ch/common/etc/tld/rsr-tags.tld
+badd +1 /media/rts/webapps/rts/WEB-INF/classes/ch/rts/taglibs/Functions.class
+badd +60 /media/rts/webapps/rts/WEB-INF/src/ch/rsr/taglibs/calendars/IsRediffToHide.java
+badd +1 /media/rts/webapps/rts/WEB-INF/template/wireframe/lightbox.jsp
+badd +17 /media/rts/webapps/rts/WEB-INF/template/elements/lightbox/iframe.jsp
+badd +0 /media/rts/webapps/rts/WEB-INF/template/elements/lightbox/render/iframe.jsp
 silent! argdel *
-set lines=65 columns=229
-edit /var/www/suivfin/js/script.js
+set lines=62 columns=231
+edit /media/rts/webapps/rts/WEB-INF/template/wireframe/lightbox.jsp
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+wincmd =
+argglobal
+enew
+file NERD_tree_2
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=3
+setlocal fml=1
+setlocal fdn=15
+setlocal fen
+lcd /var/www/suivfin/smarty/templates
+wincmd w
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=3
+setlocal fml=1
+setlocal fdn=15
+setlocal fen
+let s:l = 5 - ((4 * winheight(0) + 30) / 60)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+5
+normal! 0
+lcd /var/www/suivfin/smarty/templates
+wincmd w
+wincmd =
+tabedit /media/rts/webapps/rts/WEB-INF/template/elements/lightbox/render/iframe.jsp
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -42,70 +106,16 @@ setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=11
+setlocal fdl=3
 setlocal fml=1
 setlocal fdn=15
 setlocal fen
-218
-silent! normal zo
-231
-silent! normal zo
-233
-silent! normal zo
-240
-silent! normal zo
-242
-silent! normal zo
-243
-silent! normal zo
-246
-silent! normal zo
-243
-silent! normal zo
-242
-silent! normal zo
-252
-silent! normal zo
-240
-silent! normal zo
-260
-silent! normal zo
-262
-silent! normal zo
-263
-silent! normal zo
-266
-silent! normal zo
-263
-silent! normal zo
-262
-silent! normal zo
-272
-silent! normal zo
-260
-silent! normal zo
-233
-silent! normal zo
-231
-silent! normal zo
-719
-silent! normal zo
-720
-silent! normal zo
-732
-silent! normal zo
-720
-silent! normal zo
-719
-silent! normal zo
-218
-silent! normal zo
-let s:l = 760 - ((7 * winheight(0) + 31) / 63)
+let s:l = 4 - ((3 * winheight(0) + 30) / 60)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-760
-normal! 04l
+4
+normal! 0
 lcd /var/www/suivfin/smarty/templates
 tabnext 1
 if exists('s:wipebuf')
@@ -120,6 +130,11 @@ endif
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 unlet SessionLoad
+tabnext 1
+1wincmd w
+bwipeout
+NERDTree /media/rts/webapps
+1resize 60|vert 1resize 35|2resize 60|vert 2resize 195|
 tabnext 1
 1wincmd w
 
