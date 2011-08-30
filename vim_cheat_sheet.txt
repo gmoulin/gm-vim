@@ -37,6 +37,14 @@
 
 
 ************************************************************************
+* Code Navigation With Grep                                            *
+************************************************************************
+	:vimgrep /pattern/gj ./**/*.ext
+	:cw ou :copen
+
+
+
+************************************************************************
 * Indenting and formating                                              *
 ************************************************************************
 	>> - indent line one column to right
@@ -51,17 +59,6 @@
 	gq}                          : Format a paragraph
 	ggVGgq                       : Reformat entire file
 	Vgq                          : current line
-
-
-
-************************************************************************
-* folding                                                              *
-************************************************************************
-zf}                               : fold paragraph using motion
-v}zf                              : fold paragraph using visual
-zf'a                              : fold to mark
-zo                                : open fold
-zc                                : re-close fold
 
 
 
@@ -172,8 +169,8 @@ zc                                : re-close fold
 * Insert Mode - Code Completion                                        *
 ************************************************************************
 	ctrl-N - expand the word using the current document
-	<C-N><C-P>          : word completion in insert mode
-	<C-X><C-L>          : Line complete SUPER USEFUL
+	<C-N><C-P> - word completion in insert mode
+	<C-X><C-L> - Line complete SUPER USEFUL
 
 
 
@@ -255,6 +252,13 @@ zc                                : re-close fold
 	2. ma (marks the location as point 'a')
 	3. Place the cursor at the end of your text.
 	4. d'a (cuts back to location 'a')
+
+
+
+************************************************************************
+* Visual Mode - Select columns                                         *
+************************************************************************
+	<C-v>
 
 
 
@@ -440,6 +444,33 @@ zc                                : re-close fold
 	:viusage - show a huge cheat sheet listing every command
 
 
+************************************************************************
+* Folding commands                                                     *
+************************************************************************
+	zf}                               : fold paragraph using motion
+	v}zf                              : fold paragraph using visual
+	zf'a                              : fold to mark
+	zo                                : open fold
+	zc                                : re-close fold
+
+	zf#j creates a fold from the cursor down # lines.
+	zf/string creates a fold from the cursor to string .
+	zj moves the cursor to the next fold.
+	zk moves the cursor to the previous fold.
+	zo opens a fold at the cursor.
+	zO opens all folds at the cursor.
+	zm increases the foldlevel by one.
+	zM closes all open folds.
+	zr decreases the foldlevel by one.
+	zR decreases the foldlevel to zero -- all folds will be open.
+	zd deletes the fold at the cursor.
+	zE deletes all folds.
+	[z move to start of open fold.
+	]z move to end of open fold.
+
+	Position the cursor on the first brace, and type zfa} (also [], <>)
+	Or backward.
+
 
 ************************************************************************
 * Shortcuts                                                            *
@@ -498,7 +529,9 @@ zc                                : re-close fold
 	" Fast editing of the .vimrc (with autocmd to reload conf on saving)
 	<leader>vrc - open vimrc for editing
 
-
+	<C-F11> - TagbarToggle
+	<A-F11> - TlistToggle
+	<A-F12> - Flisttoggle
 
 ************************************************************************
 * Plugins                                                              *
@@ -739,6 +772,38 @@ has focus:
 		https://github.com/pix/vim-taglist/blob/master/doc/taglist.txt
 
 		:TlistToggle
+		:TlistUpdate
+		:TlistAddFilesRecursive /my/project/dir *.c
+
+	" function list
+		http://www.vim.org/scripts/script.php?script_id=3681
+
+		:Flisttoggle
+
+	" Tagbar (https://github.com/majutsushi/tagbar)
+		https://github.com/majutsushi/tagbar/blob/master/doc/tagbar.txt
+
+		:TagbarOpen
+			Open the Tagbar if it is closed. In case it is already open jump to it.
+
+		:TagbarClose
+			Close the Tagbar window if it is open.
+
+		:TagbarToggle
+			Open the Tagbar window if it is closed or close it if it is open.
+
+		:TagbarOpenAutoClose
+			Open the Tagbar window and close it on tag selection, regardless of the
+			setting of |g:tagbar_autoclose|. If it was already open jump to it.
+
+		:TagbarSetFoldlevel [number]
+			Set the foldlevel of the tags of the current file to [number]. The
+			foldlevel of tags in other files remains unaffected. Works in the same way
+			as 'foldlevel'.
+
+		:TagbarShowTag
+			Open the parent folds of the current tag in the file window as much as
+			needed for the tag to be visible in the Tagbar window.
 
 	" zen coding (https://github.com/mattn/zencoding-vim)
 		http://code.google.com/p/zen-coding/w/list

@@ -284,7 +284,11 @@ let delimitMate_expand_space = 1
 	nmap <leader>pd :call PhpDocSingle()<CR>
 	vmap <leader>pd :call PhpDocRange()<CR>
 
+	nmap <C-F11> :TagbarToggle<CR>
+
 	nmap <A-F11> :TlistToggle<CR>
+
+	nmap <A-F12> :Flisttoggle<CR>
 
 	" Fast editing of the .vimrc (with autocmd to reload conf on saving)
 	map <leader>vrc :e! ~/.vimrc<cr>
