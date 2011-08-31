@@ -149,9 +149,6 @@ set splitright    " A new window is put right of the current one
 	let g:session_default_to_last=1
 	set sessionoptions=blank,buffers,curdir,folds,tabpages
 
-"Plugin PIV
-	let g:DisableAutoPHPFolding = 1
-
 "Plugin taglist
 let Tlist_Use_Right_Window=1
 let Tlist_Auto_Open=0
@@ -190,6 +187,11 @@ let delimitMate_nesting_quotes = ['`']
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 
+
+" Plugin ZenCoding
+let g:user_zen_leader_key='<c-y>'
+let g:user_zen_expandabbr_key = '<c-y>'
+let g:use_zen_complete_tag = 1
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -259,7 +261,7 @@ let delimitMate_expand_space = 1
 	map <C-l> <C-W>l
 
 	"Plugin: NERDTree - keys to toggle NERDTree
-	map <C-e> :NERDTreeToggle
+	map <C-e> :NERDTreeClose<CR>:NERDTree
 	nmap <leader>e :NERDTreeToggle<CR>:NERDTreeMirror<CR>
 	nmap <leader>nt :NERDTreeFind<CR>
 

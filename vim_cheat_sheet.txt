@@ -119,6 +119,10 @@
 	10j
 	"A5yy
 
+	"+y - copy to system clipboard
+	"+p - past from system clipboard
+
+
 
 ************************************************************************
 * Changing Case                                                        *
@@ -140,7 +144,6 @@
 	# how to copy a set of columns using VISUAL BLOCK
 	# visual block (AKA columnwise selection) (NOT BY ordinary v command)
 	<C-V> then select "column(s)" with motion commands (win32 <C-Q>)
-	then c,d,y,r etc
 
 
 ************************************************************************
@@ -500,7 +503,8 @@
 	<C-l> <C-W>l
 
 	"Plugin: NERDTree - keys to toggle NERDTree
-	<C-e> ou <leader>e - NERDTreeToggle et NERDTreeMirror
+	<C-e> NERDTreeClose et NERDTree + path
+	<leader>e - NERDTreeToggle et NERDTreeMirror
 	<leader>nt - NERDTreeFind
 
 	""" Code folding options
@@ -695,10 +699,6 @@ has focus:
 		A.......Zoom (maximize/minimize) the NERDTree window.............|NERDTree-A|
 		?.......Toggle the display of the quick help.....................|NERDTree-?|
 
-	" PIV (https://github.com/spf13/PIV)
-		https://github.com/spf13/PIV/blob/master/README.md
-		Simply hit K (shift+k) on any function to see full documentation file for that function even offline.
-
 	" snipmate (https://github.com/garbas/vim-snipmate)
 		https://github.com/garbas/vim-snipmate/blob/master/doc/snipMate.txt
 
@@ -815,5 +815,14 @@ has focus:
 		To remove tag in the block, type |<C-Y>k|
 		To join multi line text like following, type |J|
 		Comment block Type '<c-y>/' in insert mode
-		To Split/Join Tag, type |<C-Y>j|
+		To Split/Join Tag (toggle autoclosing tag </> or <></>), type |<C-Y>j|
 		Type |<C-Y>a| to make link from url
+
+	" ack.vim (https://github.com/mileszs/ack.vim)
+		https://github.com/mileszs/ack.vim/blob/master/doc/ack.txt
+
+		:Ack [options] {pattern} [{directory}]
+		--type=TYPE, --type=noTYPE
+
+	" MRU Most Recent Used files (https://github.com/vim-scripts/mru.vim)
+		:MRU

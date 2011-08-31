@@ -1,5 +1,5 @@
 " ~/gm-vim/.vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.9 on 30 August 2011 at 17:21:38.
+" Created by session.vim 1.4.9 on 31 August 2011 at 14:52:42.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -16,7 +16,7 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd /media/rts/webapps/rts/WEB-INF/tags/elements
+cd /var/www/lms
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -29,19 +29,19 @@ badd +1 .vim/after/snippets/smarty.snippets
 badd +15 /var/www/suivfin/inc/class_currency.php
 badd +16 /var/www/suivfin/inc/class_payment.php
 badd +784 /var/www/suivfin/js/script.js
-badd +189 /var/www/lms/ajax/manageBand.php
-badd +60 /var/www/lms/inc/class_band.php
-badd +272 /var/www/lms/js/script.js
-badd +1 /var/www/lms/list/band.html
-badd +60 /var/www/lms/ajax/manageSaga.php
-badd +466 /var/www/lms/inc/class_saga.php
-badd +33 /var/www/lms/list/saga.html
-badd +1 /var/www/lms/tabs/bands.php
-badd +2 /var/www/lms/tabs/sagas.php
-badd +2 /var/www/lms/db/udpdate.sql
-badd +11 /var/www/lms/inc/lms.ini
-badd +1394 /var/www/lms/css/style.css
-badd +458 /var/www/lms/ajax/loadList.php
+badd +189 ajax/manageBand.php
+badd +60 inc/class_band.php
+badd +272 js/script.js
+badd +1 list/band.html
+badd +60 ajax/manageSaga.php
+badd +466 inc/class_saga.php
+badd +33 list/saga.html
+badd +1 tabs/bands.php
+badd +2 tabs/sagas.php
+badd +2 db/udpdate.sql
+badd +11 inc/lms.ini
+badd +1330 css/style.css
+badd +458 ajax/loadList.php
 badd +104 /media/rts/webapps/rts/WEB-INF/template/rsr/grid/rsr-podcast.jsp
 badd +54 /media/rts/webapps/rts/WEB-INF/tags/rsr/emission-print-calendar.tag
 badd +86 /media/rts/webapps/rts/WEB-INF/tags/rsr/emission-set-calendar.tag
@@ -61,33 +61,41 @@ badd +14 ~/.vimrc
 badd +89 /media/rts/webapps/rts/static/js/rsrlib/lightboxes.js
 badd +1 /media/rts/webapps/rts/static/js/rtslib/lightbox.js
 badd +86 /media/rts/webapps/rts/WEB-INF/template/navigation/head.jsp
-badd +26 /var/www/lms/clean.php
-badd +3 /var/www/lms/db/update.sql
+badd +26 clean.php
+badd +3 db/update.sql
 badd +170 ~/gm-vim/.vim/bundle/snipmate-snippets/snippets/javascript.snippets
-badd +1 /var/www/lms/forms/saga.html
-badd +15 /var/www/lms/forms/artist.html
-badd +30 /var/www/lms/forms/author.html
-badd +29 /var/www/lms/forms/band.html
-badd +12 /var/www/lms/forms/book.html
-badd +13 /var/www/lms/forms/loan.html
-badd +12 /var/www/lms/forms/movie.html
-badd +14 /var/www/lms/forms/album.html
-badd +30 /var/www/lms/forms/storage.html
+badd +1 forms/saga.html
+badd +15 forms/artist.html
+badd +30 forms/author.html
+badd +29 forms/band.html
+badd +12 forms/book.html
+badd +13 forms/loan.html
+badd +12 forms/movie.html
+badd +14 forms/album.html
+badd +30 forms/storage.html
 badd +304 ~/gm-vim/.vim/bundle/functionlist/plugin/functionlist.vim
-badd +16 /var/www/lms/inc/class_book.php
-badd +36 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-elections/inc/block-media.jsp
+badd +839 inc/class_book.php
+badd +33 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-elections/inc/block-media.jsp
 badd +40 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-elections/inc/block-teasers.jsp
-badd +100 teaser.tag
-badd +109 teaser/teaser.jsp
-badd +11 teaser/program.jsp
-badd +1 teaser/article.jsp
-badd +45 teaser/link.jsp
-badd +15 rtf-renders/audio-lightbox.jsp
-badd +0 /media/rts/webapps/rts/WEB-INF/tags/global/url.tag
-badd +0 link.tag
+badd +100 /media/rts/webapps/rts/WEB-INF/tags/elements/teaser.tag
+badd +109 /media/rts/webapps/rts/WEB-INF/tags/elements/teaser/teaser.jsp
+badd +11 /media/rts/webapps/rts/WEB-INF/tags/elements/teaser/program.jsp
+badd +1 /media/rts/webapps/rts/WEB-INF/tags/elements/teaser/article.jsp
+badd +45 /media/rts/webapps/rts/WEB-INF/tags/elements/teaser/link.jsp
+badd +15 /media/rts/webapps/rts/WEB-INF/tags/elements/rtf-renders/audio-lightbox.jsp
+badd +1 /media/rts/webapps/rts/WEB-INF/tags/global/url.tag
+badd +177 /media/rts/webapps/rts/WEB-INF/tags/elements/link.tag
+badd +2 /media/rts/webapps/rts/static/css/info/dossiers/elections-federales.css
+badd +32 /media/rts/webapps/rts/WEB-INF/template/tsr/navigation/header-selection.jsp
+badd +17 help.html
+badd +47 /media/rts/webapps/rts/WEB-INF/template/navigation/include/css.jsp
+badd +50 /media/rts/webapps/rts/static/css/dossiers.css
+badd +82 /media/rts/webapps/rts/static/css/tsr.css
+badd +57 ~/projects/RTS/ca-demenage.php
+badd +21 ~/.vim/bundle/snipmate-snippets/snippets/php.snippets
 silent! argdel *
-set lines=62 columns=231
-edit /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-elections/inc/block-media.jsp
+set lines=65 columns=231
+edit ~/projects/RTS/ca-demenage.php
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -98,72 +106,90 @@ setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=6
+setlocal fdl=7
 setlocal fml=1
 setlocal fdn=15
 setlocal fen
-12
+2
 silent! normal zo
-43
+9
 silent! normal zo
-47
+13
 silent! normal zo
-43
+48
 silent! normal zo
-12
+48
 silent! normal zo
-let s:l = 17 - ((10 * winheight(0) + 30) / 60)
+56
+silent! normal zo
+9
+silent! normal zo
+80
+silent! normal zo
+82
+silent! normal zo
+87
+silent! normal zo
+89
+silent! normal zo
+94
+silent! normal zo
+89
+silent! normal zo
+106
+silent! normal zo
+87
+silent! normal zo
+116
+silent! normal zo
+117
+silent! normal zo
+116
+silent! normal zo
+125
+silent! normal zo
+80
+silent! normal zo
+139
+silent! normal zo
+140
+silent! normal zo
+151
+silent! normal zo
+153
+silent! normal zo
+154
+silent! normal zo
+153
+silent! normal zo
+151
+silent! normal zo
+176
+silent! normal zo
+179
+silent! normal zo
+140
+silent! normal zo
+139
+silent! normal zo
+188
+silent! normal zo
+194
+silent! normal zo
+203
+silent! normal zo
+207
+silent! normal zo
+209
+silent! normal zo
+2
+silent! normal zo
+let s:l = 207 - ((34 * winheight(0) + 31) / 63)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
-normal! 07l
-lcd /var/www/suivfin/smarty/templates
-tabedit /media/rts/webapps/rts/WEB-INF/tags/elements/link.tag
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=9
-setlocal fml=1
-setlocal fdn=15
-setlocal fen
-98
-silent! normal zo
-114
-silent! normal zo
-128
-silent! normal zo
-131
-silent! normal zo
-148
-silent! normal zo
-167
-silent! normal zo
-167
-silent! normal zo
-148
-silent! normal zo
-131
-silent! normal zo
-128
-silent! normal zo
-114
-silent! normal zo
-98
-silent! normal zo
-let s:l = 177 - ((19 * winheight(0) + 30) / 60)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-177
-normal! 0
+207
+normal! 08l
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
