@@ -66,7 +66,7 @@ set wrap					" turn on word wrapping
 
 "GVIM
 	if has('gui_running')
-		set columns=100 lines=38 " Default window size
+		set columns=50 lines=20 " Default window size
 		set guioptions-=T " remove the toolbar
 		set mousefocus
 	endif
@@ -121,7 +121,7 @@ set splitright    " A new window is put right of the current one
 "Enable indent folding
 	set foldmethod=indent	"folding uses indentation for folding
 	set foldnestmax=15
-	set foldlevel=3
+	set foldlevel=5
 
 " enable filetype detection:
 	filetype on

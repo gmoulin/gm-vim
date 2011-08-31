@@ -1,5 +1,5 @@
 " ~/gm-vim/.vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.9 on 31 August 2011 at 14:52:42.
+" Created by session.vim 1.4.9 on 31 August 2011 at 17:14:59.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -91,105 +91,32 @@ badd +17 help.html
 badd +47 /media/rts/webapps/rts/WEB-INF/template/navigation/include/css.jsp
 badd +50 /media/rts/webapps/rts/static/css/dossiers.css
 badd +82 /media/rts/webapps/rts/static/css/tsr.css
-badd +57 ~/projects/RTS/ca-demenage.php
+badd +159 ~/projects/RTS/ca-demenage.php
 badd +21 ~/.vim/bundle/snipmate-snippets/snippets/php.snippets
 silent! argdel *
 set lines=65 columns=231
-edit ~/projects/RTS/ca-demenage.php
+edit /var/www/suivfin/js/script.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 argglobal
-setlocal fdm=indent
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=7
+setlocal fdl=0
 setlocal fml=1
 setlocal fdn=15
 setlocal fen
-2
-silent! normal zo
-9
-silent! normal zo
-13
-silent! normal zo
-48
-silent! normal zo
-48
-silent! normal zo
-56
-silent! normal zo
-9
-silent! normal zo
-80
-silent! normal zo
-82
-silent! normal zo
-87
-silent! normal zo
-89
-silent! normal zo
-94
-silent! normal zo
-89
-silent! normal zo
-106
-silent! normal zo
-87
-silent! normal zo
-116
-silent! normal zo
-117
-silent! normal zo
-116
-silent! normal zo
-125
-silent! normal zo
-80
-silent! normal zo
-139
-silent! normal zo
-140
-silent! normal zo
-151
-silent! normal zo
-153
-silent! normal zo
-154
-silent! normal zo
-153
-silent! normal zo
-151
-silent! normal zo
-176
-silent! normal zo
-179
-silent! normal zo
-140
-silent! normal zo
-139
-silent! normal zo
-188
-silent! normal zo
-194
-silent! normal zo
-203
-silent! normal zo
-207
-silent! normal zo
-209
-silent! normal zo
-2
-silent! normal zo
-let s:l = 207 - ((34 * winheight(0) + 31) / 63)
+silent! normal! zE
+let s:l = 52 - ((51 * winheight(0) + 31) / 63)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-207
-normal! 08l
+52
+normal! 027l
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
