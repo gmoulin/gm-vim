@@ -5,6 +5,14 @@ call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags() "activate for new plugins
 syntax on
+set encoding=utf8
+
+set so=7 " Set 7 lines to the curors - when moving vertical..
+
+" enable filetype detection:
+	filetype on
+	filetype plugin on
+	filetype indent on " file type based indentation
 
 set visualbell
 "set noerrorbells
@@ -12,6 +20,7 @@ set visualbell
 
 set background=dark			" Assume a dark background
 colorscheme vividchalk
+
 
 set wildmode=list:longest,full	" completion mode
 set wildmenu					" command completion
@@ -69,7 +78,18 @@ set wrap					" turn on word wrapping
 		set columns=50 lines=20 " Default window size
 		set guioptions-=T " remove the toolbar
 		set mousefocus
-	endif
+
+			if has('multi_byte') && has('unix')
+				let s:icon_closed = '▶'
+				let s:icon_open   = '▼'
+			elseif has('multi_byte') && (has('win32') || has('win64'))
+				let s:icon_closed = '▷'
+				let s:icon_open   = '◢'
+			else
+				let s:icon_closed = '+'
+				let s:icon_open   = '-'
+			endif
+		endif
 
 
 " tabs and indent
@@ -119,19 +139,22 @@ set splitright    " A new window is put right of the current one
 	endtry
 
 "Enable indent folding
-	set foldmethod=indent	"folding uses indentation for folding
+	" set foldmethod=indent	"folding uses indentation for folding
+	set foldmarker={,}
+	set foldmethod=marker
+	set foldminlines=5
 	set foldnestmax=15
 	set foldlevel=5
 
-" enable filetype detection:
-	filetype on
-	filetype plugin on
-	filetype indent on " file type based indentation
+	highlight Folded ctermfg=lightblue ctermbg=NONE
+	highlight Folded guifg=lightblue guibg=NONE
+
 
 "syntax files for jquery and smarty
 	au BufRead,BufNewFile jquery.*.js set filetype=javascript syntax=jquery
 	au BufRead,BufNewFile *.tpl set filetype=smarty
 	au BufRead,BufNewFile *.json setfiletype javascript
+	au BufRead,BufNewFile *.jsp setfiletype html
 
 "Plugin: NERDTree - use colors, cursorline and return/enter key
 	let NERDChristmasTree = 1
@@ -150,13 +173,13 @@ set splitright    " A new window is put right of the current one
 	set sessionoptions=blank,buffers,curdir,folds,tabpages
 
 "Plugin taglist
-let Tlist_Use_Right_Window=1
-let Tlist_Auto_Open=0
-let Tlist_Enable_Fold_Column=0
-let Tlist_Compact_Format=1
-let Tlist_WinWidth=28
-let Tlist_Exit_OnlyWindow=1
-let Tlist_File_Fold_Auto_Close = 1
+	let Tlist_Use_Right_Window=1
+	let Tlist_Auto_Open=0
+	let Tlist_Enable_Fold_Column=0
+	let Tlist_Compact_Format=1
+	let Tlist_WinWidth=28
+	let Tlist_Exit_OnlyWindow=1
+	let Tlist_File_Fold_Auto_Close = 1
 
 " Remove trailing whitespaces and ^M chars
 	"autocmd FileType c,cpp,java,php,js,phtml,tpl,jsp,html,css,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))

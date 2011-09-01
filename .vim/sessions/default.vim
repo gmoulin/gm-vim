@@ -1,5 +1,5 @@
 " ~/gm-vim/.vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.9 on 31 August 2011 at 17:14:59.
+" Created by session.vim 1.4.9 on 01 September 2011 at 15:59:32.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -28,7 +28,7 @@ badd +1 /var/www/suivfin/smarty/templates/clean.tpl
 badd +1 .vim/after/snippets/smarty.snippets
 badd +15 /var/www/suivfin/inc/class_currency.php
 badd +16 /var/www/suivfin/inc/class_payment.php
-badd +784 /var/www/suivfin/js/script.js
+badd +435 /var/www/suivfin/js/script.js
 badd +189 ajax/manageBand.php
 badd +60 inc/class_band.php
 badd +272 js/script.js
@@ -75,7 +75,7 @@ badd +14 forms/album.html
 badd +30 forms/storage.html
 badd +304 ~/gm-vim/.vim/bundle/functionlist/plugin/functionlist.vim
 badd +839 inc/class_book.php
-badd +33 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-elections/inc/block-media.jsp
+badd +61 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-elections/inc/block-media.jsp
 badd +40 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-elections/inc/block-teasers.jsp
 badd +100 /media/rts/webapps/rts/WEB-INF/tags/elements/teaser.tag
 badd +109 /media/rts/webapps/rts/WEB-INF/tags/elements/teaser/teaser.jsp
@@ -86,37 +86,57 @@ badd +15 /media/rts/webapps/rts/WEB-INF/tags/elements/rtf-renders/audio-lightbox
 badd +1 /media/rts/webapps/rts/WEB-INF/tags/global/url.tag
 badd +177 /media/rts/webapps/rts/WEB-INF/tags/elements/link.tag
 badd +2 /media/rts/webapps/rts/static/css/info/dossiers/elections-federales.css
-badd +32 /media/rts/webapps/rts/WEB-INF/template/tsr/navigation/header-selection.jsp
+badd +29 /media/rts/webapps/rts/WEB-INF/template/tsr/navigation/header-selection.jsp
 badd +17 help.html
 badd +47 /media/rts/webapps/rts/WEB-INF/template/navigation/include/css.jsp
 badd +50 /media/rts/webapps/rts/static/css/dossiers.css
 badd +82 /media/rts/webapps/rts/static/css/tsr.css
 badd +159 ~/projects/RTS/ca-demenage.php
 badd +21 ~/.vim/bundle/snipmate-snippets/snippets/php.snippets
+badd +17 /var/www/suivfin/inc/suivfin.ini
+badd +4 /var/www/suivfin/smarty/templates/payment.template.html
+badd +6 /var/www/suivfin/smarty/templates/payment.tpl
+badd +1 /media/rts/webapps/rts/WEB-INF/template/wireframe/ajax/elections-media-group.jsp
+badd +21 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-elections/inc/media-group.jsp
+badd +45 /media/rts/webapps/rts/static/js/rtslib/headerFooter.js
+badd +284 /media/rts/webapps/rts/WEB-INF/template/wireframe/external.jsp
+badd +104 /media/rts/webapps/rts/WEB-INF/template/wireframe/external/header-common.jsp
+badd +83 /media/rts/webapps/rts/WEB-INF/template/wireframe/external/header.jsp
 silent! argdel *
-set lines=65 columns=231
-edit /var/www/suivfin/js/script.js
+set lines=67 columns=231
+edit /media/rts/webapps/rts/static/js/rtslib/headerFooter.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 argglobal
-setlocal fdm=manual
+setlocal fdm=marker
 setlocal fde=0
-setlocal fmr={{{,}}}
+setlocal fmr={,}
 setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
+setlocal fdl=5
+setlocal fml=10
 setlocal fdn=15
 setlocal fen
-silent! normal! zE
-let s:l = 52 - ((51 * winheight(0) + 31) / 63)
+4
+silent! normal zo
+36
+silent! normal zo
+40
+silent! normal zo
+40
+silent! normal zo
+36
+silent! normal zo
+4
+silent! normal zo
+let s:l = 39 - ((38 * winheight(0) + 32) / 65)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-52
-normal! 027l
+39
+normal! 060l
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
