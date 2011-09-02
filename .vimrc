@@ -78,18 +78,7 @@ set wrap					" turn on word wrapping
 		set columns=50 lines=20 " Default window size
 		set guioptions-=T " remove the toolbar
 		set mousefocus
-
-			if has('multi_byte') && has('unix')
-				let s:icon_closed = '▶'
-				let s:icon_open   = '▼'
-			elseif has('multi_byte') && (has('win32') || has('win64'))
-				let s:icon_closed = '▷'
-				let s:icon_open   = '◢'
-			else
-				let s:icon_closed = '+'
-				let s:icon_open   = '-'
-			endif
-		endif
+	endif
 
 
 " tabs and indent
@@ -146,8 +135,7 @@ set splitright    " A new window is put right of the current one
 	set foldnestmax=15
 	set foldlevel=5
 
-	highlight Folded ctermfg=lightblue ctermbg=NONE
-	highlight Folded guifg=lightblue guibg=NONE
+	:highlight Folded guifg=lightblue guibg=NONE
 
 
 "syntax files for jquery and smarty
