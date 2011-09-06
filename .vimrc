@@ -76,7 +76,6 @@ set wrap					" turn on word wrapping
 "GVIM
 	if has('gui_running')
 		set columns=50 lines=20 " Default window size
-		set guioptions-=T " remove the toolbar
 		set mousefocus
 	endif
 
@@ -92,7 +91,7 @@ set wrap					" turn on word wrapping
 	set noexpandtab|retab!		" keep tab as real tab and transform converted tab back
 
 "tags
-	set tags=./tags;$HOME/vimtags;/
+	set tags=./tags;$HOME/vimtags ";/
 
 set splitbelow    " A new window is put below of the current one
 set splitright    " A new window is put right of the current one
