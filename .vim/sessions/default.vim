@@ -1,5 +1,5 @@
 " ~/gm-vim/.vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.9 on 06 September 2011 at 09:14:51.
+" Created by session.vim 1.4.9 on 13 September 2011 at 15:56:06.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -16,7 +16,7 @@ if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd /var/www/lms
+cd /media/rts/webapps/rts/WEB-INF/template/section-tree/archives
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -27,21 +27,21 @@ badd +1 /var/www/suivfin/smarty/templates/balance.tpl
 badd +1 /var/www/suivfin/smarty/templates/clean.tpl
 badd +1 .vim/after/snippets/smarty.snippets
 badd +15 /var/www/suivfin/inc/class_currency.php
-badd +480 /var/www/suivfin/inc/class_payment.php
-badd +871 /var/www/suivfin/js/script.js
-badd +189 ajax/manageBand.php
-badd +60 inc/class_band.php
-badd +272 js/script.js
-badd +1 list/band.html
-badd +60 ajax/manageSaga.php
-badd +466 inc/class_saga.php
-badd +33 list/saga.html
-badd +1 tabs/bands.php
-badd +2 tabs/sagas.php
-badd +2 db/udpdate.sql
-badd +11 inc/lms.ini
-badd +1330 css/style.css
-badd +458 ajax/loadList.php
+badd +1 /var/www/suivfin/inc/class_payment.php
+badd +663 /var/www/suivfin/js/script.js
+badd +189 /var/www/lms/ajax/manageBand.php
+badd +60 /var/www/lms/inc/class_band.php
+badd +272 /var/www/lms/js/script.js
+badd +1 /var/www/lms/list/band.html
+badd +60 /var/www/lms/ajax/manageSaga.php
+badd +466 /var/www/lms/inc/class_saga.php
+badd +33 /var/www/lms/list/saga.html
+badd +1 /var/www/lms/tabs/bands.php
+badd +2 /var/www/lms/tabs/sagas.php
+badd +2 /var/www/lms/db/udpdate.sql
+badd +11 /var/www/lms/inc/lms.ini
+badd +2403 /var/www/lms/css/style.css
+badd +458 /var/www/lms/ajax/loadList.php
 badd +104 /media/rts/webapps/rts/WEB-INF/template/rsr/grid/rsr-podcast.jsp
 badd +54 /media/rts/webapps/rts/WEB-INF/tags/rsr/emission-print-calendar.tag
 badd +86 /media/rts/webapps/rts/WEB-INF/tags/rsr/emission-set-calendar.tag
@@ -61,20 +61,20 @@ badd +14 ~/.vimrc
 badd +89 /media/rts/webapps/rts/static/js/rsrlib/lightboxes.js
 badd +1 /media/rts/webapps/rts/static/js/rtslib/lightbox.js
 badd +86 /media/rts/webapps/rts/WEB-INF/template/navigation/head.jsp
-badd +26 clean.php
-badd +3 db/update.sql
+badd +26 /var/www/lms/clean.php
+badd +3 /var/www/lms/db/update.sql
 badd +170 ~/gm-vim/.vim/bundle/snipmate-snippets/snippets/javascript.snippets
-badd +1 forms/saga.html
-badd +15 forms/artist.html
-badd +30 forms/author.html
-badd +29 forms/band.html
-badd +12 forms/book.html
-badd +13 forms/loan.html
-badd +12 forms/movie.html
-badd +14 forms/album.html
-badd +30 forms/storage.html
+badd +1 /var/www/lms/forms/saga.html
+badd +15 /var/www/lms/forms/artist.html
+badd +30 /var/www/lms/forms/author.html
+badd +29 /var/www/lms/forms/band.html
+badd +12 /var/www/lms/forms/book.html
+badd +13 /var/www/lms/forms/loan.html
+badd +12 /var/www/lms/forms/movie.html
+badd +14 /var/www/lms/forms/album.html
+badd +30 /var/www/lms/forms/storage.html
 badd +304 ~/gm-vim/.vim/bundle/functionlist/plugin/functionlist.vim
-badd +839 inc/class_book.php
+badd +839 /var/www/lms/inc/class_book.php
 badd +61 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-elections/inc/block-media.jsp
 badd +40 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-elections/inc/block-teasers.jsp
 badd +100 /media/rts/webapps/rts/WEB-INF/tags/elements/teaser.tag
@@ -87,12 +87,12 @@ badd +1 /media/rts/webapps/rts/WEB-INF/tags/global/url.tag
 badd +177 /media/rts/webapps/rts/WEB-INF/tags/elements/link.tag
 badd +2 /media/rts/webapps/rts/static/css/info/dossiers/elections-federales.css
 badd +29 /media/rts/webapps/rts/WEB-INF/template/tsr/navigation/header-selection.jsp
-badd +17 help.html
+badd +17 /var/www/lms/help.html
 badd +47 /media/rts/webapps/rts/WEB-INF/template/navigation/include/css.jsp
 badd +50 /media/rts/webapps/rts/static/css/dossiers.css
-badd +82 /media/rts/webapps/rts/static/css/tsr.css
+badd +884 /media/rts/webapps/rts/static/css/tsr.css
 badd +159 ~/projects/RTS/ca-demenage.php
-badd +21 ~/.vim/bundle/snipmate-snippets/snippets/php.snippets
+badd +21 ~/gm-vim/.vim/bundle/snipmate-snippets/snippets/php.snippets
 badd +17 /var/www/suivfin/inc/suivfin.ini
 badd +1 /var/www/suivfin/smarty/templates/payment.template.html
 badd +6 /var/www/suivfin/smarty/templates/payment.tpl
@@ -107,12 +107,62 @@ badd +1 /var/www/suivfin/css/style.css
 badd +56 /var/www/suivfin/ajax/payment.php
 badd +113 /media/rts/webapps/rts/static/css/emissions/la-puce-a-l-oreille.css
 badd +9 /media/rts/webapps/rts/static/css/divertissement/ca-demenage.css
-badd +1 /var/www/suivfin/smarty/templates/forecast.tpl
+badd +4 /var/www/suivfin/smarty/templates/forecast.tpl
 badd +1 /var/www/suivfin/smarty/templates/sum.tpl
 badd +1 /media/rts/webapps/rts/WEB-INF/template/wireframe/js/get-video-byid.jsp
-silent! argdel *
-set lines=63 columns=231
-edit /var/www/suivfin/css/style.css
+badd +54 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-archives-dossier-clip/articleMode.jsp
+badd +105 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-archives-dossier-clip/clip.jsp
+badd +107 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-archives-dossier-clip/videoCarousel.jsp
+badd +8 emissionsNav.jsp
+badd +51 ThumbList.jsp
+badd +114 /media/rts/webapps/rts/WEB-INF/template/layout-group/tsr-emi-postcards/content.jsp
+badd +39 /media/rts/webapps/rts/WEB-INF/template/layout/rts-archives-dossier-clip/root.jsp
+badd +221 /media/rts/webapps/rts/WEB-INF/tags/global/init.tag
+badd +30 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-archives-dossier-clip/videoList.jsp
+badd +17 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-archives-dossier-clip/sectionMode.jsp
+badd +615 /media/rts/webapps/rts/static/css/rts/archives.css
+badd +1 /media/rts/webapps/rts/WEB-INF/template/layout/section/custom/ttc/concours/include/inscription.jsp
+badd +10 /media/rts/webapps/rts/WEB-INF/template/layout/tsr-standard/section/custom/ttc/concours/include/inscription.jsp
+badd +53 /media/rts/webapps/rts/WEB-INF/template/layout/tsr-standard/inc/cached-menu.jsp
+badd +191 /media/rts/webapps/rts/WEB-INF/template/layout/tsr-standard/section/custom/passe-moi-les-jumelles/balades/main.jsp
+badd +38 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-archives-dossier-clip/temps-forts.jsp
+badd +75 /media/rts/webapps/rts/WEB-INF/template/layout-group/tsr-docs-hp/include/right.jsp
+badd +25 /media/rts/webapps/rts/WEB-INF/template/section-tree/article/tsr/tsr-ch/info/right.jsp
+badd +1007 /media/rts/webapps/rts/static/css/docs.css
+badd +4 /media/rts/webapps/rts/WEB-INF/template/section-tree/article/tsr/tsr-ch/docs/nature/content.jsp
+badd +108 /media/rts/webapps/rts/WEB-INF/template/section-tree/article/tsr/tsr-ch/docs/include/content.jsp
+badd +92 /media/rts/webapps/rts/WEB-INF/template/include/share.jsp
+badd +43 /media/rts/webapps/rts/WEB-INF/template/section-tree/section/tsr/tsr-ch/docs/histoire-vivante/right-col.jsp
+badd +41 /media/rts/webapps/rts/WEB-INF/template/rsr/histoire-vivante/content/right-col.jsp
+badd +1023 /media/rts/webapps/rts/static/css/rsr/docs.css
+args ThumbList.jsp
+set lines=62 columns=231
+edit /var/www/suivfin/js/script.js
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=marker
+setlocal fde=0
+setlocal fmr={,}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=5
+setlocal fdn=15
+setlocal fen
+193
+silent! normal zo
+193
+silent! normal zo
+let s:l = 973 - ((479 * winheight(0) + 30) / 60)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+973
+normal! 0
+tabedit /var/www/suivfin/ajax/payment.php
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -124,10 +174,10 @@ setlocal fde=0
 setlocal fmr={,}
 setlocal fdi=#
 setlocal fdl=5
-setlocal fml=10
+setlocal fml=5
 setlocal fdn=15
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 30) / 61)
+let s:l = 1 - ((0 * winheight(0) + 30) / 60)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt

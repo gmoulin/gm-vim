@@ -134,8 +134,6 @@ set splitright    " A new window is put right of the current one
 	set foldnestmax=15
 	set foldlevel=5
 
-	:highlight Folded guifg=lightblue guibg=NONE
-
 
 "syntax files for jquery and smarty
 	au BufRead,BufNewFile jquery.*.js set filetype=javascript syntax=jquery
