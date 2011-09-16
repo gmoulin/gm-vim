@@ -127,9 +127,9 @@ set splitright    " A new window is put right of the current one
 	endtry
 
 "Enable indent folding
-	" set foldmethod=indent	"folding uses indentation for folding
-	set foldmarker={,}
-	set foldmethod=marker
+	set foldmethod=indent	"folding uses indentation for folding
+	" set foldmarker={,}
+	" set foldmethod=marker
 	set foldminlines=5
 	set foldnestmax=15
 	set foldlevel=5

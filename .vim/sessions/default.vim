@@ -1,5 +1,5 @@
 " ~/gm-vim/.vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.9 on 13 September 2011 at 15:56:06.
+" Created by session.vim 1.4.9 on 16 September 2011 at 13:52:16.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegimrLtT
@@ -21,13 +21,13 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +36 /var/www/suivfin/clean.php
+badd +49 /var/www/suivfin/clean.php
 badd +54 /var/www/suivfin/inc/Stash/Box.class.php
 badd +1 /var/www/suivfin/smarty/templates/balance.tpl
 badd +1 /var/www/suivfin/smarty/templates/clean.tpl
 badd +1 .vim/after/snippets/smarty.snippets
 badd +15 /var/www/suivfin/inc/class_currency.php
-badd +1 /var/www/suivfin/inc/class_payment.php
+badd +433 /var/www/suivfin/inc/class_payment.php
 badd +663 /var/www/suivfin/js/script.js
 badd +189 /var/www/lms/ajax/manageBand.php
 badd +60 /var/www/lms/inc/class_band.php
@@ -114,7 +114,7 @@ badd +54 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-archives-dossi
 badd +105 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-archives-dossier-clip/clip.jsp
 badd +107 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-archives-dossier-clip/videoCarousel.jsp
 badd +8 emissionsNav.jsp
-badd +51 ThumbList.jsp
+badd +72 ThumbList.jsp
 badd +114 /media/rts/webapps/rts/WEB-INF/template/layout-group/tsr-emi-postcards/content.jsp
 badd +39 /media/rts/webapps/rts/WEB-INF/template/layout/rts-archives-dossier-clip/root.jsp
 badd +221 /media/rts/webapps/rts/WEB-INF/tags/global/init.tag
@@ -125,7 +125,7 @@ badd +1 /media/rts/webapps/rts/WEB-INF/template/layout/section/custom/ttc/concou
 badd +10 /media/rts/webapps/rts/WEB-INF/template/layout/tsr-standard/section/custom/ttc/concours/include/inscription.jsp
 badd +53 /media/rts/webapps/rts/WEB-INF/template/layout/tsr-standard/inc/cached-menu.jsp
 badd +191 /media/rts/webapps/rts/WEB-INF/template/layout/tsr-standard/section/custom/passe-moi-les-jumelles/balades/main.jsp
-badd +38 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-archives-dossier-clip/temps-forts.jsp
+badd +54 /media/rts/webapps/rts/WEB-INF/template/layout-group/rts-archives-dossier-clip/temps-forts.jsp
 badd +75 /media/rts/webapps/rts/WEB-INF/template/layout-group/tsr-docs-hp/include/right.jsp
 badd +25 /media/rts/webapps/rts/WEB-INF/template/section-tree/article/tsr/tsr-ch/info/right.jsp
 badd +1007 /media/rts/webapps/rts/static/css/docs.css
@@ -135,8 +135,18 @@ badd +92 /media/rts/webapps/rts/WEB-INF/template/include/share.jsp
 badd +43 /media/rts/webapps/rts/WEB-INF/template/section-tree/section/tsr/tsr-ch/docs/histoire-vivante/right-col.jsp
 badd +41 /media/rts/webapps/rts/WEB-INF/template/rsr/histoire-vivante/content/right-col.jsp
 badd +1023 /media/rts/webapps/rts/static/css/rsr/docs.css
+badd +67 /media/rts/webapps/rts/WEB-INF/template/elements/comments-new-emi.jsp
+badd +25 /var/www/suivfin/conf.ini.php
+badd +76 /var/www/khalimna/act/calendar/encounter.php
+badd +10 /var/www/khalimna/act/calendar/includes/variables.php
+badd +58 /var/www/khalimna/act/calendar/encounters.php
+badd +639 /var/www/suivfin/inc/class_common.php
+badd +359 /var/www/khalimna/act/calendar/includes/Stash/Stash.class.php
+badd +348 /var/www/khalimna/act/calendar/includes/Stash/handlers/FileSystem.class.php
+badd +178 /var/www/khalimna/act/calendar/includes/Stash/Utilities.class.php
+badd +303 /media/rts/webapps/rts/WEB-INF/template/layout-group/tsr-hp/include/on-tv.jsp
 args ThumbList.jsp
-set lines=62 columns=231
+set lines=63 columns=231
 edit /var/www/suivfin/js/script.js
 set splitbelow splitright
 set nosplitbelow
@@ -156,11 +166,11 @@ setlocal fen
 silent! normal zo
 193
 silent! normal zo
-let s:l = 973 - ((479 * winheight(0) + 30) / 60)
+let s:l = 504 - ((304 * winheight(0) + 30) / 61)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-973
+504
 normal! 0
 tabedit /var/www/suivfin/ajax/payment.php
 set splitbelow splitright
@@ -177,12 +187,12 @@ setlocal fdl=5
 setlocal fml=5
 setlocal fdn=15
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 30) / 60)
+let s:l = 33 - ((7 * winheight(0) + 30) / 61)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+33
+normal! 01l
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
