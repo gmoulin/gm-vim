@@ -30,6 +30,7 @@ set wildignore+=*.o,*.obj,*.pyc,*.DS_Store,*.db " Hide irrelevent matches
 set backspace=2				" Allow backspacing over anything
 set wrap					" turn on word wrapping
 
+
 " vim conf
 	set mouse=a
 	let mapleader=","
@@ -77,6 +78,8 @@ set wrap					" turn on word wrapping
 	if has('gui_running')
 		set columns=50 lines=20 " Default window size
 		set mousefocus
+		set guifont=liberationmono "workaround for the display corruption
+		set ttyscroll=0 "turn off scrolling, workaround for the display corruption
 	endif
 
 
@@ -128,8 +131,8 @@ set splitright    " A new window is put right of the current one
 
 "Enable indent folding
 	set foldmethod=indent	"folding uses indentation for folding
-	" set foldmarker={,}
-	" set foldmethod=marker
+	"set foldmarker={,}
+	"set foldmethod=marker
 	set foldminlines=5
 	set foldnestmax=15
 	set foldlevel=5
@@ -267,6 +270,10 @@ let g:use_zen_complete_tag = 1
 	map <C-k> <C-W>k
 	map <C-h> <C-W>h
 	map <C-l> <C-W>l
+
+	" add a new line without entering in insert mode
+	nmap <A-o> o<Esc>k
+	nmap <A-O> O<Esc>j
 
 	"Plugin: NERDTree - keys to toggle NERDTree
 	map <C-e> :NERDTreeClose<CR>:NERDTree

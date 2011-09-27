@@ -511,6 +511,11 @@
 	<C-h> <C-W>h
 	<C-l> <C-W>l
 
+	" add a new line without entering in insert mode
+	<A-o> o<Esc>k "insert a line after and return on current line
+	<A-O> O<Esc>j "insert a line before and return on current line
+
+
 	"Plugin: NERDTree - keys to toggle NERDTree
 	<C-e> NERDTreeClose et NERDTree + path
 	<leader>e - NERDTreeToggle et NERDTreeMirror
