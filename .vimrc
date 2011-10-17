@@ -78,8 +78,6 @@ set wrap					" turn on word wrapping
 	if has('gui_running')
 		set columns=50 lines=20 " Default window size
 		set mousefocus
-		set guifont=liberationmono "workaround for the display corruption
-		set ttyscroll=0 "turn off scrolling, workaround for the display corruption
 	endif
 
 
