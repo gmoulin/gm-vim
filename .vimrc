@@ -7,7 +7,7 @@ call pathogen#helptags() "activate for new plugins
 syntax on
 set encoding=utf8
 
-set so=7 " Set 7 lines to the curors - when moving vertical..
+set so=7 " Set 7 lines to the cursor - when moving vertical..
 
 " enable filetype detection:
 	filetype on
@@ -38,11 +38,11 @@ set wrap					" turn on word wrapping
 	set title					" show title
 	set number					" enable line numbers
 	set shortmess+=I 			" Disable intro screen
-	set lazyredraw				" Don't redraw screen during macros
+	"set lazyredraw				" Don't redraw screen during macros
 	set ttyfast					" Improves redrawing for newer computers
 	set history=100				" Only store past 100 commands
 	set undolevels=150			" Only undo up to 150 times
-	set shortmess+=filmnrxoOtT	" abbrev. of messages (avoids 'hit enter')
+	"set shortmess+=filmnrxoOtT	" abbrev. of messages (avoids 'hit enter')
 	set titlestring=%f title	" Display filename in terminal window
 	set cursorline 				" highlight current line
 	if has('cmdline_info')
@@ -76,8 +76,9 @@ set wrap					" turn on word wrapping
 
 "GVIM
 	if has('gui_running')
-		set columns=50 lines=20 " Default window size
-		set mousefocus
+		"set columns=50 lines=20 " Default window size
+		"set mousefocus
+		set guifont=Ubuntu\ Mono\ 12
 	endif
 
 
@@ -140,13 +141,13 @@ set splitright    " A new window is put right of the current one
 	au BufRead,BufNewFile jquery.*.js set filetype=javascript syntax=jquery
 	au BufRead,BufNewFile *.tpl set filetype=smarty
 	au BufRead,BufNewFile *.json setfiletype javascript
-	au BufRead,BufNewFile *.jsp setfiletype html
+	"au BufRead,BufNewFile *.jsp setfiletype html
 
 "Plugin: NERDTree - use colors, cursorline and return/enter key
 	let NERDChristmasTree = 1
 	let NERDTreeHighlightCursorline = 1
 	let NERDTreeMapActivateNode='<CR>'
-	let NERDTreeWinSize=35
+	let NERDTreeWinSize=75
 	let NERDTreeChDirMode=0
 	let NERDTreeQuitOnOpen=1
 	let NERDTreeShowHidden=1
@@ -172,24 +173,12 @@ set splitright    " A new window is put right of the current one
 
 let g:checksyntax_auto = 1
 
-"let g:loaded_easytags = 1 " Disable easytags
-let g:easytags_cmd = 'ctags'
-let g:easytags_dynamic_files = 1
-
-" AutoCloseTag
-	" Make it so AutoCloseTag works for xml and xhtml files as well
-	au FileType xhtml,phtml,tpl,jsp,xml ru bundle/autoclosetag/ftplugin/html/autoclosetag.vim
-
 let g:snips_author = 'Guillaume Moulin <gmoulin.dev@gmail.com>'
 
-" Set to auto read when a file is changed from the outside
-" set autoread
 
 " When vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/.vim_runtime/vimrc
+autocmd! bufwritepost vimrc source ~/.vimrc
 
-" Set 7 lines to the curors - when moving vertical..
-set so=7
 
 " Plugin DelimitMate
 let delimitMate_nesting_quotes = ['`']
@@ -298,9 +287,7 @@ let g:use_zen_complete_tag = 1
 
 	nmap <leader>pd :call PhpDocSingle()<CR>
 	vmap <leader>pd :call PhpDocRange()<CR>
-
-	nmap <C-F11> :TagbarToggle<CR>
-
+m
 	nmap <A-F11> :TlistToggle<CR>
 
 	nmap <A-F12> :Flisttoggle<CR>

@@ -571,55 +571,7 @@
 ************************************************************************
 * Plugins                                                              *
 ************************************************************************
-	" autoclosetag (http://www.vim.org/scripts/script.php?script_id=2591)
-
 	" checksyntax (https://github.com/tomtom/checksyntax_vim)
-
-
-	" command-t (https://github.com/wincent/Command-T)
-		https://github.com/wincent/Command-T/blob/master/doc/command-t.txt
-
-		" shortcuts and commands
-		<Leader>t - bring up the Command-T file window
-		<Leader>b - bring up the Command-T buffer window
-		:CommandT
-		:CommandT ../path/to/other/files
-		:CommandTBuffer
-		:CommandTFlush - flush the path cache
-
-		" Force mapping for CommandT
-		nmap <silent> <Leader>t :CommandT<CR>
-		nmap <silent> <Leader>b :CommandTBuffer<CR>
-
-		" The following mappings are active when the prompt has focus:
-			<BS> delete the character to the left of the cursor
-			<Del> delete the character at the cursor
-			<Left> move the cursor one character to the left
-			<C-h> move the cursor one character to the left
-			<Right> move the cursor one character to the right
-			<C-l> move the cursor one character to the right
-			<C-a> move the cursor to the start (left)
-			<C-e> move the cursor to the end (right)
-			<C-u> clear the contents of the prompt
-			<Tab> change focus to the file listing
-		" The following mappings are active when the file listing has focus:
-			<Tab> change focus to the prompt
-		" The following mappings are active when either the prompt or the file listing
-has focus:
-			<CR> open the selected file
-			<C-CR> open the selected file in a new split window
-			<C-s> open the selected file in a new split window
-			<C-v> open the selected file in a new vertical split window
-			<C-t> open the selected file in a new tab
-			<C-j> select next file in the file listing
-			<C-n> select next file in the file listing
-			<Down> select next file in the file listing
-			<C-k> select previous file in the file listing
-			<C-p> select previous file in the file listing
-			<Up> select previous file in the file listing
-			<C-c> cancel (dismisses file listing)
-		" The following is also available on terminals which support it:
-			<Esc> cancel (dismisses file listing)
 
 	" delimitMate (https://github.com/Raimondi/delimitMate)
 		https://github.com/Raimondi/delimitMate/blob/master/doc/delimitMate.txt
@@ -628,9 +580,6 @@ has focus:
 		" let delimitMate_expand_cr = 1
 		" let delimitMate_expand_space = 1
 		" let delimitMate_nesting_quotes = ['"','`']
-
-	" easytag (https://github.com/vim-scripts/easytags.vim)
-		https://github.com/vim-scripts/easytags.vim/blob/master/doc/easytags.txt
 
 	" nerdcommenter (https://github.com/scrooloose/nerdcommenter)
 		https://github.com/scrooloose/nerdcommenter/blob/master/doc/NERD_commenter.txt
@@ -737,12 +686,6 @@ has focus:
 		<c-r><tab>: shows a list of available snippets
 		XX<tab> : will either show a list of all snippets starting with the characters XX or expand the snippet if it matches a snippet name.
 
-	" tabular (https://github.com/godlygeek/tabular)
-		https://github.com/godlygeek/tabular/blob/master/doc/Tabular.txt
-
-		:Tabularize /,/r1c1l0
-		That command would be read as "Align the matching text, splitting fields on commas. Print everything before the first comma right aligned, then 1 space, then the comma center aligned, then 1 space, then everything after the comma left aligned."
-
 	" align (https://github.com/tsaleh/vim-align)
 		https://github.com/tsaleh/vim-align/blob/master/doc/Align.txt
 
@@ -761,15 +704,6 @@ has focus:
 
 	" fugitive (https://github.com/tpope/vim-fugitive)
 		https://github.com/tpope/vim-fugitive/blob/master/doc/fugitive.txt
-
-	" matchit (https://github.com/tsaleh/vim-matchit)
-		https://github.com/tsaleh/vim-matchit/blob/master/doc/matchit.txt
-
-		% Cycle forward
-		g% Cycle backwards
-		[% Go to [count] next unmatched group
-		]% Go to [count] next unmatched group
-		a% In Visual mode, select the matching group, as specified by |b:match_words|, containing the cursor
 
 	" session (https://github.com/xolox/vim-session)
 		https://github.com/xolox/vim-session/blob/master/doc/session.txt
@@ -810,31 +744,6 @@ has focus:
 		http://www.vim.org/scripts/script.php?script_id=3681
 
 		:Flisttoggle
-
-	" Tagbar (https://github.com/majutsushi/tagbar)
-		https://github.com/majutsushi/tagbar/blob/master/doc/tagbar.txt
-
-		:TagbarOpen
-			Open the Tagbar if it is closed. In case it is already open jump to it.
-
-		:TagbarClose
-			Close the Tagbar window if it is open.
-
-		:TagbarToggle
-			Open the Tagbar window if it is closed or close it if it is open.
-
-		:TagbarOpenAutoClose
-			Open the Tagbar window and close it on tag selection, regardless of the
-			setting of |g:tagbar_autoclose|. If it was already open jump to it.
-
-		:TagbarSetFoldlevel [number]
-			Set the foldlevel of the tags of the current file to [number]. The
-			foldlevel of tags in other files remains unaffected. Works in the same way
-			as 'foldlevel'.
-
-		:TagbarShowTag
-			Open the parent folds of the current tag in the file window as much as
-			needed for the tag to be visible in the Tagbar window.
 
 	" zen coding (https://github.com/mattn/zencoding-vim)
 		http://code.google.com/p/zen-coding/w/list
