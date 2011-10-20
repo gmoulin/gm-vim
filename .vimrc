@@ -287,7 +287,7 @@ let g:use_zen_complete_tag = 1
 
 	nmap <leader>pd :call PhpDocSingle()<CR>
 	vmap <leader>pd :call PhpDocRange()<CR>
-m
+
 	nmap <A-F11> :TlistToggle<CR>
 
 	nmap <A-F12> :Flisttoggle<CR>
