@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/vim-taglist"]
 	path = .vim/bundle/vim-taglist
 	url = https://github.com/pix/vim-taglist.git
+[submodule ".vim/bundle/xmledit"]
+	path = .vim/bundle/xmledit
+	url = https://gmoulin@github.com/gmoulin/xmledit.git

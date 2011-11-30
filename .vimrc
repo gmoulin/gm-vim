@@ -10,9 +10,9 @@ set encoding=utf8
 set so=7 " Set 7 lines to the cursor - when moving vertical..
 
 " enable filetype detection:
-	filetype on
-	filetype plugin on
-	filetype indent on " file type based indentation
+filetype on
+filetype plugin on
+filetype indent on " file type based indentation
 
 set visualbell
 "set noerrorbells
@@ -79,6 +79,8 @@ set wrap					" turn on word wrapping
 		"set columns=50 lines=20 " Default window size
 		"set mousefocus
 		set guifont=Ubuntu\ Mono\ 12
+		set guioptions-=m  "remove menu bar
+		set guioptions-=T  "remove toolbar
 	endif
 
 
@@ -132,7 +134,7 @@ set splitright    " A new window is put right of the current one
 	set foldmethod=indent	"folding uses indentation for folding
 	"set foldmarker={,}
 	"set foldmethod=marker
-	set foldminlines=5
+	set foldminlines=2
 	set foldnestmax=15
 	set foldlevel=5
 
@@ -184,12 +186,14 @@ autocmd! bufwritepost vimrc source ~/.vimrc
 let delimitMate_nesting_quotes = ['`']
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
+let delimitMate_matchpairs = "(:),[:],{:}"
 
 
 " Plugin ZenCoding
 let g:user_zen_leader_key='<c-y>'
 let g:user_zen_expandabbr_key = '<c-y>'
 let g:use_zen_complete_tag = 1
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

@@ -221,6 +221,7 @@
 	guiw - make current word lowercase
 	ddp - swap current line with next
 	ddkP - swap current line with previous
+	dfx - delete until char 'x'
 
 
 
@@ -727,7 +728,7 @@
 		"Look ma, I'm *HTML!"	cs"<q> 			<q>Look ma, I'm HTML!</q>
 		if *x>3 { 				ysW( 			if ( x>3 ) {
 		Hello w*orld!			ysiw)			Hello (world)!
-		my $str = *whee!; 		vlllls' 		my $str = 'whee!';
+		my $str = *whee!; 		vllllS' 		my $str = 'whee!';
 		Hello w*orld!			yssB			{Hello world!}
 
 		As a special case, *yss* operates on the current line, ignoring leading whitespace.
@@ -765,4 +766,7 @@
 		--type=TYPE, --type=noTYPE
 
 	" MRU Most Recent Used files (https://github.com/vim-scripts/mru.vim)
-		:MRU
+		:MRU		
+
+	" xmledit (https://github.com/gmoulin/xmledit)
+		> or >> while typing (x)(ht)ml

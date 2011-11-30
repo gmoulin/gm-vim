@@ -1,26 +1,46 @@
 " ~/gm-vim/.vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.9 on 19 October 2011 at 17:25:10.
+" Created by session.vim 1.4.20 on 30 November 2011 at 11:11:46.
 " Open this file in Vim and run :source % to restore your session.
 
-set guioptions=aegimrLtT
+set guioptions=aegirLt
 silent! set guifont=Ubuntu\ Mono\ 12
 if exists('g:syntax_on') != 1 | syntax on | endif
 if exists('g:did_load_filetypes') != 1 | filetype on | endif
 if exists('g:did_load_ftplugin') != 1 | filetype plugin on | endif
 if exists('g:did_indent_on') != 1 | filetype indent on | endif
+if &background != 'dark'
+	set background=dark
+endif
 if !exists('g:colors_name') || g:colors_name != 'vividchalk' | colorscheme vividchalk | endif
-set background=dark
-call setqflist([{'lnum': 12, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/pricePositioningProductDetail.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 80, 'col': 26, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/pricePositioningProductDetail.php', 'text': '	echo ''<pre>''; var_dump($oVisitor->rightLevel); echo ''</pre>'';'}, {'lnum': 81, 'col': 7, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/pricePositioningProductDetail.php', 'text': '	if( $oVisitor->rightLevel >= ''EDITOR'' ){'}, {'lnum': 20, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/visualList.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 39, 'col': 32, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/visualList.php', 'text': '$smarty->assign(''rightLevel'', $oVisitor->getRight_level());'}, {'lnum': 47, 'col': 6, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/visualList.php', 'text': 'if ($oVisitor->getRight_level() >= EDITOR)'}, {'lnum': 11, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogue.reloadFilters.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 41, 'col': 113, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogue.reloadFilters.php', 'text': 'extract(ProductCatalogueUtility::getPCsearchQueryString($_SESSION[''pcFilters''], $_SESSION[$curTab][''orderby''], $oVisitor), EXTR_OVERWRITE);'}, {'lnum': 22, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageDidYouMean.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 19, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/brandList.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 32, 'col': 6, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/brandList.php', 'text': 'if ($oVisitor->getRight_level() < EDITOR) $where .= '' and published = \''1\'''';'}, {'lnum': 14, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/loadBrands.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 16, 'col': 6, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/loadBrands.php', 'text': 'if ($oVisitor->getRight_level() < EDITOR) $where .= '' and published = \''1\'''';'}, {'lnum': 25, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/search.php', 'text': '$oVisitor = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 79, 'col': 6, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/search.php', 'text': 'if ($oVisitor->right_level <= VIP)'}, {'lnum': 119, 'col': 7, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/search.php', 'text': '	if ($oVisitor->right_level < EDITOR)'}, {'lnum': 133, 'col': 79, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/search.php', 'text': '			extract(ProductCatalogueUtility::getPCsearchQueryString($pcFilters, null, $oVisitor), EXTR_OVERWRITE);'}, {'lnum': 21, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteEntities.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 75, 'col': 104, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteEntities.php', 'text': '//					$logmsg = ''Products ''.$vproduct->getTitle().'' deleted - id = ''.$vproduct->getId().'' - userId ''.$oVisitor->getId();'}, {'lnum': 85, 'col': 119, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteEntities.php', 'text': '//					$logmsg = ''Communication ''.$communication->getTitle().'' deleted - id = ''.$communication->getId().'' - userId ''.$oVisitor->getId();'}, {'lnum': 120, 'col': 98, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteEntities.php', 'text': '					$oAnnualFigures = new AnnualFigures($entity->id, $row[''id_figure_category''], $row[''year''], $oVisitor);'}, {'lnum': 124, 'col': 94, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteEntities.php', 'text': '				$logmsg = ''Entity ''.$entity->getName().'' deleted - id = ''.$entity->getId().'' - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 25, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/entityList.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 50, 'col': 7, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/entityList.php', 'text': '	if ($oVisitor->getRight_level() < EDITOR) $whereAlphabet .= '' where published = \''1\'''';'}, {'lnum': 166, 'col': 6, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/entityList.php', 'text': 'if ($oVisitor->getRight_level() < EDITOR) $where .= '' and published = \''1\'''';'}, {'lnum': 228, 'col': 6, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/entityList.php', 'text': 'if ($oVisitor->getRight_level() >= EDITOR)'}, {'lnum': 16, 'col': 42, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/login.php', 'text': '//Logger::logDebug(var_export($_SESSION[''oVisitor''], true), ''logDebug'');'}, {'lnum': 18, 'col': 22, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/login.php', 'text': 'if (isset($_SESSION[''oVisitor'']))'}, {'lnum': 20, 'col': 3, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/login.php', 'text': '	$oVisitor = unserialize($_SESSION[''oVisitor'']);'}, {'lnum': 21, 'col': 7, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/login.php', 'text': '	if ($oVisitor->isLogged())'}, {'lnum': 22, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/editComingSoon.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 72, 'col': 52, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/editComingSoon.php', 'text': '	$logmsg = ''Coming soon section update - userId ''.$oVisitor->getId();'}, {'lnum': 22, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageSynonyms.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 54, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/entityListInsert.php', 'text': '$oVisitor = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 60, 'col': 6, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/entityListInsert.php', 'text': 'if ($oVisitor->getRight_level() > VIP)'}, {'lnum': 70, 'col': 6, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/entityListInsert.php', 'text': 'if ($oVisitor->getRight_level() < EDITOR)'}, {'lnum': 29, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/createCommunication.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 461, 'col': 106, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/createCommunication.php', 'text': '	$logmsg .= '' - id = ''.$dbVcommunication->getId().'' title ''.$dbVcommunication->getTitle().'' - user id ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 19, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/documentEntityList.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 24, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/userList.php', 'text': '$oVisitor = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 165, 'col': 29, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/userList.php', 'text': 'foreach($arList[''list''] as $oVisitor)'}, {'lnum': 167, 'col': 51, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/userList.php', 'text': '	$oFormDelete->addElement(''checkbox'', ''userDel[''.$oVisitor->getId().'']'','''','''', array(''onClick'' => ''manageHidden(\''frmDeleteUser\'',''.$oVisitor->getId().'')''));'}, {'lnum': 10, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogue.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 46, 'col': 8, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogue.php', 'text': '	'' . ($oVisitor->right_level < EDITOR ? ''AND published = 1'' : '''') . '''}, {'lnum': 73, 'col': 67, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogue.php', 'text': '$stash = StashBox::getCache(''collections'', $idsProduct[$curTab], $oVisitor->right_level);'}, {'lnum': 78, 'col': 47, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogue.php', 'text': '		WHERE id_product = ".$idsProduct[$curTab].($oVisitor->right_level < EDITOR ? " AND published=1" : "")." AND collection IS NOT NULL AND id_collection IS NOT NULL ORDER BY collection";'}, {'lnum': 99, 'col': 65, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogue.php', 'text': '	$stash = StashBox::getCache(''diameter'', $idsProduct[$curTab], $oVisitor->right_level);'}, {'lnum': 104, 'col': 49, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogue.php', 'text': '				WHERE id_product = ".$idsProduct[$curTab].($oVisitor->right_level < EDITOR ? " AND published=1" : "")." AND diameter IS NOT NULL";'}, {'lnum': 123, 'col': 62, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogue.php', 'text': '	$stash = StashBox::getCache(''price'', $idsProduct[$curTab], $oVisitor->right_level);'}, {'lnum': 128, 'col': 49, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogue.php', 'text': '				WHERE id_product = ".$idsProduct[$curTab].($oVisitor->right_level < EDITOR ? " AND published=1" : "")." AND price IS NOT NULL";'}, {'lnum': 13, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteCurrency.php', 'text': '$oVisitor = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 54, 'col': 91, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteCurrency.php', 'text': '				$logmsg = ''Currency ''.$oCurrency->name.'' (id: '' . $oCurrency->id . '') deleted by '' . $oVisitor->firstname . '' '' . $oVisitor->lastname . '' (id: '' . $oVisitor->id. '')'';'}, {'lnum': 22, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/communicationDetail.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 19, 'col': 45, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/currencies.php', 'text': '$oAdmin  = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 15, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteAnnualFigures.php', 'text': '$oVisitor = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 22, 'col': 77, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteAnnualFigures.php', 'text': '$oFigureToDelete = new AnnualFigures($idEntity, $figureCatId, $year, null, $oVisitor);'}, {'lnum': 17, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/visualListInsertNews.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 24, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/visualDetail.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 180, 'col': 8, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/visualDetail.php', 'text': '//if ($oVisitor->getRight_level() < EDITOR)'}, {'lnum': 23, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/sales.figures.export.php', 'text': '$oVisitor = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 27, 'col': 114, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogue.searchResult.php', 'text': '	extract(ProductCatalogueUtility::getPCsearchQueryString($_SESSION[''pcFilters''], $_SESSION[$curTab][''orderby''], $oVisitor), EXTR_OVERWRITE);'}, {'lnum': 18, 'col': 45, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/addCurrency.php', 'text': '$oAdmin  = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 33, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/communicationListInsert.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 17, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteVisual.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 137, 'col': 131, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteVisual.php', 'text': '					$logmsg = ''Dataitem ''.$row[''type''].'' ''.$objectToDelete->getTitle().'' deleted - id = ''.$objectToDelete->getId().'' - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 145, 'col': 88, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteVisual.php', 'text': '			$logmsg = ''Visual ''.$val->getTitle().'' deleted - id = ''.$val->getId().'' - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 20, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/documentDetail.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 20, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/loadSynonym.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 22, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/createProduct.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 747, 'col': 104, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/createProduct.php', 'text': '	$logmsg .= '' - id = '' . $dbVproduct->getId() . '' title '' . $dbVproduct->getTitle() . '' - user id '' . $oVisitor->getId() . '' '' . $oVisitor->firstname . '' '' . $oVisitor->lastname;'}, {'lnum': 21, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/communicationList.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 24, 'col': 45, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/vat.php', 'text': '$visitor  = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 59, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogueExport.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 74, 'col': 89, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogueExport.php', 'text': '        $aryQuery = ProductCatalogueUtility::getPCsearchQueryString($aryFilters, null, $oVisitor, true);'}, {'lnum': 23, 'col': 45, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/editPricePositioningTips.php', 'text': '	$oAdmin = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 25, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/createEntity.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 282, 'col': 108, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/createEntity.php', 'text': '    	$logmsg = ''Entity ''.$entity->getName().'' of class ''.$entity->getEntity_class().'' inserted - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 286, 'col': 108, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/createEntity.php', 'text': '    	$logmsg = ''Entity ''.$entity->getName().'' of class ''.$entity->getEntity_class().'' updated  - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 23, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productCatalogueProductDetail.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 22, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productDetail.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 15, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteProduct.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 61, 'col': 96, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteProduct.php', 'text': '					$logmsg = ''Visual ''.$visual->getTitle().'' deleted - id = ''.$visual->getId().'' - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 67, 'col': 89, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteProduct.php', 'text': '			$logmsg = ''Product ''.$val->getTitle().'' deleted - id = ''.$val->getId().'' - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 20, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageListIndex.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 22, 'col': 44, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/editSearchTips.php', 'text': '$oAdmin = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 18, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/contactus.php', 'text': '$oVisitor  = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 70, 'col': 29, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/contactus.php', 'text': '$aDefaults[''senderName''] = $oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 71, 'col': 30, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/contactus.php', 'text': '$aDefaults[''senderEmail''] = $oVisitor->email; '}, {'lnum': 38, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/newsletter.php', 'text': '$oVisitor = (isset($_SESSION[''oVisitor'']) ? unserialize($_SESSION[''oVisitor'']) : null);'}, {'lnum': 40, 'col': 16, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/newsletter.php', 'text': 'if (is_object($oVisitor) && $oVisitor->isLogged())'}, {'lnum': 58, 'col': 22, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/download.php', 'text': 'if (isset($_SESSION[''oVisitor'']))'}, {'lnum': 60, 'col': 3, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/download.php', 'text': '	$oVisitor = unserialize($_SESSION[''oVisitor'']);'}, {'lnum': 61, 'col': 7, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/download.php', 'text': '	if ($oVisitor->right_level < EDITOR)'}, {'lnum': 64, 'col': 28, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/download.php', 'text': '		$stats->id_visitor    = $oVisitor->id;'}, {'lnum': 15, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteDocument.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 119, 'col': 90, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteDocument.php', 'text': '			$logmsg = ''Document ''.$val->getTitle().'' deleted - id = ''.$val->getId().'' - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 138, 'col': 105, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteDocument.php', 'text': '			$logmsg = ''Document with relations ''.$val->getTitle().'' deleted - id = ''.$val->getId().'' - userId ''.$oVisitor->getId();'}, {'lnum': 16, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/download_zip.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 33, 'col': 75, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/download_zip.php', 'text': 'extract(ProductCatalogueUtility::getPCsearchQueryString($params, ''date'', $oVisitor), EXTR_OVERWRITE);	// return the variables $sql and $sqlCount'}, {'lnum': 24, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productList.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 41, 'col': 9, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/productList.php', 'text': '//	if ($oVisitor->right_level >= EDITOR)'}, {'lnum': 22, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/documentList.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 77, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/documentList.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 13, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteStore.php', 'text': '$oVisitor = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 60, 'col': 91, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteStore.php', 'text': '						$logmsg = ''Visual ''.$visual->title.'' (id dataitem: ''.$visual->id.'') deleted by '' . $oVisitor->firstname . '' '' . $oVisitor->lastname . '' (id: '' . $oVisitor->id. '')'';'}, {'lnum': 66, 'col': 91, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteStore.php', 'text': '			$logmsg = ''Store ''.$oStore->title.'' (id dataitem: '' . $oStore->id . '') deleted by '' . $oVisitor->firstname . '' '' . $oVisitor->lastname . '' (id: '' . $oVisitor->id. '')'';'}, {'lnum': 13, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteUser.php', 'text': '$oVisitor = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 36, 'col': 33, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteUser.php', 'text': '	foreach($aVisitorsToDelete as $oVisitorToDelete)'}, {'lnum': 40, 'col': 25, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteUser.php', 'text': '			$logmsg = ''User '' . $oVisitorToDelete->firstname . '' '' . $oVisitorToDelete->lastname . ''(id: '' . $oVisitorToDelete->id . '') deleted by '' . $oVisitor->firstname . '' '' . $oVisitor->lastname . ''(id: '' . $oVisitor->id . '')'';'}, {'lnum': 43, 'col': 5, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteUser.php', 'text': '			$oVisitorToDelete->delete();'}, {'lnum': 16, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteCommunication.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 60, 'col': 96, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteCommunication.php', 'text': '					$logmsg = ''Visual ''.$visual->getTitle().'' deleted - id = ''.$visual->getId().'' - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 67, 'col': 95, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/deleteCommunication.php', 'text': '			$logmsg = ''Communication ''.$val->getTitle().'' deleted - id = ''.$val->getId().'' - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 20, 'col': 45, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/createUser.php', 'text': '$oAdmin  = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 19, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageList.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 145, 'col': 112, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageList.php', 'text': '			$logMsg = ''List ''.$_SESSION[''listType''].'' update: changed position - Element id ''.$idElement.'' - user id ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 149, 'col': 109, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageList.php', 'text': '			$logMsg = ''List ''.$_SESSION[''listType''].'' update: changed level - Element id ''.$idElement.'' - user id ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 156, 'col': 176, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageList.php', 'text': '			$logMsg = ''List ''.$_SESSION[''listType''].'' added child ''.FormNUrl::ifExistSet(''childName'',''request'').'' to father ''.FormNUrl::ifExistSet(''idFather'',''request'').'' - user id ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 160, 'col': 111, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageList.php', 'text': '			$logMsg = ''List ''.$_SESSION[''listType''].'' update: deleted element - Element id ''.$idElement.'' - user id ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 164, 'col': 113, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageList.php', 'text': '			$logMsg = ''List ''.$_SESSION[''listType''].'' update: undeleted element - Element id ''.$idElement.'' - user id ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 168, 'col': 108, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageList.php', 'text': '			$logMsg = ''List ''.$_SESSION[''listType''].'' update: changed name - Element id ''.$idElement.'' - user id ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 171, 'col': 68, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageList.php', 'text': '			ManageListUtils::purgeElement($_SESSION[''listType''],$idElement,$oVisitor);'}, {'lnum': 172, 'col': 110, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/manageList.php', 'text': '			$logMsg = ''List ''.$_SESSION[''listType''].'' update: purged element - Element id ''.$idElement.'' - user id ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 437, 'col': 97, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/_dev/importPP/importPP.php', 'text': '				$logmsg .= '' - id = ''.$dbVproduct->getId().'' title ''.$dbVproduct->getTitle().'' - user id ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 38, 'col': 4, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/sales.php', 'text': '		$oVisitor = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 59, 'col': 4, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/sales.php', 'text': '		$oVisitor = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 71, 'col': 35, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/sales.php', 'text': '    		$currCurrencyId = (is_null($oVisitor->getCurrencyRef()) ? $entity->id_currency : $oVisitor->getCurrencyRef());'}, {'lnum': 74, 'col': 8, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/sales.php', 'text': '    		$oVisitor->setCurrencyRef($currencyId);'}, {'lnum': 75, 'col': 18, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/sales.php', 'text': '    		$_SESSION[''oVisitor''] = serialize($oVisitor);'}, {'lnum': 25, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/documentListInsertFigures.php', 'text': '$oVisitor   = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 12, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/distribution.php', 'text': '$oVisitor = $oSmarty->get_registered_object(''oVisitor'');'}, {'lnum': 34, 'col': 6, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/distribution.php', 'text': 'if ($oVisitor->right_level < EDITOR)'}, {'lnum': 65, 'col': 6, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/distribution.php', 'text': 'if ($oVisitor->right_level == VISITOR && SalesUtility::belongsToRichemont($entity->id))'}, {'lnum': 131, 'col': 7, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/distribution.php', 'text': '	if ($oVisitor->GetRight_level() < EDITOR)'}, {'lnum': 194, 'col': 29, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/distribution.php', 'text': '			if (empty($filename) && $oVisitor->right_level >= EDITOR)'}, {'lnum': 44, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/overviewEntity.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 106, 'col': 38, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/overviewEntity.php', 'text': '	if ($group->getPublished() == 1 or $oVisitor->getRight_level() >=  EDITOR)'}, {'lnum': 155, 'col': 133, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/overviewEntity.php', 'text': '			$logmsg = ''Entity ''.$entity->getName().'' of class ''.$entity->getEntity_class().'' updated: changed status: published  - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 161, 'col': 135, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/overviewEntity.php', 'text': '			$logmsg = ''Entity ''.$entity->getName().'' of class ''.$entity->getEntity_class().'' updated: changed status: unpublished  - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 184, 'col': 140, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/overviewEntity.php', 'text': '			$logmsg = ''Entity ''.$entity->getName().'' of class ''.$entity->getEntity_class().'' updated: deleted acquisition informations  - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 229, 'col': 133, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/overviewEntity.php', 'text': '			$logmsg = ''Entity ''.$entity->getName().'' of class ''.$entity->getEntity_class().'' updated: changed acquisition infos  - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 314, 'col': 131, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/overviewEntity.php', 'text': '		    $logmsg = ''Entity ''.$entity->getName().'' of class ''.$entity->getEntity_class().'' updated: changed name and logo - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 449, 'col': 132, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/overviewEntity.php', 'text': '		    $logmsg = ''Entity ''.$entity->getName().'' of class ''.$entity->getEntity_class().'' updated: changed general infos  - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 489, 'col': 123, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/overviewEntity.php', 'text': '			$logmsg = ''Entity ''.$entity->getName().'' of class ''.$entity->getEntity_class().'' updated: changed history  - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 525, 'col': 126, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/overviewEntity.php', 'text': '			$logmsg = ''Entity ''.$entity->getName().'' of class ''.$entity->getEntity_class().'' updated: changed production  - userId ''.$oVisitor->getId().'' ''.$oVisitor->firstname.'' ''.$oVisitor->lastname;'}, {'lnum': 20, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/loadMaster.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 15, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/createVisual.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}, {'lnum': 21, 'col': 2, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': 'htdocs/loadDidYouMean.php', 'text': '$oVisitor = $smarty->get_registered_object(''oVisitor'');'}])
+call setqflist([{'lnum': 0, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/home/gmoulin/top.tpl', 'text': 'ack: --type-add: Type "TPL" does not exist, creating with ".tpl" ...'}, {'lnum': 11, 'col': 31, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/home/gmoulin/top.tpl', 'text': '	<span class="white"><a href="contactus.php?request_uri={$smarty.server.REQUEST_URI|base64_encode}">Contact us</a></span> |'}, {'lnum': 43, 'col': 14, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/home/gmoulin/contact.us.thankyou.tpl', 'text': '				<a href="contactus.php"> >> Back to previous page</a>'}, {'lnum': 187, 'col': 14, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/home/gmoulin/contactus.display.tpl', 'text': '				<a href="contactus.php"><< Back to contact us</a>'}])
 let SessionLoad = 1
 if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/projects/Richemont_TheEye/svn/theeye
+cd ~/koc
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
+badd +78 /var/www/mypiaget/trunk/modules/mod_myspace.php
+badd +478 ~/projects/Richemont/TheEye/svn/theeye/lib/PHPExcel/Calculation/LookupRef.php
+badd +89 ~/projects/Richemont/TheEye/svn/theeye/lib/db/DBv_dataitems_vproducts.class.php
+badd +159 ~/projects/Richemont/TheEye/svn/theeye/htdocs/css/overview-nav-cel.css
+badd +169 ~/projects/Richemont/TheEye/svn/theeye/htdocs/css/brand.css
+badd +39 ~/projects/Richemont/TheEye/svn/theeye/include/config.inc.php
+badd +33 ~/projects/Richemont/TheEye/svn/theeye/htdocs/_importScripts/MigrateConstants.java
+badd +131 ~/projects/Richemont/TheEye/svn/theeye/lib/db/DBobject.class.php
+badd +247 ~/projects/Richemont/TheEye/svn/theeye/lib/PricePositioningUtility.class.php
+badd +90 htdocs/pricePositioningProductDetail.php
+badd +47 htdocs/visualList.php
+badd +29 htdocs/login.php
+badd +1 htdocs/productCatalogue.searchResult.php
+badd +390 htdocs/createProduct.php
+badd +123 htdocs/vat.php
+badd +54 htdocs/productCatalogueExport.php
+badd +163 htdocs/productDetail.php
+badd +35 htdocs/deleteProduct.php
 badd +1017 lib/pclzip.lib.php
 badd +362 lib/db/DBv_dataitems_vproducts.class.php
 badd +28 lib/db/DBvproducts.class.php
@@ -29,14 +49,14 @@ badd +106 lib/db/DBobject.class.php
 badd +120 htdocs/js/deleteFunction.js
 badd +1131 /var/www/WHO-SDMX-HD/WebSite/lib/Smarty-2.6.14/libs/Smarty.class.php
 badd +13 /var/www/WHO-SDMX-HD/WebSite/htdocs/index_0_2_1.php
-badd +118 /var/www/WHO-SDMX-HD/WebSite/include/handleCookies.php
-badd +80 /var/www/WHO-SDMX-HD/WebSite/include/index_0_2_1.left.php
-badd +67 /var/www/WHO-SDMX-HD/WebSite/include/index_5_1_1.right.php
-badd +188 /var/www/WHO-SDMX-HD/WebSite/include/config.inc.php
+badd +16 /var/www/WHO-SDMX-HD/WebSite/include/handleCookies.php
+badd +87 /var/www/WHO-SDMX-HD/WebSite/include/index_0_2_1.left.php
+badd +50 /var/www/WHO-SDMX-HD/WebSite/include/index_5_1_1.right.php
+badd +56 /var/www/WHO-SDMX-HD/WebSite/include/config.inc.php
 badd +44 /var/www/WHO-SDMX-HD/WebSite/htdocs/popup.php
 badd +38 /var/www/WHO-SDMX-HD/WebSite/htdocs/admin/include/config.inc.php
 badd +200 ~/storetraffic.class.php
-badd +81 /var/www/JTI-ingredients/trunk/htdocs/added_to.php
+badd +9 /var/www/JTI-ingredients/trunk/htdocs/added_to.php
 badd +1 ~/storetraffic.php
 badd +44 /media/rts/webapps/rts/WEB-INF/template/tsr/navigation/header-selection.jsp
 badd +528 /var/www/suivfin/inc/class_common.php
@@ -44,24 +64,24 @@ badd +223 /var/www/suivfin/demo/tests.html
 badd +40 /var/www/suivfin/clean.php
 badd +54 /var/www/suivfin/inc/Stash/Box.class.php
 badd +1 /var/www/suivfin/smarty/templates/balance.tpl
-badd +14 /var/www/suivfin/smarty/templates/clean.tpl
+badd +1 /var/www/suivfin/smarty/templates/clean.tpl
 badd +1 .vim/after/snippets/smarty.snippets
 badd +15 /var/www/suivfin/inc/class_currency.php
-badd +627 /var/www/suivfin/inc/class_payment.php
-badd +455 /var/www/suivfin/js/script.js
+badd +863 /var/www/suivfin/inc/class_payment.php
+badd +974 /var/www/suivfin/js/script.js
 badd +189 /var/www/lms/ajax/manageBand.php
 badd +60 /var/www/lms/inc/class_band.php
 badd +1078 /var/www/lms/js/script.js
 badd +1 /var/www/lms/list/band.html
 badd +60 /var/www/lms/ajax/manageSaga.php
-badd +466 /var/www/lms/inc/class_saga.php
+badd +409 /var/www/lms/inc/class_saga.php
 badd +33 /var/www/lms/list/saga.html
 badd +1 /var/www/lms/tabs/bands.php
 badd +2 /var/www/lms/tabs/sagas.php
 badd +2 /var/www/lms/db/udpdate.sql
 badd +11 /var/www/lms/inc/lms.ini
 badd +2227 /var/www/lms/css/style.css
-badd +458 /var/www/lms/ajax/loadList.php
+badd +17 /var/www/lms/ajax/loadList.php
 badd +104 /media/rts/webapps/rts/WEB-INF/template/rsr/grid/rsr-podcast.jsp
 badd +54 /media/rts/webapps/rts/WEB-INF/tags/rsr/emission-print-calendar.tag
 badd +86 /media/rts/webapps/rts/WEB-INF/tags/rsr/emission-set-calendar.tag
@@ -77,13 +97,13 @@ badd +12 /media/rts/webapps/rts/WEB-INF/template/layout/main.jsp
 badd +38 /media/rts/webapps/rts/WEB-INF/template/tsr/main.jsp
 badd +41 /media/rts/webapps/rts/WEB-INF/template/section-tree/section/tsr/tsr-ch/jeunesse/zozios/jeux/content.jsp
 badd +18 /media/rts/webapps/rts/static/js/jeunesse/zozios.js
-badd +14 ~/.vimrc
+badd +137 ~/.vimrc
 badd +89 /media/rts/webapps/rts/static/js/rsrlib/lightboxes.js
 badd +1 /media/rts/webapps/rts/static/js/rtslib/lightbox.js
 badd +86 /media/rts/webapps/rts/WEB-INF/template/navigation/head.jsp
 badd +26 /var/www/lms/clean.php
 badd +3 /var/www/lms/db/update.sql
-badd +170 ~/gm-vim/.vim/bundle/snipmate-snippets/snippets/javascript.snippets
+badd +40 ~/gm-vim/.vim/bundle/snipmate-snippets/snippets/javascript.snippets
 badd +1 /var/www/lms/forms/saga.html
 badd +15 /var/www/lms/forms/artist.html
 badd +30 /var/www/lms/forms/author.html
@@ -111,7 +131,7 @@ badd +32 /media/rts/webapps/rts/WEB-INF/template/navigation/include/css.jsp
 badd +50 /media/rts/webapps/rts/static/css/dossiers.css
 badd +884 /media/rts/webapps/rts/static/css/tsr.css
 badd +159 ~/projects/RTS/ca-demenage.php
-badd +172 ~/gm-vim/.vim/bundle/snipmate-snippets/snippets/php.snippets
+badd +237 ~/gm-vim/.vim/bundle/snipmate-snippets/snippets/php.snippets
 badd +10 /var/www/suivfin/inc/suivfin.ini
 badd +1 /var/www/suivfin/smarty/templates/payment.template.html
 badd +6 /var/www/suivfin/smarty/templates/payment.tpl
@@ -122,8 +142,8 @@ badd +284 /media/rts/webapps/rts/WEB-INF/template/wireframe/external.jsp
 badd +41 /media/rts/webapps/rts/WEB-INF/template/wireframe/external/header-common.jsp
 badd +83 /media/rts/webapps/rts/WEB-INF/template/wireframe/external/header.jsp
 badd +190 /media/rts/webapps/rts/static/css/header-common.css
-badd +867 /var/www/suivfin/css/style.css
-badd +65 /var/www/suivfin/ajax/payment.php
+badd +1707 /var/www/suivfin/css/style.css
+badd +251 /var/www/suivfin/ajax/payment.php
 badd +113 /media/rts/webapps/rts/static/css/emissions/la-puce-a-l-oreille.css
 badd +9 /media/rts/webapps/rts/static/css/divertissement/ca-demenage.css
 badd +14 /var/www/suivfin/smarty/templates/forecast.tpl
@@ -156,12 +176,12 @@ badd +41 /media/rts/webapps/rts/WEB-INF/template/rsr/histoire-vivante/content/ri
 badd +1023 /media/rts/webapps/rts/static/css/rsr/docs.css
 badd +67 /media/rts/webapps/rts/WEB-INF/template/elements/comments-new-emi.jsp
 badd +13 /var/www/suivfin/conf.ini.php
-badd +76 /var/www/khalimna/act/calendar/encounter.php
-badd +10 /var/www/khalimna/act/calendar/includes/variables.php
-badd +58 /var/www/khalimna/act/calendar/encounters.php
-badd +359 /var/www/khalimna/act/calendar/includes/Stash/Stash.class.php
-badd +348 /var/www/khalimna/act/calendar/includes/Stash/handlers/FileSystem.class.php
-badd +178 /var/www/khalimna/act/calendar/includes/Stash/Utilities.class.php
+badd +76 khalimna/act/calendar/encounter.php
+badd +10 khalimna/act/calendar/includes/variables.php
+badd +58 khalimna/act/calendar/encounters.php
+badd +359 khalimna/act/calendar/includes/Stash/Stash.class.php
+badd +348 khalimna/act/calendar/includes/Stash/handlers/FileSystem.class.php
+badd +178 khalimna/act/calendar/includes/Stash/Utilities.class.php
 badd +303 /media/rts/webapps/rts/WEB-INF/template/layout-group/tsr-hp/include/on-tv.jsp
 badd +95 /var/www/suivfin/index.php
 badd +16 /var/www/suivfin/site.manifest
@@ -169,7 +189,7 @@ badd +4 /media/rts/webapps/rts/WEB-INF/template/section-tree/article/tsr/tsr-ch/
 badd +3 /var/www/suivfin/db/update.sql
 badd +3 /var/www/suivfin/ajax/loadList.php
 badd +184 /var/www/suivfin/smarty/templates/filters.tpl
-badd +253 /var/www/suivfin/inc/class_evolution.php
+badd +305 /var/www/suivfin/inc/class_evolution.php
 badd +341 /var/www/suivfin/inc/Stash/handlers/FileSystem.class.php
 badd +344 /var/www/suivfin/inc/Stash/Stash.class.php
 badd +1 ~/menu.jsp
@@ -185,7 +205,7 @@ badd +1 /var/www/suivfin/smarty/templates/html_footer.tpl
 badd +19 /media/rts/webapps/rts/WEB-INF/tags/elements/video/html.jsp
 badd +128 /media/rts/webapps/rts/static/js/rtslib/player.js
 badd +25 /media/rts/webapps/rts/WEB-INF/template/navigation/footer.jsp
-badd +16 /var/www/suivfin/smarty/templates/index.tpl
+badd +77 /var/www/suivfin/smarty/templates/index.tpl
 badd +225 /media/rts/webapps/rts/WEB-INF/template/wireframe/ce/profile.register.jsp
 badd +78 /media/rts/webapps/rts/static/css/header.css
 badd +58 /media/rts/webapps/rts/WEB-INF/template/wireframe/rss/podcast.jsp
@@ -217,8 +237,8 @@ badd +13 /var/www/suivfin/js/mylibs/jquery.isotope.min.js
 badd +1270 /var/www/suivfin/js/mylibs/jquery.isotope.js
 badd +54 /var/www/suivfin/smarty/templates/form.tpl
 badd +1 /var/www/suivfin/db/removeTest.sql
-badd +21 /var/www/JTI-ingredients/trunk/htdocs/non_components.php
-badd +117 /var/www/JTI-ingredients/trunk/htdocs/per_product.php
+badd +9 /var/www/JTI-ingredients/trunk/htdocs/non_components.php
+badd +9 /var/www/JTI-ingredients/trunk/htdocs/per_product.php
 badd +135 /var/www/JTI-ingredients/trunk/templates/per_product.tpl
 badd +199 /var/www/JTI-ingredients/trunk/lib/common.php
 badd +67 /var/www/JTI-ingredients/trunk/templates/added_to.tpl
@@ -252,18 +272,16 @@ badd +32 /var/www/WHO-SDMX-HD/WebSite/htdocs/copyright.php
 badd +31 /var/www/WHO-SDMX-HD/WebSite/htdocs/glossary.php
 badd +30 /var/www/WHO-SDMX-HD/WebSite/htdocs/index_3_2_2.php
 badd +30 /var/www/WHO-SDMX-HD/WebSite/htdocs/index_2_2_0.php
-badd +1241 /var/www/suivfin_redesign/Suivi\ Financier_files/style.css
-badd +422 /var/www/suivfin_redesign/Suivi\ Financier.html
-badd +1 /var/www/suivfin_redesign/Suivi\ Financier_files/style2.css
+badd +1241 suivfin_redesign/Suivi\ Financier_files/style.css
+badd +422 suivfin_redesign/Suivi\ Financier.html
+badd +1 suivfin_redesign/Suivi\ Financier_files/style2.css
 badd +1 /var/www/suivfin/smarty/templates/html_header.tpl
-badd +108 /var/www/lms/index.php
+badd +56 /var/www/lms/index.php
 badd +1 /var/www/suivfin/css/style.v1.css
 badd +1 /var/www/suivfin/js/libs/modernizr-2.0.6.custom.min.js
 badd +73 htdocs/cron/ami.php
 badd +331 smarty/templates/createProduct.tpl
-badd +390 htdocs/createProduct.php
 badd +86 smarty/templates/header.tpl
-badd +35 htdocs/deleteProduct.php
 badd +1 htdocs/pricePositioning.currencyCrossRates.php
 badd +1 htdocs/pricePositioning.landing.php
 badd +1 htdocs/pricePositioning.php
@@ -274,7 +292,6 @@ badd +173 htdocs/pricePositioning.searchResult.php
 badd +1 htdocs/pricePositioningPriceComparison.compare2selections.php
 badd +1 htdocs/pricePositioningPriceComparison.result.php
 badd +131 htdocs/pricePositioningPriceImport.php
-badd +90 htdocs/pricePositioningProductDetail.php
 badd +62 htdocs/pricePositioningProductDetail.priceEvolution.php
 badd +1 htdocs/pricePositioningProductDetail.priceIndex.php
 badd +1 htdocs/pricePositioningUpdateRemoveFromView.php
@@ -282,7 +299,6 @@ badd +153 lib/PricePositioningUtility.class.php
 badd +215 lib/PricePositioning.class.php
 badd +786 htdocs/css/pricePositioning.css
 badd +1 htdocs/index.php
-badd +29 htdocs/login.php
 badd +39 include/config.inc.php
 badd +77 htdocs/home.php
 badd +37 lib/smarty/SmartyTheEye.class.php
@@ -309,27 +325,211 @@ badd +20 smarty/templates/dataitem.common.tpl
 badd +860 lib/ProductCatalogueImport.class.php
 badd +109 /var/www/suivfin/inc/class_init.php
 badd +60 htdocs/cron/updateCurrencyCrossRates.php
-badd +123 htdocs/vat.php
 badd +79 lib/ListVats.class.php
 badd +1 lib/db/DBsimpleViewDataitem.class.php
-badd +1 htdocs/productCatalogue.searchResult.php
 badd +406 lib/ProductCatalogueUtility.class.php
 badd +31 smarty/templates/productDetail.tpl
 badd +117 smarty/templates/productDetail.detail.tpl
-badd +163 htdocs/productDetail.php
 badd +1 lib/db/DBv_dataitems_vproducts_merged.class.php
 badd +692 htdocs/js/productCatalogue.js
-badd +54 htdocs/productCatalogueExport.php
 badd +246 htdocs/js/createProduct.js
 badd +1 sql/resetProductDate.sql
-badd +47 htdocs/visualList.php
 badd +202 htdocs/_import/productCatalogue.fix.php
 badd +789 lib/ProductCatalogueFix.class.php
 badd +35 htdocs/getDimLog.php
 badd +1 smarty/templates/productCatalogue.fix.tpl
-args ~/ThumbList.jsp
-set lines=63 columns=231
-edit lib/ProductCatalogueFix.class.php
+badd +1 projects/Richemont_TheEye/svn/theeye/smarty/templates/productCatalogue.fix.tpl
+badd +1 projects/Richemont_TheEye/svn/theeye/htdocs/_import/productCatalogue.fix.php
+badd +96 ~/projects/Richemont/TheEye/svn/theeye/htdocs/cron/ami.php
+badd +10 /var/www/poc_canvas.html
+badd +58 /var/www/poc_canvas.php
+badd +16 ~/projects/Richemont/TheEye/svn/theeye/htdocs/cron/dim_Import_Scrcipt.php
+badd +1 ~/projects/Richemont/TheEye/svn/theeye/lib/DimHelper.class.php
+badd +71 test/test/index.html
+badd +165 test/test/css/style.css
+badd +326 ~/projects/Richemont/TheEye/svn/theeye/htdocs/pricePositioningPriceImport.php
+badd +11 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/pricePositioning.priceIndex.inc.tpl
+badd +1 ~/projects/Richemont/TheEye/svn/theeye/sql/resetProductDate.sql
+badd +1 ~/projects/Richemont/TheEye/svn/theeye/sql/ppt_remove_futur_period.sql
+badd +254 ~/.mozilla/firefox/kriste5w.KOC/gm_scripts/koc-widemap_v2_31st_marc/koc-widemap_v2_31st_marc.user.js
+badd +126 ~/.mozilla/firefox/kriste5w.KOC/gm_scripts/koc_power_bot/koc_power_bot.user.js
+badd +459 ~/.mozilla/firefox/kriste5w.KOC/gm_scripts/boite_outils/boite_outils.user.js
+badd +5605 ~/.mozilla/firefox/kriste5w.KOC/gm_scripts/kocattack_fr_-_extra_fea/kocattack_fr_-_extra_fea.user.js
+badd +1 koc.js
+badd +29 /var/www/WHO-SDMX-HD/WebSite/smarty/plugins/function.html_prevNextNavigation.php
+badd +27 /var/www/WHO-SDMX-HD/WebSite/smarty/templates/en/topNav.tpl
+badd +25 /var/www/WHO-SDMX-HD/WebSite/smarty/templates/es/topNav.tpl
+badd +25 /var/www/WHO-SDMX-HD/WebSite/smarty/templates/fr/topNav.tpl
+badd +6 koc.user.js
+badd +10 visilab/conf.php
+badd +1 /var/www/lms/inc/class_init.php
+badd +3 visilab/footer.php
+badd +70 visilab/index.php
+badd +1 /var/www/lms/inc/class_DBI.php
+badd +1 /var/www/lms/conf.ini.php
+badd +1 visilab/class_album.php
+badd +4 visilab/class_DBI.php
+badd +56 visilab/class_init.php
+badd +21 visilab/class_commun.php
+badd +56 visilab/function_commun.php
+badd +11 visilab/conf.ini
+badd +1 visilab/class_common.php
+badd +33 visilab/inc/class_common.php
+badd +21 visilab/inc/class_commun.php
+badd +9 visilab/inc/class_DBI.php
+badd +64 visilab/inc/class_init.php
+badd +104 visilab/inc/common_func.php
+badd +7 visilab/inc/conf.ini
+badd +33 visilab/conf.ini.php
+badd +167 visilab/inc/class_album.php
+badd +362 /var/www/lms/inc/class_loan.php
+badd +4 visilab/inc/class_vote.php
+badd +714 /var/www/lms/inc/class_album.php
+badd +54 visilab/ajax/loadList.php
+badd +59 visilab/ajax/manageAlbum.php
+badd +170 visilab/inc/class_participation.php
+badd +53 visilab/ajax/manage.php
+badd +49 visilab/moderate.php
+badd +2 visilab/ajax/moderate.php
+badd +2364 ~/projects/Richemont/TheEye/dump/dump_richemont_eye_joomla_20111012-2.sql
+badd +368 ~/projects/Richemont/TheEye/svn/theeye/htdocs/_import/productCatalogue.fix.php
+badd +878 ~/projects/Richemont/TheEye/svn/theeye/lib/ProductCatalogueFix.class.php
+badd +320 ~/projects/Richemont/TheEye/svn/theeye/lib/PricePositioning.class.php
+badd +58 ~/projects/Richemont/TheEye/svn/theeye/htdocs/pricePositioning.priceIndex.php
+badd +513 /var/www/mypiaget/trunk/components/com_storetraffic/js/store_traffic.js
+badd +1 visilab/inc/lang/glasses.fr.json
+badd +1 koc.fb.user.js
+badd +39 visilab/inc/lang/fr.ini
+badd +1 ~/projects/Richemont/TheEye/svn/theeye/sql/ppt_fix_zero_price.sql
+badd +61 ~/gm-vim/.vim/bundle/snipmate-snippets/snippets/html.snippets
+badd +39 visilab/inc/lang/de.ini
+badd +1 /var/www/VisilabTedBaker/website/inc/conf.ini
+badd +11 /var/www/VisilabTedBaker/website/index.php
+badd +1 /var/www/VisilabTedBaker/website/jeu.php
+badd +21 /var/www/VisilabTedBaker/website/participation.php
+badd +56 /var/www/VisilabTedBaker/website/contest.php
+badd +1 /var/www/VisilabTedBaker/website/test.php
+badd +80 /var/www/VisilabTedBaker/website/participations.php
+badd +20 /var/www/VisilabTedBaker/website/ajax/manage.php
+badd +62 /var/www/VisilabTedBaker/website/moderate.php
+badd +259 /var/www/VisilabTedBaker/website/inc/class_participation.php
+badd +1 /var/www/VisilabTedBaker/website/inc/lang/glasses.fr.json
+badd +39 /var/www/VisilabTedBaker/website/inc/lang/fr.ini
+badd +39 /var/www/VisilabTedBaker/website/inc/lang/de.ini
+badd +1 /var/www/VisilabTedBaker/website/conf.ini.php
+badd +157 /var/www/VisilabTedBaker/website/inc/common_func.php
+badd +4 /var/www/VisilabTedBaker/website/crossdomain.xml
+badd +3 /var/www/VisilabTedBaker/website/ajax/test2.php
+badd +1 koc..frame.user.js
+badd +2605 koc-0.0.1.js
+badd +25 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/pricePositioning.landing.tpl
+badd +58 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/entityList.tpl
+badd +98 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/overviewEntity.tpl
+badd +356 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/header.tpl
+badd +71 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/distribution.tpl
+badd +118 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/pricePositioningProductDetail.tpl
+badd +49 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/entityTab.tpl
+badd +203 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/documentList.results.tpl
+badd +222 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/sales.tpl
+badd +204 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/userList.tpl
+badd +14 ~/projects/Richemont/TheEye/svn/theeye/htdocs/deleteDocument.php
+badd +135 ~/projects/Richemont/TheEye/svn/theeye/htdocs/search.php
+badd +81 ~/projects/Richemont/TheEye/svn/theeye/htdocs/sales.php
+badd +6 ~/projects/Richemont/TheEye/svn/theeye/htdocs/ckeditor/plugins/a11yhelp/lang/he.js
+badd +157 ~/projects/Richemont/TheEye/svn/theeye/htdocs/entityList.php
+badd +80 ~/projects/Richemont/TheEye/svn/theeye/htdocs/createProduct.php
+badd +66 ~/projects/Richemont/TheEye/svn/theeye/htdocs/distribution.php
+badd +22 ~/projects/Richemont/TheEye/svn/theeye/htdocs/productCatalogue.php
+badd +139 ~/projects/Richemont/TheEye/svn/theeye/include/visualList.form.php
+badd +33 ~/projects/Richemont/TheEye/svn/theeye/include/entityTab.php
+badd +25 ~/projects/Richemont/TheEye/svn/theeye/lib/smarty/SmartyTheEye.class.php
+badd +20 ~/projects/Richemont/TheEye/svn/theeye/htdocs/subscribenewsletterthankyou.php
+badd +30 ~/projects/Richemont/TheEye/svn/theeye/htdocs/productCatalogue.reloadFilters.php
+badd +3 ~/projects/Richemont/TheEye/svn/theeye/htdocs/_dev/clean.php
+badd +18 ~/projects/Richemont/TheEye/svn/theeye/htdocs/pricePositioning.searchResult.php
+badd +150 ~/projects/Richemont/TheEye/svn/theeye/htdocs/productDetail.php
+badd +33 ~/projects/Richemont/TheEye/svn/theeye/htdocs/download_zip.php
+badd +45 ~/projects/Richemont/TheEye/svn/theeye/htdocs/productCatalogue.searchResult.php
+badd +15 ~/projects/Richemont/TheEye/svn/theeye/include/overviewEntity.pieChartInfo.php
+badd +127 ~/projects/Richemont/TheEye/svn/theeye/lib/tab/Tab.class.php
+badd +1 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/top.tpl
+badd +1 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/distribution.displayDocuments.tpl
+badd +484 ~/projects/Richemont/TheEye/svn/theeye/lib/Sales.class.php
+badd +642 ~/projects/Richemont/TheEye/svn/theeye/lib/AnnualFigures.class.php
+badd +56 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/search.tpl
+badd +454 ~/projects/Richemont/TheEye/svn/theeye/lib/ProductCatalogueUtility.class.php
+badd +53 ~/projects/Richemont/TheEye/svn/theeye/lib/PHPExcel/Shared/File.php
+badd +57 ~/projects/Richemont/TheEye/svn/theeye/lib/Paginate.class.php
+badd +1 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/entityList
+badd +9 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/pricePositioningPriceComparison.compare2selections.tpl
+badd +16 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/documentList.tpl
+badd +69 ~/projects/Richemont/TheEye/svn/theeye/lib/smarty/plugins/function.html_imgTag.php
+badd +374 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/createProduct.tpl
+badd +31 ~/projects/Richemont/TheEye/svn/theeye/htdocs/pricePositioning.reloadFilters.php
+badd +9 ~/projects/Richemont/TheEye/svn/theeye/htdocs/pricePositioningUpdateRemoveFromView.php
+badd +2114 104299.user.js
+badd +34 examples.txt
+badd +1 pistes.txt
+badd +17 koc.fb-popup.user.js
+badd +145 ~/projects/Richemont/TheEye/svn/theeye/lib/ldap/LDAPSearch.class.php
+badd +604 ~/projects/Richemont/TheEye/svn/theeye/lib/Login.class.php
+badd +28 ~/projects/Richemont/TheEye/svn/theeye/lib/db/DBvisitors.class.php
+badd +269 ~/projects/Richemont/TheEye/svn/theeye/htdocs/createUser.php
+badd +56 ~/projects/Richemont/TheEye/svn/theeye/htdocs/login.php
+badd +72 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/productDetail.tpl
+badd +56 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/productDetail.detail.tpl
+badd +62 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/productCatalogue.tpl
+badd +21 ~/projects/Richemont/TheEye/svn/theeye/htdocs/css/productCatalogue.css
+badd +1 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/productCatalogue.filter.include.tpl
+badd +3 seed.txt
+badd +300 jquery-ui-1.8.16.custom.css
+badd +9 koc.frame.user.js
+badd +17 ~/projects/Richemont/TheEye/svn/theeye/lib/db/DBvproducts.class.php
+badd +16 ~/projects/Richemont/TheEye/svn/theeye/lib/db/DBv_dataitems_vproducts_merged.class.php
+badd +18 ~/projects/Richemont/TheEye/svn/theeye/lib/db/DBsimpleViewDataitem.class.php
+badd +71 ~/projects/Richemont/TheEye/svn/theeye/lib/db/DBsimpleObject.class.php
+badd +1 toto
+badd +37 ~/projects/Richemont/TheEye/svn/theeye/htdocs/js/productCatalogue.js
+badd +19 ~/projects/Richemont/TheEye/svn/theeye/htdocs/css/selectCheckList.css
+badd +63 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/productCatalogue.header.tpl
+badd +60 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/productCatalogue.footer.tpl
+badd +13 debug-frame.user.js
+badd +11541 kabam-code.js
+badd +13 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/footer.tpl
+badd +36 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/login.tpl
+badd +29 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/pricePositioning.footer.tpl
+badd +21 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/pricePositioning.header.tpl
+badd +23 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/headerLogin.tpl
+badd +673 ~/projects/Richemont/TheEye/svn/theeye/htdocs/css/pricePositioning.css
+badd +884 test.html
+badd +10 /var/www/JTI-ingredients/trunk/templates/header.tpl
+badd +1 /tmp/debug.log
+badd +1 ~/debug.log
+badd +1 /var/www/JTI-ingredients/trunk/htdocs/glossary.php
+badd +56 /var/www/mypiaget/trunk/components/com_roombooking/includes_f/reports.html.php
+badd +1 /var/www/VisilabTedBaker/website/inc/lang/glasses.de.json
+badd +395 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioning.class.php
+badd +743 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioningUtility.class.php
+badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioningV2.class.php
+badd +58 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/Paginate.class.php
+badd +14 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.landing.php
+badd +7 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.V2.landing.php
+badd +11 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.landing.tpl
+badd +90 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.landing.tpl
+badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.V2.ajax.php
+badd +37 /var/www/VisilabTedBaker/website/inc/sendToFriend.php
+badd +28 /var/www/VisilabTedBaker/website/js/main.js
+badd +820 /var/www/VisilabTedBaker/website/css/style.css
+badd +38 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.header.tpl
+badd +49 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.footer.tpl
+badd +21 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/importDataItems.tpl
+badd +8 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/left.tpl
+badd +28 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/smarty/SmartyTheEye.class.php
+badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/js/libs/rte-light/rte.css
+badd +11 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/top.tpl
+args /var/www/VisilabTedBaker/website/ajax/manage.php
+set lines=67 columns=231
+edit ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioningV2.class.php
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -340,128 +540,50 @@ setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=0
-setlocal fml=5
+setlocal fdl=5
+setlocal fml=2
 setlocal fdn=15
 setlocal fen
-31
+10
 silent! normal zo
-53
+11
 silent! normal zo
-64
+14
 silent! normal zo
-64
-silent! normal zo
-53
-silent! normal zo
-31
-normal zc
-264
-silent! normal zo
-267
-silent! normal zo
-268
-silent! normal zo
-269
-silent! normal zo
-269
-silent! normal zo
-275
-normal zc
-269
-silent! normal zo
-269
-silent! normal zo
-299
-silent! normal zo
-299
-silent! normal zo
-305
-normal zc
-299
-silent! normal zo
-299
-silent! normal zo
-268
-silent! normal zo
-267
-silent! normal zo
-264
-silent! normal zo
-732
-silent! normal zo
-790
-silent! normal zo
-820
-silent! normal zo
-790
-silent! normal zo
-732
-silent! normal zo
-let s:l = 819 - ((26 * winheight(0) + 30) / 61)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-819
-normal! 043l
-lcd ~/projects/Richemont_TheEye/svn/theeye/lib
-tabedit ~/projects/Richemont_TheEye/svn/theeye/smarty/templates/productCatalogue.fix.tpl
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=11
-setlocal fml=5
-setlocal fdn=15
-setlocal fen
 23
 silent! normal zo
-41
+11
 silent! normal zo
-43
+30
+silent! normal zo
+33
 silent! normal zo
 44
 silent! normal zo
-51
-silent! normal zo
-57
-silent! normal zo
-88
-silent! normal zo
-93
-silent! normal zo
-96
-silent! normal zo
-93
-silent! normal zo
-88
-silent! normal zo
-57
+30
 silent! normal zo
 51
 silent! normal zo
-44
+54
 silent! normal zo
-43
+63
 silent! normal zo
-41
+51
 silent! normal zo
-23
+70
 silent! normal zo
-let s:l = 96 - ((35 * winheight(0) + 30) / 61)
+81
+silent! normal zo
+10
+silent! normal zo
+let s:l = 75 - ((20 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-96
-normal! 055l
-lcd ~/projects/Richemont_TheEye/svn/theeye/smarty/templates
-tabedit ~/projects/Richemont_TheEye/svn/theeye/htdocs/_import/productCatalogue.fix.php
+75
+normal! 095l
+lcd ~/projects/Richemont/TheEye/theeye/svn/theeye/lib
+tabedit ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.V2.ajax.php
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -472,54 +594,262 @@ setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
-setlocal fdl=0
-setlocal fml=5
+setlocal fdl=5
+setlocal fml=2
 setlocal fdn=15
 setlocal fen
-155
+4
 silent! normal zo
-189
+7
 silent! normal zo
-189
+8
 silent! normal zo
-201
+8
 silent! normal zo
-202
+9
 silent! normal zo
-202
+11
 silent! normal zo
-201
+13
 silent! normal zo
-263
+16
 silent! normal zo
-264
+20
 silent! normal zo
-276
+8
 silent! normal zo
-264
+8
 silent! normal zo
-263
+24
 silent! normal zo
-297
+24
 silent! normal zo
-312
+24
 silent! normal zo
-312
+7
 silent! normal zo
-332
+31
 silent! normal zo
-297
+4
 silent! normal zo
-155
+38
 silent! normal zo
-let s:l = 329 - ((40 * winheight(0) + 30) / 61)
+let s:l = 15 - ((12 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-329
-normal! 013l
-lcd ~/projects/Richemont_TheEye/svn/theeye/lib
-tabnext 1
+15
+normal! 037l
+lcd ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs
+tabedit ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.landing.tpl
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=5
+setlocal fml=2
+setlocal fdn=15
+setlocal fen
+10
+silent! normal zo
+17
+silent! normal zo
+19
+silent! normal zo
+20
+silent! normal zo
+19
+silent! normal zo
+26
+silent! normal zo
+28
+silent! normal zo
+26
+silent! normal zo
+32
+silent! normal zo
+33
+silent! normal zo
+37
+silent! normal zo
+32
+silent! normal zo
+41
+silent! normal zo
+42
+silent! normal zo
+45
+silent! normal zo
+41
+silent! normal zo
+17
+silent! normal zo
+10
+silent! normal zo
+56
+silent! normal zo
+61
+silent! normal zo
+66
+silent! normal zo
+73
+silent! normal zo
+79
+silent! normal zo
+85
+silent! normal zo
+90
+silent! normal zo
+94
+silent! normal zo
+99
+silent! normal zo
+56
+silent! normal zo
+105
+silent! normal zo
+111
+silent! normal zo
+116
+silent! normal zo
+117
+silent! normal zo
+122
+silent! normal zo
+123
+silent! normal zo
+124
+silent! normal zo
+125
+silent! normal zo
+124
+silent! normal zo
+131
+silent! normal zo
+133
+silent! normal zo
+140
+silent! normal zo
+140
+silent! normal zo
+142
+silent! normal zo
+146
+silent! normal zo
+148
+silent! normal zo
+150
+silent! normal zo
+155
+silent! normal zo
+156
+silent! normal zo
+159
+silent! normal zo
+155
+silent! normal zo
+163
+silent! normal zo
+150
+silent! normal zo
+148
+silent! normal zo
+140
+silent! normal zo
+140
+silent! normal zo
+131
+silent! normal zo
+175
+silent! normal zo
+178
+silent! normal zo
+181
+silent! normal zo
+182
+silent! normal zo
+181
+silent! normal zo
+185
+silent! normal zo
+178
+silent! normal zo
+123
+silent! normal zo
+122
+silent! normal zo
+116
+silent! normal zo
+let s:l = 46 - ((26 * winheight(0) + 32) / 65)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+46
+normal! 011l
+lcd ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates
+tabedit ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/js/libs/rte-light/rte.css
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=5
+setlocal fml=2
+setlocal fdn=15
+setlocal fen
+2
+silent! normal zo
+10
+silent! normal zo
+15
+silent! normal zo
+32
+silent! normal zo
+let s:l = 16 - ((13 * winheight(0) + 28) / 56)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+16
+normal! 018l
+lcd ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates
+tabedit ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.V2.landing.php
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=5
+setlocal fml=2
+setlocal fdn=15
+setlocal fen
+8
+silent! normal zo
+17
+silent! normal zo
+let s:l = 15 - ((12 * winheight(0) + 28) / 56)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+15
+normal! 0
+lcd ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates
+tabnext 3
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -532,7 +862,7 @@ endif
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 unlet SessionLoad
-tabnext 1
+tabnext 3
 1wincmd w
 
 " vim: ft=vim ro nowrap smc=128
