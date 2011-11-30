@@ -141,9 +141,15 @@ set splitright    " A new window is put right of the current one
 
 "syntax files for jquery and smarty
 	au BufRead,BufNewFile jquery.*.js set filetype=javascript syntax=jquery
-	au BufRead,BufNewFile *.tpl set filetype=smarty
-	au BufRead,BufNewFile *.json setfiletype javascript
-	"au BufRead,BufNewFile *.jsp setfiletype html
+	au BufRead,BufNewFile *.tpl set filetype=html syntax=smarty
+
+"Plugins snipmates syntax
+	let g:snipMate.scope_aliases['xhtml'] = 'html,javascript,css,jquery'
+	let g:snipMate.scope_aliases['html'] = 'html,javascript,css,jquery'
+	let g:snipMate.scope_aliases['tpl'] = 'html,javascript,css,jquery,smarty'
+	let g:snipMate.scope_aliases['smarty'] = 'smarty,html,javascript,css,jquery'
+	let g:snipMate.scope_aliases['php'] = 'php,html,javascript,css,jquery,sql'
+	let g:snipMate['no_match_completion_feedkeys_chars'] = "\<tab>"
 
 "Plugin: NERDTree - use colors, cursorline and return/enter key
 	let NERDChristmasTree = 1
