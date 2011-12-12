@@ -770,3 +770,7 @@
 
 	" xmledit (https://github.com/gmoulin/xmledit)
 		> or >> while typing (x)(ht)ml
+
+	" Command-T (http://www.vim.org/scripts/script.php?script_id=3025)
+		<leader>t ou <leader>b (buffer)
+		ou :CommandT /...

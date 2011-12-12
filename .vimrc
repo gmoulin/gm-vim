@@ -95,7 +95,7 @@ set wrap					" turn on word wrapping
 	set noexpandtab|retab!		" keep tab as real tab and transform converted tab back
 
 "tags
-	set tags=./tags;$HOME/vimtags ";/
+	set tags=./tags;
 
 set splitbelow    " A new window is put below of the current one
 set splitright    " A new window is put right of the current one
@@ -119,16 +119,10 @@ set splitright    " A new window is put right of the current one
 	set directory=$HOME/.vimswap/
 	set viewdir=$HOME/.vimviews/
 	"Persistent undo
-	try
-		"if MySys() == "windows"
-		"  set undodir=C:\Windows\Temp
-		"else
-		  set undodir=~/.vim_undodir
-		"endif
-
-		set undofile
-	catch
-	endtry
+	set undodir=$HOME/.vimundo/
+	set undofile
+	set undolevels=1000 "maximum number of changes that can be undone
+	set undoreload=10000
 
 "Enable indent folding
 	set foldmethod=indent	"folding uses indentation for folding
@@ -142,14 +136,6 @@ set splitright    " A new window is put right of the current one
 "syntax files for jquery and smarty
 	au BufRead,BufNewFile jquery.*.js set filetype=javascript syntax=jquery
 	au BufRead,BufNewFile *.tpl set filetype=html syntax=smarty
-
-"Plugins snipmates syntax
-	let g:snipMate.scope_aliases['xhtml'] = 'html,javascript,css,jquery'
-	let g:snipMate.scope_aliases['html'] = 'html,javascript,css,jquery'
-	let g:snipMate.scope_aliases['tpl'] = 'html,javascript,css,jquery,smarty'
-	let g:snipMate.scope_aliases['smarty'] = 'smarty,html,javascript,css,jquery'
-	let g:snipMate.scope_aliases['php'] = 'php,html,javascript,css,jquery,sql'
-	let g:snipMate['no_match_completion_feedkeys_chars'] = "\<tab>"
 
 "Plugin: NERDTree - use colors, cursorline and return/enter key
 	let NERDChristmasTree = 1
@@ -176,12 +162,12 @@ set splitright    " A new window is put right of the current one
 	let Tlist_Exit_OnlyWindow=1
 	let Tlist_File_Fold_Auto_Close = 1
 
-" Remove trailing whitespaces and ^M chars
-	"autocmd FileType c,cpp,java,php,js,phtml,tpl,jsp,html,css,python,twig,xml,yml autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
-
 let g:checksyntax_auto = 1
 
 let g:snips_author = 'Guillaume Moulin <gmoulin.dev@gmail.com>'
+
+"Plugins snipmates syntax
+	"let g:snipMate['no_match_completion_feedkeys_chars'] = "\<tab>"
 
 
 " When vimrc is edited, reload it
@@ -200,6 +186,8 @@ let g:user_zen_leader_key='<c-y>'
 let g:user_zen_expandabbr_key = '<c-y>'
 let g:use_zen_complete_tag = 1
 
+" Plugin Command-T
+set wildignore+=*.o,*.obj,.git,.svn,*.php.tpl
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
