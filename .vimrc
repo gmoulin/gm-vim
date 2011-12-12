@@ -162,8 +162,6 @@ set splitright    " A new window is put right of the current one
 	let Tlist_Exit_OnlyWindow=1
 	let Tlist_File_Fold_Auto_Close = 1
 
-let g:checksyntax_auto = 1
-
 let g:snips_author = 'Guillaume Moulin <gmoulin.dev@gmail.com>'
 
 "Plugins snipmates syntax
@@ -188,6 +186,10 @@ let g:use_zen_complete_tag = 1
 
 " Plugin Command-T
 set wildignore+=*.o,*.obj,.git,.svn,*.php.tpl
+
+" Plugin Syntastic
+let g:syntastic_auto_jump=1
+let g:syntastic_auto_loc_list=1
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

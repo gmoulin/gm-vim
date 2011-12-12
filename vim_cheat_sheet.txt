@@ -572,8 +572,6 @@
 ************************************************************************
 * Plugins                                                              *
 ************************************************************************
-	" checksyntax (https://github.com/tomtom/checksyntax_vim)
-
 	" delimitMate (https://github.com/Raimondi/delimitMate)
 		https://github.com/Raimondi/delimitMate/blob/master/doc/delimitMate.txt
 
@@ -774,3 +772,7 @@
 	" Command-T (http://www.vim.org/scripts/script.php?script_id=3025)
 		<leader>t ou <leader>b (buffer)
 		ou :CommandT /...
+	
+	" syntastic (http://github.com/scrooloose/syntastic/)
+		https://github.com/scrooloose/syntastic/blob/master/doc/syntastic.txt
+	
