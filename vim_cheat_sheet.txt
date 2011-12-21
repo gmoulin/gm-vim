@@ -49,6 +49,7 @@
 ************************************************************************
 	<c-]> Navigating to the function definition
 	<c-t> Returning back to function call
+	<c-w> <c-]> open the definition in a split horizontal window
 	:ta /^get Navigating through a list of function names
 	:ts – shows the list.
 	:tn – goes to the next tag in that list.
@@ -768,6 +769,7 @@
 
 	" xmledit (https://github.com/gmoulin/xmledit)
 		> or >> while typing (x)(ht)ml
+		need to create symbolic links in ftplugin folder (html.vim -> xml.vim, idem with javascript.vim and smarty.vim)
 
 	" Command-T (http://www.vim.org/scripts/script.php?script_id=3025)
 		<leader>t ou <leader>b (buffer)

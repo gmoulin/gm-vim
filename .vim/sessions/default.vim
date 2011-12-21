@@ -1,5 +1,5 @@
 " ~/gm-vim/.vim/sessions/default.vim: Vim session script.
-" Created by session.vim 1.4.20 on 12 December 2011 at 17:05:27.
+" Created by session.vim 1.4.20 on 20 December 2011 at 17:59:13.
 " Open this file in Vim and run :source % to restore your session.
 
 set guioptions=aegirLt
@@ -12,23 +12,27 @@ if &background != 'dark'
 	set background=dark
 endif
 if !exists('g:colors_name') || g:colors_name != 'vividchalk' | colorscheme vividchalk | endif
-call setqflist([{'lnum': 0, 'col': 0, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/home/gmoulin/pricePositioning.V2.criteria.php', 'text': 'ack: --type-add: Type "TPL" does not exist, creating with ".tpl" ...'}, {'lnum': 44, 'col': 8, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/home/gmoulin/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.filter.include.tpl', 'text': '					//@todo'}, {'lnum': 88, 'col': 7, 'valid': 1, 'vcol': 0, 'nr': -1, 'type': '', 'pattern': '', 'filename': '/home/gmoulin/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.criteria.tpl', 'text': '				//@todo sql operand'}])
+call setqflist([])
 let SessionLoad = 1
 if &cp | set nocp | endif
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/js
+cd ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +47 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.filter.include.tpl
-badd +38 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.criteria.tpl
+badd +286 ~/projects/Richemont/TheEye/theeye/svn/theeye/include/config.inc.php
+badd +121 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/db/DBobject.class.php
+badd +233 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioningV2.class.php
+badd +58 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioningUtility.class.php
+badd +25 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.filter.include.tpl
+badd +79 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.criteria.tpl
 badd +923 /var/www/mypiaget/trunk/components/com_carbooking/includes_f/meeting.edit.php
 badd +159 /var/www/mypiaget/trunk/components/com_carbooking/includes_f/meeting.delete.php
-badd +81 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.searchResult.php
-badd +80 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/productCatalogueExport.php
+badd +19 pricePositioning.searchResult.php
+badd +80 productCatalogueExport.php
 badd +65 /var/www/mypiaget/trunk/modules/mod_myspace.php
 badd +478 ~/projects/Richemont/TheEye/svn/theeye/lib/PHPExcel/Calculation/LookupRef.php
 badd +89 ~/projects/Richemont/TheEye/svn/theeye/lib/db/DBv_dataitems_vproducts.class.php
@@ -137,7 +141,7 @@ badd +32 /media/rts/webapps/rts/WEB-INF/template/navigation/include/css.jsp
 badd +50 /media/rts/webapps/rts/static/css/dossiers.css
 badd +884 /media/rts/webapps/rts/static/css/tsr.css
 badd +159 ~/projects/RTS/ca-demenage.php
-badd +237 ~/gm-vim/.vim/bundle/snipmate-snippets/snippets/php.snippets
+badd +62 ~/gm-vim/.vim/bundle/snipmate-snippets/snippets/php.snippets
 badd +10 /var/www/suivfin/inc/suivfin.ini
 badd +1 /var/www/suivfin/smarty/templates/payment.template.html
 badd +6 /var/www/suivfin/smarty/templates/payment.tpl
@@ -148,7 +152,7 @@ badd +284 /media/rts/webapps/rts/WEB-INF/template/wireframe/external.jsp
 badd +41 /media/rts/webapps/rts/WEB-INF/template/wireframe/external/header-common.jsp
 badd +83 /media/rts/webapps/rts/WEB-INF/template/wireframe/external/header.jsp
 badd +190 /media/rts/webapps/rts/static/css/header-common.css
-badd +1707 /var/www/suivfin/css/style.css
+badd +1722 /var/www/suivfin/css/style.css
 badd +251 /var/www/suivfin/ajax/payment.php
 badd +113 /media/rts/webapps/rts/static/css/emissions/la-puce-a-l-oreille.css
 badd +9 /media/rts/webapps/rts/static/css/divertissement/ca-demenage.css
@@ -507,7 +511,7 @@ badd +29 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/pricePositionin
 badd +21 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/pricePositioning.header.tpl
 badd +23 ~/projects/Richemont/TheEye/svn/theeye/smarty/templates/headerLogin.tpl
 badd +673 ~/projects/Richemont/TheEye/svn/theeye/htdocs/css/pricePositioning.css
-badd +884 ~/koc/test.html
+badd +55 ~/koc/test.html
 badd +10 /var/www/JTI-ingredients/trunk/templates/header.tpl
 badd +1 /tmp/debug.log
 badd +1 ~/debug.log
@@ -515,86 +519,83 @@ badd +1 /var/www/JTI-ingredients/trunk/htdocs/glossary.php
 badd +56 /var/www/mypiaget/trunk/components/com_roombooking/includes_f/reports.html.php
 badd +1 /var/www/VisilabTedBaker/website/inc/lang/glasses.de.json
 badd +475 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioning.class.php
-badd +776 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioningUtility.class.php
-badd +283 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioningV2.class.php
 badd +58 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/Paginate.class.php
-badd +14 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.landing.php
-badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.V2.landing.php
+badd +14 pricePositioning.landing.php
+badd +1 pricePositioning.V2.landing.php
 badd +11 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.landing.tpl
-badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.landing.tpl
-badd +19 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.V2.ajax.php
+badd +80 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.landing.tpl
+badd +19 pricePositioning.V2.ajax.php
 badd +37 /var/www/VisilabTedBaker/website/inc/sendToFriend.php
 badd +65 /var/www/VisilabTedBaker/website/js/main.js
 badd +820 /var/www/VisilabTedBaker/website/css/style.css
 badd +60 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.header.tpl
-badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.footer.tpl
+badd +3 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.footer.tpl
 badd +21 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/importDataItems.tpl
 badd +8 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/left.tpl
 badd +42 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/smarty/SmartyTheEye.class.php
 badd +16 libs/rte-light/rte.css
 badd +11 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/top.tpl
-badd +15 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.V2.home.php
+badd +15 pricePositioning.V2.home.php
 badd +21 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.home.tpl
-badd +11 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.head.tpl
-badd +10 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.footer.tpl
-badd +69 pricePositioning.V2.landing.js
-badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/css/pricePositioning.V2.landing.css
-badd +107 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.home.watches.tpl
-badd +27 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.V2.home.watches.php
-badd +198 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/css/pricePositioning.V2.page.css
+badd +13 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.head.tpl
+badd +15 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.footer.tpl
+badd +20 js/pricePositioning.V2.landing.js
+badd +1 css/pricePositioning.V2.landing.css
+badd +164 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.home.watches.tpl
+badd +18 pricePositioning.V2.home.watches.php
+badd +84 css/pricePositioning.V2.page.css
 badd +4 ~/projects/Richemont/TheEye/theeye/svn/theeye/sql/pptV2/page_text.sql
-badd +39 pricePositioning.V2.home.js
-badd +58 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/home.php
-badd +502 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/css/productCatalogue.css
+badd +44 js/pricePositioning.V2.home.js
+badd +58 home.php
+badd +502 css/productCatalogue.css
 badd +8 libs/rte-light/jquery.rte.min.js
-badd +6 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/ckeditor/ckeditor.js
-badd +282 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/createProduct.php
-badd +288 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/productList.php
-badd +41 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/editSearchTips.php
+badd +6 ckeditor/ckeditor.js
+badd +282 createProduct.php
+badd +288 productList.php
+badd +41 editSearchTips.php
 badd +15 /var/www/mypiaget/trunk/components/com_ged/flash.configure.php
 badd +993 /var/www/mypiaget/trunk/components/com_ged/class.ged.php
 badd +118 /var/www/mypiaget/trunk/components/com_storetraffic/storetraffic.html.php
 badd +159 /var/www/mypiaget/trunk/components/com_storetraffic/storetraffic.class.php
 badd +28 /var/www/mypiaget/trunk/components/com_storetraffic/storetraffic.php
-badd +1 libs/jquery.printarea.js
-badd +48 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/ProductCatalogueUtility.class.php
+badd +1 js/libs/jquery.printarea.js
+badd +400 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/ProductCatalogueUtility.class.php
 badd +64 /var/www/VisilabTedBaker/website/mass_moderation.php
 badd +37 /var/www/VisilabTedBaker/website/admin/mass_moderation.php
 badd +106 /var/www/mypiaget/trunk/components/com_roombooking/roombooking.html.php
 badd +1 /var/www/mypiaget/trunk/components/com_roombooking/includes_f/overview.html.html
 badd +350 /var/www/mypiaget/trunk/components/com_roombooking/includes_f/overview.html.php
 badd +366 /var/www/mypiaget/trunk/components/com_carbooking/includes_f/overview.html.php
-badd +94 ~/projects/Richemont/TheEye/theeye/svn/theeye/include/config.inc.php
 badd +15 /var/www/mypiaget/trunk/components/com_ged/ged.conf.php
 badd +846 /var/www/mypiaget/trunk/components/com_roombooking/includes_f/meeting.edit.php
 badd +181 /var/www/mypiaget/trunk/components/com_roombooking/includes_f/meeting.delete.php
 badd +435 /var/www/mypiaget/trunk/components/com_roombooking/includes_f/meeting.php
 badd +33 /var/www/mypiaget/trunk/administrator/components/com_carbooking/classes/carbooking.utils.class.php
 badd +1 /var/www/mypiaget/sql/trafic_boutique_suppression_doublons.sql
-badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/_import/productCatalogue.import.php
+badd +1 _import/productCatalogue.import.php
 badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/pricePositioning.import.php
-badd +185 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/_import/pricePositioning.import.php
+badd +185 _import/pricePositioning.import.php
 badd +11 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/ProductCatalogueImport.class.php
 badd +28 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioningImport.class.php
 badd +424 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/db/DBv_dataitems_vproducts.class.php
-badd +44 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.V2.criteria.php
-badd +424 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/css/pricePositioning.V2.normalize.css
-badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/css/pricePositioning.V2.criteria.css
-badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/css/pricePositioning.V2.popup.css
+badd +108 pricePositioning.V2.criteria.php
+badd +383 css/pricePositioning.V2.normalize.css
+badd +199 css/pricePositioning.V2.criteria.css
+badd +1 css/pricePositioning.V2.popup.css
 badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/home.tpl
 badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/home.center.tpl
 badd +10 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/home.center.news.tpl
-badd +79 productCatalogue.js
-badd +116 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/productCatalogue.php
-badd +32 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.tpl
-badd +94 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/productCatalogue.reloadFilters.php
-badd +10 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/ckeditor/_source/plugins/uicolor/yui/yui.js
+badd +598 js/productCatalogue.js
+badd +24 productCatalogue.php
+badd +4 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.tpl
+badd +26 productCatalogue.reloadFilters.php
+badd +10 ckeditor/_source/plugins/uicolor/yui/yui.js
 badd +69 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/Stash/Box.class.php
 badd +400 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/Stash/Stash.class.php
 badd +16 ~/koc/test.postmessage.html
 badd +12 ~/koc/test.iframe.html
 badd +5 ~/koc/test.iframewrapper.html
-badd +27 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/productCatalogue.searchResult.php
+badd +44 productCatalogue.searchResult.php
 badd +447 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/db/DBsearchQueryString.class.php
 badd +23 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/db/DBsimpleObject.class.php
 badd +464 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/db/DBsimpleViewDataitem.class.php
@@ -602,18 +603,18 @@ badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/cache/stash/86a98cd1b65007
 badd +70 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.excel.tpl
 badd +286 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/createProduct.tpl
 badd +9 ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/ProductCatalogueFix.class.php
-badd +23 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/_importScripts/MigrateDIVisuals.java
-badd +23 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/_dev/randomProductsForProductCatalog.php
-badd +133 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/search.php
-badd +149 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/productDetail.php
-badd +47 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/_export/exportProductsToExcel.php
-badd +90 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/manageList.php
-badd +24 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/css/selectCheckList.css
-badd +34 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/download_zip.php
-badd +83 ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/productCatalogueProductDetail.php
-badd +764 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib/ProductImport.class.php
-badd +1 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/htdocs/product.import.php
-badd +188 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/smarty/templates/product.import.tpl
+badd +23 _importScripts/MigrateDIVisuals.java
+badd +23 _dev/randomProductsForProductCatalog.php
+badd +133 search.php
+badd +149 productDetail.php
+badd +47 _export/exportProductsToExcel.php
+badd +90 manageList.php
+badd +1 css/selectCheckList.css
+badd +34 download_zip.php
+badd +83 productCatalogueProductDetail.php
+badd +354 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib/ProductImport.class.php
+badd +254 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/htdocs/product.import.php
+badd +143 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/smarty/templates/product.import.tpl
 badd +100 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib/ProductCatalogueUtility.class.php
 badd +23 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib/PricePositioningUtility.class.php
 badd +44 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/smarty/templates/left.tpl
@@ -624,165 +625,29 @@ badd +125 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib/Copy\ of
 badd +125 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib/FileUtility.class.php
 badd +16 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib/db/DBv_dataitems_vproducts_merged.class.php
 badd +179 ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib/db/DBv_dataitems_vproducts.class.php
-args ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/ckeditor/ckeditor.js
-set lines=67 columns=231
-edit ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/smarty/templates/product.import.tpl
+badd +1 ~/projects/Richemont/TheEye/theeye/svn/theeye/include/config.inc.p
+badd +35 _dev/clean.php
+badd +30 pricePositioning.reloadFilters.php
+badd +9 pricePositioningUpdateRemoveFromView.php
+badd +3 ~/projects/Richemont/TheEye/theeye/svn/theeye/sql/pptV2/pp_visitor_default.sql
+badd +1 ~/koc/index.html
+badd +603 js/pricePositioning.V2.criteria.js
+badd +5 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.products.dropdown.tpl
+badd +97 ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/productCatalogue.result.tpl
+badd +0 js/libs/modernizr-2.0.6.custom.min.js
+badd +14 pricePositioning.V2.indexEvolution.php
+badd +14 pricePositioning.V2.positioningAnalysis.php
+badd +14 pricePositioning.V2.priceEvolution.php
+badd +31 pricePositioning.V2.priceMapping.php
+args pricePositioning.V2.indexEvolution.php pricePositioning.V2.positioningAnalysis.php pricePositioning.V2.priceEvolution.php pricePositioning.V2.priceMapping.php
+set lines=64 columns=147
+edit pricePositioning.V2.ajax.php
 set splitbelow splitright
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 argglobal
-setlocal fdm=indent
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=11
-setlocal fml=2
-setlocal fdn=15
-setlocal fen
-4
-silent! normal zo
-4
-silent! normal zo
-23
-silent! normal zo
-24
-silent! normal zo
-30
-silent! normal zo
-31
-silent! normal zo
-31
-silent! normal zo
-39
-silent! normal zo
-41
-silent! normal zo
-39
-silent! normal zo
-30
-silent! normal zo
-52
-silent! normal zo
-54
-silent! normal zo
-55
-silent! normal zo
-62
-silent! normal zo
-70
-silent! normal zo
-71
-silent! normal zo
-72
-silent! normal zo
-75
-silent! normal zo
-78
-silent! normal zo
-81
-silent! normal zo
-84
-silent! normal zo
-71
-silent! normal zo
-89
-silent! normal zo
-91
-silent! normal zo
-94
-silent! normal zo
-89
-silent! normal zo
-98
-silent! normal zo
-99
-silent! normal zo
-102
-silent! normal zo
-105
-silent! normal zo
-102
-silent! normal zo
-98
-silent! normal zo
-70
-silent! normal zo
-62
-silent! normal zo
-55
-silent! normal zo
-54
-silent! normal zo
-115
-silent! normal zo
-117
-silent! normal zo
-119
-silent! normal zo
-117
-silent! normal zo
-115
-silent! normal zo
-126
-silent! normal zo
-128
-silent! normal zo
-130
-silent! normal zo
-128
-silent! normal zo
-126
-silent! normal zo
-137
-silent! normal zo
-139
-silent! normal zo
-139
-silent! normal zo
-137
-silent! normal zo
-215
-silent! normal zo
-217
-silent! normal zo
-218
-silent! normal zo
-219
-silent! normal zo
-220
-silent! normal zo
-221
-silent! normal zo
-220
-silent! normal zo
-219
-silent! normal zo
-225
-silent! normal zo
-218
-silent! normal zo
-217
-silent! normal zo
-215
-silent! normal zo
-52
-silent! normal zo
-23
-silent! normal zo
-let s:l = 143 - ((31 * winheight(0) + 32) / 65)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-143
-normal! 04l
-lcd ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib
-tabedit ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/htdocs/product.import.php
-set splitbelow splitright
-set nosplitright
-wincmd t
-set winheight=1 winwidth=1
-argglobal
+edit pricePositioning.V2.ajax.php
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -791,57 +656,54 @@ setlocal fdl=5
 setlocal fml=2
 setlocal fdn=15
 setlocal fen
-20
+4
 silent! normal zo
-20
-normal zc
-89
+7
 silent! normal zo
-91
+8
 silent! normal zo
-91
-normal zc
-89
+8
 silent! normal zo
-153
+25
 silent! normal zo
-234
+8
 silent! normal zo
-235
+8
 silent! normal zo
-235
+26
 silent! normal zo
-234
+26
 silent! normal zo
-341
+30
 silent! normal zo
-342
+38
 silent! normal zo
-343
+43
 silent! normal zo
-343
+47
 silent! normal zo
-376
+26
 silent! normal zo
-342
+26
 silent! normal zo
-341
+7
 silent! normal zo
-153
+4
 silent! normal zo
-let s:l = 254 - ((33 * winheight(0) + 32) / 65)
+let s:l = 33 - ((30 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-254
-normal! 062l
-lcd ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib
-tabedit ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib/ProductImport.class.php
+33
+normal! 05l
+lcd ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs
+tabedit ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioningV2.class.php
 set splitbelow splitright
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 argglobal
+edit ~/projects/Richemont/TheEye/theeye/svn/theeye/lib/PricePositioningV2.class.php
 setlocal fdm=indent
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -850,388 +712,857 @@ setlocal fdl=5
 setlocal fml=2
 setlocal fdn=15
 setlocal fen
-28
+10
 silent! normal zo
-48
+52
 silent! normal zo
-54
-silent! normal zo
-59
-silent! normal zo
-61
+53
 silent! normal zo
 63
 silent! normal zo
-65
+52
 silent! normal zo
-67
+73
 silent! normal zo
-59
+74
+silent! normal zo
+85
+silent! normal zo
+73
+silent! normal zo
+10
+silent! normal zo
+let s:l = 340 - ((55 * winheight(0) + 31) / 62)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+340
+normal! 0103l
+lcd ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs
+tabedit ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.criteria.tpl
+set splitbelow splitright
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+edit ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates/pricePositioning.V2.criteria.tpl
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=12
+setlocal fml=2
+setlocal fdn=15
+setlocal fen
+3
+silent! normal zo
+15
+silent! normal zo
+16
+silent! normal zo
+19
+silent! normal zo
+16
+silent! normal zo
+23
+silent! normal zo
+15
+silent! normal zo
+28
+silent! normal zo
+29
+silent! normal zo
+32
+silent! normal zo
+29
+silent! normal zo
+36
+silent! normal zo
+28
+silent! normal zo
+42
+silent! normal zo
+44
+silent! normal zo
+42
+silent! normal zo
+53
+silent! normal zo
+54
+silent! normal zo
+58
+silent! normal zo
+63
+silent! normal zo
+54
+silent! normal zo
+58
+silent! normal zo
+63
+silent! normal zo
+53
+silent! normal zo
+68
+silent! normal zo
+70
 silent! normal zo
 72
 silent! normal zo
-75
+73
+silent! normal zo
+77
 silent! normal zo
 78
 silent! normal zo
+79
+silent! normal zo
+80
+silent! normal zo
+81
+silent! normal zo
+86
+silent! normal zo
+88
+silent! normal zo
+89
+silent! normal zo
 90
 silent! normal zo
-75
+89
 silent! normal zo
-48
+88
 silent! normal zo
-104
+86
 silent! normal zo
-106
+80
 silent! normal zo
-114
+79
 silent! normal zo
-106
+78
 silent! normal zo
-118
+77
 silent! normal zo
-104
+73
 silent! normal zo
-127
+72
 silent! normal zo
-132
+70
+silent! normal zo
+121
+silent! normal zo
+123
+silent! normal zo
+128
+silent! normal zo
+121
+silent! normal zo
+68
 silent! normal zo
 137
-silent! normal zo
-139
-silent! normal zo
-144
-silent! normal zo
-145
-silent! normal zo
-144
 silent! normal zo
 149
 silent! normal zo
 137
 silent! normal zo
+154
+silent! normal zo
+155
+silent! normal zo
 156
 silent! normal zo
+158
+silent! normal zo
+159
+silent! normal zo
+160
+silent! normal zo
 161
+silent! normal zo
+162
 silent! normal zo
 163
 silent! normal zo
-167
-silent! normal zo
-170
-silent! normal zo
-171
-silent! normal zo
-172
-silent! normal zo
-171
-silent! normal zo
-170
-silent! normal zo
-167
+162
 silent! normal zo
 161
 silent! normal zo
-180
+160
 silent! normal zo
-132
+184
 silent! normal zo
-28
+185
 silent! normal zo
-198
+185
 silent! normal zo
-198
-normal zc
-270
+186
 silent! normal zo
-271
+185
 silent! normal zo
-272
+185
 silent! normal zo
-273
+184
 silent! normal zo
-273
+159
 silent! normal zo
-302
+158
 silent! normal zo
-273
+156
 silent! normal zo
-273
+155
 silent! normal zo
-314
+154
 silent! normal zo
-314
-silent! normal zo
-339
-silent! normal zo
-314
-silent! normal zo
-314
-silent! normal zo
-272
-silent! normal zo
-271
-normal zc
-270
-silent! normal zo
-387
-silent! normal zo
-387
-normal zc
-410
-silent! normal zo
-413
-silent! normal zo
-419
-silent! normal zo
-423
-silent! normal zo
-419
-silent! normal zo
-427
-silent! normal zo
-432
-silent! normal zo
-427
-silent! normal zo
-437
-silent! normal zo
-439
-silent! normal zo
-444
-silent! normal zo
-449
-silent! normal zo
-454
-silent! normal zo
-459
-silent! normal zo
-464
-silent! normal zo
-469
-silent! normal zo
-473
-silent! normal zo
-475
-silent! normal zo
-473
-silent! normal zo
-481
-silent! normal zo
-483
-silent! normal zo
-481
-silent! normal zo
-437
-silent! normal zo
-495
-silent! normal zo
-496
-silent! normal zo
-502
-silent! normal zo
-503
-silent! normal zo
-508
-silent! normal zo
-512
-silent! normal zo
-503
-silent! normal zo
-517
-silent! normal zo
-520
-silent! normal zo
-525
-silent! normal zo
-528
-silent! normal zo
-531
-silent! normal zo
-520
-silent! normal zo
-537
-silent! normal zo
-540
-silent! normal zo
-546
-silent! normal zo
-549
-silent! normal zo
-552
-silent! normal zo
-540
-silent! normal zo
-558
-silent! normal zo
-559
-silent! normal zo
-558
-silent! normal zo
-537
-silent! normal zo
-566
-silent! normal zo
-567
-silent! normal zo
-566
-silent! normal zo
-573
-silent! normal zo
-575
-silent! normal zo
-573
-silent! normal zo
-517
-silent! normal zo
-582
-silent! normal zo
-583
-silent! normal zo
-582
-silent! normal zo
-588
-silent! normal zo
-589
-silent! normal zo
-591
-silent! normal zo
-593
-silent! normal zo
-595
-silent! normal zo
-596
-silent! normal zo
-599
-silent! normal zo
-601
-silent! normal zo
-599
-silent! normal zo
-595
-silent! normal zo
-593
-silent! normal zo
-591
-silent! normal zo
-608
-silent! normal zo
-611
-silent! normal zo
-614
-silent! normal zo
-611
-silent! normal zo
-589
-silent! normal zo
-588
-silent! normal zo
-502
-silent! normal zo
-495
-silent! normal zo
-410
-silent! normal zo
-639
-silent! normal zo
-650
-silent! normal zo
-650
-normal zc
-658
-silent! normal zo
-658
-normal zc
-671
-silent! normal zo
-707
-silent! normal zo
-707
-silent! normal zo
-671
-normal zc
-725
-silent! normal zo
-726
-silent! normal zo
-731
-silent! normal zo
-736
-silent! normal zo
-738
-silent! normal zo
-747
-silent! normal zo
-749
-silent! normal zo
-766
-silent! normal zo
-799
-silent! normal zo
-800
-silent! normal zo
-806
-silent! normal zo
-810
-silent! normal zo
-800
-silent! normal zo
-813
-silent! normal zo
-799
-silent! normal zo
-820
-silent! normal zo
-825
-silent! normal zo
-830
-silent! normal zo
-832
-silent! normal zo
-833
-silent! normal zo
-835
-silent! normal zo
-833
-silent! normal zo
-838
-silent! normal zo
-832
-silent! normal zo
-830
-silent! normal zo
-845
-silent! normal zo
-846
-silent! normal zo
-845
-silent! normal zo
-726
-silent! normal zo
-725
-silent! normal zo
-639
-silent! normal zo
-900
-silent! normal zo
-901
-silent! normal zo
-902
-silent! normal zo
-902
-silent! normal zo
-901
-silent! normal zo
-900
-silent! normal zo
-let s:l = 354 - ((92 * winheight(0) + 32) / 65)
+let s:l = 90 - ((38 * winheight(0) + 31) / 62)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-354
-normal! 027l
-lcd ~/projects/Richemont/TheEye/theeye/svn/branches/prod_v1.5/lib
-tabnext 3
+90
+normal! 012l
+lcd ~/projects/Richemont/TheEye/theeye/svn/theeye/smarty/templates
+tabedit ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/js/pricePositioning.V2.criteria.js
+set splitbelow splitright
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+edit ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/js/pricePositioning.V2.criteria.js
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=5
+setlocal fml=2
+setlocal fdn=15
+setlocal fen
+2
+silent! normal zo
+21
+silent! normal zo
+26
+silent! normal zo
+33
+silent! normal zo
+34
+silent! normal zo
+35
+silent! normal zo
+34
+silent! normal zo
+38
+silent! normal zo
+33
+normal zc
+45
+silent! normal zo
+48
+silent! normal zo
+50
+silent! normal zo
+52
+silent! normal zo
+52
+silent! normal zo
+53
+silent! normal zo
+59
+silent! normal zo
+63
+silent! normal zo
+65
+silent! normal zo
+59
+silent! normal zo
+52
+silent! normal zo
+52
+silent! normal zo
+50
+silent! normal zo
+53
+silent! normal zo
+59
+silent! normal zo
+63
+silent! normal zo
+65
+silent! normal zo
+59
+silent! normal zo
+48
+silent! normal zo
+45
+silent! normal zo
+21
+silent! normal zo
+2
+silent! normal zo
+73
+silent! normal zo
+73
+silent! normal zo
+74
+silent! normal zo
+76
+silent! normal zo
+82
+silent! normal zo
+74
+silent! normal zo
+102
+silent! normal zo
+108
+silent! normal zo
+113
+silent! normal zo
+108
+silent! normal zo
+121
+silent! normal zo
+122
+silent! normal zo
+123
+silent! normal zo
+126
+silent! normal zo
+131
+silent! normal zo
+132
+silent! normal zo
+135
+silent! normal zo
+131
+silent! normal zo
+122
+silent! normal zo
+121
+silent! normal zo
+145
+silent! normal zo
+145
+silent! normal zo
+151
+silent! normal zo
+154
+silent! normal zo
+155
+silent! normal zo
+160
+silent! normal zo
+162
+silent! normal zo
+164
+silent! normal zo
+174
+silent! normal zo
+175
+silent! normal zo
+174
+silent! normal zo
+164
+silent! normal zo
+179
+silent! normal zo
+185
+silent! normal zo
+190
+silent! normal zo
+194
+silent! normal zo
+190
+silent! normal zo
+179
+silent! normal zo
+162
+silent! normal zo
+160
+silent! normal zo
+200
+silent! normal zo
+202
+silent! normal zo
+218
+silent! normal zo
+224
+silent! normal zo
+230
+silent! normal zo
+238
+silent! normal zo
+230
+silent! normal zo
+251
+silent! normal zo
+252
+silent! normal zo
+257
+silent! normal zo
+251
+silent! normal zo
+202
+silent! normal zo
+200
+silent! normal zo
+155
+silent! normal zo
+154
+silent! normal zo
+151
+silent! normal zo
+276
+silent! normal zo
+279
+silent! normal zo
+145
+silent! normal zo
+102
+normal zc
+288
+silent! normal zo
+290
+silent! normal zo
+291
+silent! normal zo
+293
+silent! normal zo
+295
+silent! normal zo
+290
+normal zc
+300
+silent! normal zo
+301
+silent! normal zo
+305
+silent! normal zo
+312
+silent! normal zo
+312
+silent! normal zo
+315
+silent! normal zo
+319
+silent! normal zo
+321
+silent! normal zo
+323
+silent! normal zo
+328
+silent! normal zo
+329
+silent! normal zo
+332
+silent! normal zo
+328
+silent! normal zo
+336
+silent! normal zo
+323
+silent! normal zo
+321
+silent! normal zo
+312
+silent! normal zo
+312
+silent! normal zo
+300
+normal zc
+346
+silent! normal zo
+350
+silent! normal zo
+355
+silent! normal zo
+350
+normal zc
+365
+silent! normal zo
+368
+silent! normal zo
+374
+silent! normal zo
+377
+silent! normal zo
+374
+silent! normal zo
+365
+silent! normal zo
+288
+silent! normal zo
+387
+silent! normal zo
+393
+silent! normal zo
+394
+silent! normal zo
+396
+silent! normal zo
+398
+silent! normal zo
+401
+silent! normal zo
+404
+silent! normal zo
+406
+silent! normal zo
+412
+silent! normal zo
+412
+silent! normal zo
+418
+silent! normal zo
+419
+silent! normal zo
+422
+silent! normal zo
+419
+silent! normal zo
+418
+silent! normal zo
+429
+silent! normal zo
+432
+silent! normal zo
+412
+silent! normal zo
+404
+silent! normal zo
+394
+silent! normal zo
+438
+silent! normal zo
+444
+silent! normal zo
+445
+silent! normal zo
+444
+silent! normal zo
+451
+silent! normal zo
+393
+normal zc
+461
+silent! normal zo
+462
+silent! normal zo
+463
+silent! normal zo
+466
+silent! normal zo
+470
+silent! normal zo
+472
+silent! normal zo
+479
+silent! normal zo
+481
+silent! normal zo
+479
+silent! normal zo
+470
+silent! normal zo
+488
+silent! normal zo
+490
+silent! normal zo
+492
+silent! normal zo
+488
+silent! normal zo
+462
+silent! normal zo
+497
+silent! normal zo
+499
+silent! normal zo
+510
+silent! normal zo
+513
+silent! normal zo
+514
+silent! normal zo
+519
+silent! normal zo
+524
+silent! normal zo
+513
+silent! normal zo
+531
+silent! normal zo
+532
+silent! normal zo
+539
+silent! normal zo
+544
+silent! normal zo
+531
+silent! normal zo
+510
+silent! normal zo
+497
+silent! normal zo
+461
+silent! normal zo
+551
+silent! normal zo
+553
+silent! normal zo
+555
+silent! normal zo
+562
+silent! normal zo
+563
+silent! normal zo
+562
+silent! normal zo
+571
+silent! normal zo
+553
+silent! normal zo
+551
+silent! normal zo
+579
+silent! normal zo
+580
+silent! normal zo
+584
+silent! normal zo
+591
+silent! normal zo
+580
+silent! normal zo
+579
+silent! normal zo
+73
+silent! normal zo
+598
+silent! normal zo
+73
+silent! normal zo
+600
+silent! normal zo
+600
+silent! normal zo
+600
+silent! normal zo
+604
+silent! normal zo
+603
+silent! normal zo
+607
+silent! normal zo
+614
+silent! normal zo
+615
+silent! normal zo
+620
+silent! normal zo
+634
+silent! normal zo
+620
+silent! normal zo
+649
+silent! normal zo
+654
+silent! normal zo
+649
+silent! normal zo
+615
+silent! normal zo
+614
+silent! normal zo
+607
+silent! normal zo
+604
+silent! normal zo
+let s:l = 93 - ((48 * winheight(0) + 31) / 62)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+93
+normal! 033l
+lcd ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/js
+tabedit ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/css/pricePositioning.V2.criteria.css
+set splitbelow splitright
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+edit ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/css/pricePositioning.V2.criteria.css
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=5
+setlocal fml=2
+setlocal fdn=15
+setlocal fen
+2
+silent! normal zo
+16
+silent! normal zo
+22
+silent! normal zo
+29
+silent! normal zo
+35
+silent! normal zo
+42
+silent! normal zo
+58
+silent! normal zo
+67
+silent! normal zo
+77
+silent! normal zo
+85
+silent! normal zo
+95
+silent! normal zo
+99
+silent! normal zo
+105
+silent! normal zo
+109
+silent! normal zo
+113
+silent! normal zo
+118
+silent! normal zo
+142
+silent! normal zo
+155
+silent! normal zo
+161
+silent! normal zo
+171
+silent! normal zo
+175
+silent! normal zo
+179
+silent! normal zo
+183
+silent! normal zo
+189
+silent! normal zo
+194
+silent! normal zo
+201
+silent! normal zo
+206
+silent! normal zo
+216
+silent! normal zo
+221
+silent! normal zo
+225
+silent! normal zo
+226
+silent! normal zo
+225
+silent! normal zo
+216
+silent! normal zo
+221
+silent! normal zo
+226
+silent! normal zo
+let s:l = 56 - ((11 * winheight(0) + 31) / 62)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+56
+normal! 0
+lcd ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/css
+tabedit ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.V2.criteria.php
+set splitbelow splitright
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+4argu
+edit ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs/pricePositioning.V2.criteria.php
+setlocal fdm=indent
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=5
+setlocal fml=2
+setlocal fdn=15
+setlocal fen
+14
+silent! normal zo
+30
+silent! normal zo
+33
+silent! normal zo
+40
+silent! normal zo
+57
+silent! normal zo
+65
+silent! normal zo
+71
+silent! normal zo
+77
+silent! normal zo
+71
+silent! normal zo
+83
+silent! normal zo
+91
+silent! normal zo
+92
+silent! normal zo
+93
+silent! normal zo
+95
+silent! normal zo
+96
+silent! normal zo
+97
+silent! normal zo
+96
+silent! normal zo
+100
+silent! normal zo
+101
+silent! normal zo
+100
+silent! normal zo
+95
+silent! normal zo
+93
+silent! normal zo
+92
+silent! normal zo
+108
+silent! normal zo
+112
+silent! normal zo
+113
+silent! normal zo
+112
+silent! normal zo
+118
+silent! normal zo
+119
+silent! normal zo
+122
+silent! normal zo
+118
+silent! normal zo
+91
+silent! normal zo
+14
+silent! normal zo
+let s:l = 131 - ((42 * winheight(0) + 31) / 62)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+131
+normal! 041l
+lcd ~/projects/Richemont/TheEye/theeye/svn/theeye/htdocs
+tabnext 4
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -1244,7 +1575,7 @@ endif
 let &so = s:so_save | let &siso = s:siso_save
 doautoall SessionLoadPost
 unlet SessionLoad
-tabnext 3
+tabnext 4
 1wincmd w
 
 " vim: ft=vim ro nowrap smc=128
