@@ -32,7 +32,7 @@ set wrap					" turn on word wrapping
 
 "completion limitation (-i pas les fichiers include, -u pas les fichiers non ouvert)
 set complete=.,w,b,t
-set tags=./tags;/
+set tags=./tags,tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags
 
 
 " vim conf
@@ -172,12 +172,11 @@ let g:snips_author = 'Guillaume Moulin <gmoulin.dev@gmail.com>'
 " When vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
-
 " Plugin DelimitMate
 let delimitMate_nesting_quotes = ['`']
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
-let delimitMate_matchpairs = "(:),[:],{:}"
+let delimitMate_matchpairs = '(:),[:],{:}'
 
 
 " Plugin ZenCoding
@@ -189,54 +188,10 @@ let g:use_zen_complete_tag = 1
 set wildignore+=*.o,*.obj,.git,.svn,*.php.tpl
 
 " Plugin Syntastic
-let g:syntastic_auto_jump=1
+"let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings=1 "only errors prevents the save and popup the quickfix list
-"let g:syntastic_javascript_jsl_conf=""
-	"jsl conf parameters
-	"+no_return_value # function {0} does not always return a value
-	"+duplicate_formal # duplicate formal argument {0}
-	"-equal_as_assign # test for equality (==) mistyped as assignment (=)?{0}
-	"+var_hides_arg # variable {0} hides argument
-	"+redeclared_var # redeclaration of {0} {1}
-	"-anon_no_return_value # anonymous function does not always return a value
-	"+missing_semicolon # missing semicolon
-	"+meaningless_block # meaningless block; curly braces have no impact
-	"-comma_separated_stmts # multiple statements separated by commas (use semicolons?)
-	"+unreachable_code # unreachable code
-	"+missing_break # missing break statement
-	"-missing_break_for_last_case # missing break statement for last case in switch
-	"-comparison_type_conv # comparisons against null, 0, true, false, or an empty string allowing implicit type conversion (use === or !==)
-	"-inc_dec_within_stmt # increment (++) and decrement (--) operators used as part of greater statement
-	"-useless_void # use of the void type may be unnecessary (void is always undefined)
-	"+multiple_plus_minus # unknown order of operations for successive plus (e.g. x+++y) or minus (e.g. x---y) signs
-	"+use_of_label # use of label
-	"-block_without_braces # block statement without curly braces
-	"+leading_decimal_point # leading decimal point may indicate a number or an object member
-	"+trailing_decimal_point # trailing decimal point may indicate a number or an object member
-	"+octal_number # leading zeros make an octal number
-	"+nested_comment # nested comment
-	"+misplaced_regex # regular expressions should be preceded by a left parenthesis, assignment, colon, or comma
-	"+ambiguous_newline # unexpected end of line; it is ambiguous whether these lines are part of the same statement
-	"+empty_statement # empty statement or extra semicolon
-	"-missing_option_explicit # the "option explicit" control comment is missing
-	"+partial_option_explicit # the "option explicit" control comment, if used, must be in the first script tag
-	"+dup_option_explicit # duplicate "option explicit" control comment
-	"+useless_assign # useless assignment
-	"+ambiguous_nested_stmt # block statements containing block statements should use curly braces to resolve ambiguity
-	"+ambiguous_else_stmt # the else statement could be matched with one of multiple if statements (use curly braces to indicate intent)
-	"-missing_default_case # missing default case in switch statement
-	"+duplicate_case_in_switch # duplicate case in switch statements
-	"+default_not_at_end # the default case is not at the end of the switch statement
-	"+legacy_cc_not_understood # couldn't understand control comment using /*@keyword@*/ syntax
-	"+jsl_cc_not_understood # couldn't understand control comment using /*jsl:keyword*/ syntax
-	"+useless_comparison # useless comparison; comparing identical expressions
-	"+with_statement # with statement hides undeclared variables; use temporary variable instead
-	"+trailing_comma_in_array # extra comma is not recommended in array initializers
-	"+assign_to_function_call # assignment to a function call
-	"+parseint_missing_radix # parseInt missing radix parameter
-	"+lambda_assign_requires_semicolon
-
+let g:syntastic_javascript_checker = 'jsl' "gjslint, jslint, jsl, jshint
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

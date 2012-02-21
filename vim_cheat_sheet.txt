@@ -1,4 +1,20 @@
 ************************************************************************
+* BI VPN                                                               *
+************************************************************************
+	sudo bi_vpn.sh connect
+	sudo bi_vpn.sh disconnect
+
+************************************************************************
+* mass recursive folder permissions                                    *
+************************************************************************
+	find ./ -type d -exec chmod 755 {} \;
+	
+************************************************************************
+* mass submodule update                                                *
+************************************************************************
+	git submodule -q foreach git pull -q origin master
+
+************************************************************************
 * Cursor movement                                                      *
 ************************************************************************
 	h - move left
@@ -50,6 +66,7 @@
 	<c-]> Navigating to the function definition
 	<c-t> Returning back to function call
 	<c-w> <c-]> open the definition in a split horizontal window
+	<c-w> <c-]> <c-w> T - open the definition in a split horizontal window then move it in a new tab
 	:ta /^get Navigating through a list of function names
 	:ts – shows the list.
 	:tn – goes to the next tag in that list.
@@ -57,6 +74,14 @@
 	:tf – goes to the function which is in the first of the list.
 	:tl – goes to the function which is in the last of the list.
 
+************************************************************************
+* Code Navigation With mark                                            *
+************************************************************************
+	mk      - mark current position (can use a-z)
+ 	'k      - move to mark k
+ 	d'k     - delete from current position to mark k
+ 	'a-z    - same file
+ 	'A-Z    - beteween files
 
 
 
@@ -411,6 +436,7 @@
 	ctrl-w w - switch between windows
 	ctrl-w q - Quit a window
 	ctrl-w v - Split windows vertically
+	ctrl-w T - move window in a new tab
 
 
 
@@ -750,7 +776,7 @@
 
 		insert mode <C-Y> - expend abbreviation
 		visual mode v_<C-Y> - wrap with abbreviation
-		To jump next point that need to edit, type |<C-Y>n| in insert mode
+		To jump next point that need to edit, type |<C-Y>n| in ilnsert mode
 		To jump previous point that need to edit, type |<C-Y>N| in insert mode
 		To remove tag in the block, type |<C-Y>k|
 		To join multi line text like following, type |J|
