@@ -8,7 +8,12 @@
 * mass recursive folder permissions                                    *
 ************************************************************************
 	find ./ -type d -exec chmod 755 {} \;
-	
+
+************************************************************************
+* mass recursive .svn folders deletion                                 *
+************************************************************************
+	rm -rf `find . -name .svn`
+
 ************************************************************************
 * mass submodule update                                                *
 ************************************************************************
@@ -791,7 +796,7 @@
 		--type=TYPE, --type=noTYPE
 
 	" MRU Most Recent Used files (https://github.com/vim-scripts/mru.vim)
-		:MRU		
+		:MRU
 
 	" xmledit (https://github.com/gmoulin/xmledit)
 		> or >> while typing (x)(ht)ml
@@ -800,7 +805,27 @@
 	" Command-T (http://www.vim.org/scripts/script.php?script_id=3025)
 		<leader>t ou <leader>b (buffer)
 		ou :CommandT /...
-	
+
 	" syntastic (http://github.com/scrooloose/syntastic/)
 		https://github.com/scrooloose/syntastic/blob/master/doc/syntastic.txt
-	
+
+	" browser auto reload (https://github.com/lordm/vim-browser-reload-linux)
+		https://github.com/lordm/vim-browser-reload-linux/blob/master/README.rst
+
+		:ChromeReload      //reload "Google Chrome"
+		:FirefoxReload     //reload "Firefox"
+		:OperaReload       //reload "Opera"
+		:AllBrowserReload  //reload all browser
+
+		start auto reload:
+		:ChromeReloadStart
+		:FirefoxReloadStart
+		:OperaReloadStart
+		:AllBrowserReloadStart
+
+		stop auto reload:
+		:ChromeReloadStop
+		:FirefoxReloadStop
+		:OperaReloadStop
+		:AllBrowserReloadStart
+

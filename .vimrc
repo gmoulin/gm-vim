@@ -41,14 +41,14 @@ set tags=./tags,tags,../tags,../../tags,../../../tags,../../../../tags,../../../
 	set showmode				" display current working mode
 	set title					" show title
 	set number					" enable line numbers
-	set shortmess+=I 			" Disable intro screen
+	set shortmess+=I			" Disable intro screen
 	"set lazyredraw				" Don't redraw screen during macros
 	set ttyfast					" Improves redrawing for newer computers
 	set history=100				" Only store past 100 commands
 	set undolevels=150			" Only undo up to 150 times
 	"set shortmess+=filmnrxoOtT	" abbrev. of messages (avoids 'hit enter')
 	set titlestring=%f title	" Display filename in terminal window
-	set cursorline 				" highlight current line
+	set cursorline				" highlight current line
 	if has('cmdline_info')
 		set ruler " show the ruler
 		set rulerformat=%30(%=\:b%n%y%m%r%w\ %l,%c%V\ %P%) " a ruler on steroids
@@ -98,8 +98,8 @@ set tags=./tags,tags,../tags,../../tags,../../../tags,../../../../tags,../../../
 	set smarttab				" smart tabulation and backspace
 	set noexpandtab|retab!		" keep tab as real tab and transform converted tab back
 
-set splitbelow    " A new window is put below of the current one
-set splitright    " A new window is put right of the current one
+set splitbelow	  " A new window is put below of the current one
+set splitright	  " A new window is put right of the current one
 
 " remove trailing whitespaces on save
 	autocmd BufWritePre * :%s/\s\+$//e
@@ -191,7 +191,13 @@ set wildignore+=*.o,*.obj,.git,.svn,*.php.tpl
 "let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings=1 "only errors prevents the save and popup the quickfix list
-let g:syntastic_javascript_checker = 'jsl' "gjslint, jslint, jsl, jshint
+let g:syntastic_javascript_checker = 'jslint' "gjslint, jslint, jsl, jshint
+
+let g:syntastic_javascript_jslint_conf = '--white --undef --nomen --regexp --plusplus --bitwise --newcap --sloppy --vars --evil --indent --unparam'
+
+" Plugin Browser reload
+"let g:returnAppFlag = 1 "default is 1
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -207,29 +213,29 @@ let g:syntastic_javascript_checker = 'jsl' "gjslint, jslint, jsl, jshint
 
 
 	"function! CmdLine(str)
-	"    exe "menu Foo.Bar :" . a:str
-	"    emenu Foo.Bar
-	"    unmenu Foo
+	"	 exe "menu Foo.Bar :" . a:str
+	"	 emenu Foo.Bar
+	"	 unmenu Foo
 	"endfunction
 
 	" From an idea by Michael Naumann
 	"function! VisualSearch(direction) range
-	"    let l:saved_reg = @"
-	"    execute "normal! vgvy"
+	"	 let l:saved_reg = @"
+	"	 execute "normal! vgvy"
 	"
-	"    let l:pattern = escape(@", '\\/.*$^~[]')
-	"    let l:pattern = substitute(l:pattern, "\n$", "", "")
+	"	 let l:pattern = escape(@", '\\/.*$^~[]')
+	"	 let l:pattern = substitute(l:pattern, "\n$", "", "")
 	"
-	"    if a:direction == 'b'
-	"        execute "normal ?" . l:pattern . "^M"
-	"    elseif a:direction == 'gv'
-	"        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
-	"    elseif a:direction == 'f'
-	"        execute "normal /" . l:pattern . "^M"
-	"    endif
+	"	 if a:direction == 'b'
+	"		 execute "normal ?" . l:pattern . "^M"
+	"	 elseif a:direction == 'gv'
+	"		 call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+	"	 elseif a:direction == 'f'
+	"		 execute "normal /" . l:pattern . "^M"
+	"	 endif
 	"
-	"    let @/ = l:pattern
-	"    let @" = l:saved_reg
+	"	 let @/ = l:pattern
+	"	 let @" = l:saved_reg
 	"endfunction
 
 """""""""""""""""""""""""""""""""""""""""
@@ -244,7 +250,7 @@ let g:syntastic_javascript_checker = 'jsl' "gjslint, jslint, jsl, jshint
 	nmap <leader>a <c-^> " Switch to alternate window (mnemonic: ,alternate)
 
 	"for pasting from outside vim
-	set pastetoggle=<F12>       " Use <F12> to paste in text from other apps
+	set pastetoggle=<F12>		" Use <F12> to paste in text from other apps
 
 	"navigation between tabs
 	nmap th :tabfirst<CR>
