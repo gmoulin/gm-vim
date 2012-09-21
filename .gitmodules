@@ -58,3 +58,9 @@
 [submodule ".vim/bundle/vim-browser-reload-linux"]
 	path = .vim/bundle/vim-browser-reload-linux
 	url = https://github.com/lordm/vim-browser-reload-linux.git
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule ".vim/bundle/vim-less"]
+	path = .vim/bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
