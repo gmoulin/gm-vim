@@ -4,20 +4,46 @@
 	sudo bi_vpn.sh connect
 	sudo bi_vpn.sh disconnect
 
+	update password !
+
+
+
 ************************************************************************
 * mass recursive folder permissions                                    *
 ************************************************************************
 	find ./ -type d -exec chmod 755 {} \;
+
+
 
 ************************************************************************
 * mass recursive .svn folders deletion                                 *
 ************************************************************************
 	rm -rf `find . -name .svn`
 
+
+
 ************************************************************************
 * mass submodule update                                                *
 ************************************************************************
 	git submodule -q foreach git pull -q origin master
+
+
+
+************************************************************************
+* bash                                                                 *
+************************************************************************
+	Ctrl-B  Move left on command line
+	Ctrl-F  Move right on command line
+	Alt-B   Move back a word
+	Alt-F   Move forward a word
+	Ctrl-A  Move to the start of the line
+	Ctrl-E  Move to the end of the line
+	Ctrl-P  Move up in history
+	Ctrl-N  Move down in history
+	Ctrl-R  Search history backward
+	Ctrl-S  Search history forward
+
+
 
 ************************************************************************
 * Cursor movement                                                      *
@@ -26,8 +52,11 @@
 	j - move down
 	k - move up
 	l - move right
+	gj - move one row down
+	gk - move one row up
 	ctrl-b - page up
 	ctrl-f - page down
+	zz - center screen on cursor
 	% - jump to matching brace
 	w - jump by start of words (punctuation considered words)
 	W - jump by words (spaces separate words)
@@ -78,6 +107,8 @@
 	:tp - goes to the previous tag in that list.
 	:tf – goes to the function which is in the first of the list.
 	:tl – goes to the function which is in the last of the list.
+
+
 
 ************************************************************************
 * Code Navigation With mark                                            *
@@ -201,6 +232,7 @@
 	<C-V> then select "column(s)" with motion commands (win32 <C-Q>)
 
 
+
 ************************************************************************
 * Number increment                                                     *
 ************************************************************************
@@ -268,6 +300,7 @@
 	2yy - yank 2 lines
 	yw - yank word
 	y$ - yank to end of line
+	Y - yank the whole line
 	p - put (paste) the clipboard after cursor/current line
 	P - put (paste) before cursor/current line
 	:set paste - avoid unexpected effects in pasting

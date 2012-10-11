@@ -113,6 +113,7 @@ set splitright	  " A new window is put right of the current one
 	set gdefault		" imply /g when s///
 	set magic			" ^ and $ are special symbols
 	set showmatch		" show matching brackets/parenthesis
+	set scrolloff=10	" 10 lines from screen top or bottom when searching
 
 " backups are nice ...
 	set backup
@@ -122,7 +123,6 @@ set splitright	  " A new window is put right of the current one
 	"Persistent undo
 	set undodir=$HOME/.vimundo/
 	set undofile
-	set undolevels=1000 "maximum number of changes that can be undone
 	set undoreload=10000
 
 "Enable indent folding
@@ -190,10 +190,11 @@ set wildignore+=*.o,*.obj,.git,.svn,*.php.tpl
 " Plugin Syntastic
 "let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
-let g:syntastic_quiet_warnings=1 "only errors prevents the save and popup the quickfix list
+let g:syntastic_quiet_warnings=0 "only errors prevents the save and popup the quickfix list
 let g:syntastic_javascript_checker = 'jslint' "gjslint, jslint, jsl, jshint
 
 let g:syntastic_javascript_jslint_conf = '--white --undef --nomen --regexp --plusplus --bitwise --newcap --sloppy --vars --evil --indent --unparam'
+let g:syntastic_javascript_jshint_conf = '$HOME/gm-vim/.jshintrc'
 
 " Plugin Browser reload
 "let g:returnAppFlag = 1 "default is 1
@@ -302,6 +303,9 @@ let g:syntastic_javascript_jslint_conf = '--white --undef --nomen --regexp --plu
 
 	" Fast editing of the .vimrc (with autocmd to reload conf on saving)
 	map <leader>vrc :e! ~/.vimrc<cr>
+
+	"Fast editing of the .vimrc (with autocmd to reload conf on saving)
+	map <leader>lcs :e! ~/gm-vim/vim_cheat_sheet.txt<cr>
 
 	"VISUAL MODE (easy to add other HTML Tags)
 	":vmap sb "zdi<b><C-R>z</b><ESC>  : wrap <b></b> around VISUALLY selected Text
