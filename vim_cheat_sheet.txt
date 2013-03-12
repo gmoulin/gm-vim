@@ -1,53 +1,87 @@
-************************************************************************
-* BI VPN                                                               *
-************************************************************************
+*************************************************************************
+* BI VPN																*
+*************************************************************************
 	sudo bi_vpn.sh connect
 	sudo bi_vpn.sh disconnect
 
-	update password !
+	update password ! ( /etc/ppp/chap-secrets )
+	change network interface if needed (wlan0 for wifi, else ppp0)
 
 
 
-************************************************************************
-* mass recursive folder permissions                                    *
-************************************************************************
+*************************************************************************
+* BI SVN tagging														*
+*************************************************************************
+	svn copy https://scm.b-i.com/svn/JTI-ingredients/trunk https://scm.b-i.com/svn/JTI-ingredients/tags/REC_1.7/ -m"release 1.7"
+	svn switch https://scm.b-i.com/svn/JTI-ingredients/tags/REC_1.7 .
+
+
+
+*************************************************************************
+* mass recursive folder permissions										*
+*************************************************************************
 	find ./ -type d -exec chmod 755 {} \;
 
 
 
-************************************************************************
-* mass recursive .svn folders deletion                                 *
-************************************************************************
+*************************************************************************
+* mass recursive .svn folders deletion									*
+*************************************************************************
 	rm -rf `find . -name .svn`
 
 
 
-************************************************************************
-* mass submodule update                                                *
-************************************************************************
+*************************************************************************
+* Git mass submodule update												*
+*************************************************************************
 	git submodule -q foreach git pull -q origin master
 
 
 
-************************************************************************
-* bash                                                                 *
-************************************************************************
-	Ctrl-B  Move left on command line
-	Ctrl-F  Move right on command line
-	Alt-B   Move back a word
-	Alt-F   Move forward a word
-	Ctrl-A  Move to the start of the line
-	Ctrl-E  Move to the end of the line
-	Ctrl-P  Move up in history
-	Ctrl-N  Move down in history
-	Ctrl-R  Search history backward
-	Ctrl-S  Search history forward
+*************************************************************************
+* Git fork update														*
+*************************************************************************
+	git remote add original git://url-to-original-repo
+	git fetch original
+	git merge original/master
+	git push
 
 
 
-************************************************************************
-* Cursor movement                                                      *
-************************************************************************
+*************************************************************************
+* Git merge conflict													*
+*************************************************************************
+	git mergetool
+
+
+
+*************************************************************************
+* bash																	*
+*************************************************************************
+	Ctrl-B	Move left on command line
+	Ctrl-F	Move right on command line
+	Alt-B	Move back a word
+	Alt-F	Move forward a word
+	Ctrl-A	Move to the start of the line
+	Ctrl-E	Move to the end of the line
+	Ctrl-P	Move up in history
+	Ctrl-N	Move down in history
+	Ctrl-R	Search history backward
+	Ctrl-S	Search history forward
+
+
+
+*************************************************************************
+* network synchronize													*
+*************************************************************************
+	scp -r e8dev3:/var/www/carandache/img/* .
+	scp -r [ssh shortcut]:path/to/files/* local/path/to/files/.
+
+
+
+*************************************************************************
+* Cursor movement														*
+*************************************************************************
 	h - move left
 	j - move down
 	k - move up
@@ -74,29 +108,29 @@
 
 
 
-************************************************************************
-* Code Navigation                                                      *
-************************************************************************
+*************************************************************************
+* Code Navigation														*
+*************************************************************************
 	[{ - jump back to the "{" at the start of the current code block
 	gd - jump from the use of a variable to its local declaration
 	m - mark the line (bookmark)
 	ma mark the line as 'a' bookmark
-	* # g* g#           : find word under cursor (<cword>) (forwards/backwards)
+	* # g* g#			: find word under cursor (<cword>) (forwards/backwards)
 	[I - show lines matching word under cursor <cword> (super)
 
 
 
-************************************************************************
-* Code Navigation With Grep                                            *
-************************************************************************
+*************************************************************************
+* Code Navigation With Grep												*
+*************************************************************************
 	:vimgrep /pattern/gj ./**/*.ext
 	:cw ou :copen
 
 
 
-************************************************************************
-* Code Navigation With CTAGS                                           *
-************************************************************************
+*************************************************************************
+* Code Navigation With CTAGS											*
+*************************************************************************
 	<c-]> Navigating to the function definition
 	<c-t> Returning back to function call
 	<c-w> <c-]> open the definition in a split horizontal window
@@ -110,20 +144,20 @@
 
 
 
-************************************************************************
-* Code Navigation With mark                                            *
-************************************************************************
-	mk      - mark current position (can use a-z)
- 	'k      - move to mark k
- 	d'k     - delete from current position to mark k
- 	'a-z    - same file
- 	'A-Z    - beteween files
+*************************************************************************
+* Code Navigation With mark												*
+*************************************************************************
+	mk		- mark current position (can use a-z)
+	'k		- move to mark k
+	d'k		- delete from current position to mark k
+	'a-z	- same file
+	'A-Z	- beteween files
 
 
 
-************************************************************************
-* Indenting and formating                                              *
-************************************************************************
+*************************************************************************
+* Indenting and formating												*
+*************************************************************************
 	>> - indent line one column to right
 	<< - indet line one column to left
 	== - auto-indent current line
@@ -133,71 +167,71 @@
 	<%
 
 	# Re-Formatting text
-	gq}                          : Format a paragraph
-	ggVGgq                       : Reformat entire file
-	Vgq                          : current line
+	gq}							 : Format a paragraph
+	ggVGgq						 : Reformat entire file
+	Vgq							 : current line
 
 
 
-************************************************************************
-* Directories Navigation                                               *
-************************************************************************
+*************************************************************************
+* Directories Navigation												*
+*************************************************************************
 	:cd .. - move to parent directory
 	:lcd %:p:h - change to directory of current file
 
 
 
-************************************************************************
-* Correct line ending                                                  *
-************************************************************************
+*************************************************************************
+* Correct line ending													*
+*************************************************************************
 	On Linux and Mac OS, the following works
 	:%s/^V^M/^V^M/g
 	(where ^V means control-V and ^M means control-M)
 
 
 
-************************************************************************
-* History                                                              *
-************************************************************************
-	'.               : jump to last modification line (SUPER)
-	`.               : jump to exact spot in last modification line
-	g;               : cycle thru recent changes (oldest first) (new in vim6.3)
-	g,               : reverse direction (new in vim6.3)
+*************************************************************************
+* History																*
+*************************************************************************
+	'.				 : jump to last modification line (SUPER)
+	`.				 : jump to exact spot in last modification line
+	g;				 : cycle thru recent changes (oldest first) (new in vim6.3)
+	g,				 : reverse direction (new in vim6.3)
 	:changes
-	:h changelist    : help for above
-	<C-O>            : retrace your movements in file (starting from most recent)
-	<C-I>            : retrace your movements in file (reverse direction)
-	:ju(mps)         : list of your movements
+	:h changelist	 : help for above
+	<C-O>			 : retrace your movements in file (starting from most recent)
+	<C-I>			 : retrace your movements in file (reverse direction)
+	:ju(mps)		 : list of your movements
 	:help jump-motions
-	:history         : list of all your commands
-	:his c           : commandline history
-	:his s           : search history
-	q/               : Search history Window
-	q:               : commandline history Window
-	:<C-F>           : history Window
+	:history		 : list of all your commands
+	:his c			 : commandline history
+	:his s			 : search history
+	q/				 : Search history Window
+	q:				 : commandline history Window
+	:<C-F>			 : history Window
 
 
 
-************************************************************************
-* Macro                                                                *
-************************************************************************
+*************************************************************************
+* Macro																	*
+*************************************************************************
 	qa - start recording into register 'a'
 	q - stop recording
 	@a - repeat macro in register 'a'
 
 
 
-************************************************************************
-* Copy buffers                                                         *
-************************************************************************
+*************************************************************************
+* Copy buffers															*
+*************************************************************************
 	"ay - yank in the 'a' register
 	"ap - paste from the 'a' register
 	:let @a=@b - copy the contents of the b register to a
 	:let @a=@" - copy the contents of the " register to a
 	:ls - list of buffers
-	:reg             : display contents of all registers
-	:reg a           : display content of individual registers
-	"1p....          : retrieve numeric registers one by one
+	:reg			 : display contents of all registers
+	:reg a			 : display content of individual registers
+	"1p....			 : retrieve numeric registers one by one
 
 	# appending to registers (use CAPITAL)
 	# yank 5 lines into "a" then add a further 5
@@ -210,40 +244,40 @@
 
 
 
-************************************************************************
-* Changing Case                                                        *
-************************************************************************
-	guu                             : lowercase line
-	gUU                             : uppercase line
-	Vu                              : lowercase line
-	VU                              : uppercase line
-	g~~                             : flip case line
-	vEU                             : Upper Case Word
-	vE~                             : Flip Case Word
-	ggguG                           : lowercase entire file
+*************************************************************************
+* Changing Case															*
+*************************************************************************
+	guu								: lowercase line
+	gUU								: uppercase line
+	Vu								: lowercase line
+	VU								: uppercase line
+	g~~								: flip case line
+	vEU								: Upper Case Word
+	vE~								: Flip Case Word
+	ggguG							: lowercase entire file
 
 
 
-************************************************************************
-* Columns Selection                                                    *
-************************************************************************
+*************************************************************************
+* Columns Selection														*
+*************************************************************************
 	# how to copy a set of columns using VISUAL BLOCK
 	# visual block (AKA columnwise selection) (NOT BY ordinary v command)
 	<C-V> then select "column(s)" with motion commands (win32 <C-Q>)
 
 
 
-************************************************************************
-* Number increment                                                     *
-************************************************************************
+*************************************************************************
+* Number increment														*
+*************************************************************************
 	<C-A> - increment number under cursor
 	<C-X> - decrement number under cursor
 
 
 
-************************************************************************
-* Insert Mode - Inserting/Appending text                               *
-************************************************************************
+*************************************************************************
+* Insert Mode - Inserting/Appending text								*
+*************************************************************************
 	i - start insert mode at cursor
 	I - insert at the beginning of the line
 	a - append after the cursor
@@ -255,18 +289,18 @@
 
 
 
-************************************************************************
-* Insert Mode - Code Completion                                        *
-************************************************************************
+*************************************************************************
+* Insert Mode - Code Completion											*
+*************************************************************************
 	ctrl-N - expand the word using the current document
 	<C-N><C-P> - word completion in insert mode
 	<C-X><C-L> - Line complete SUPER USEFUL
 
 
 
-************************************************************************
-* Editing                                                              *
-************************************************************************
+*************************************************************************
+* Editing																*
+*************************************************************************
 	r - replace a single character (does not use insert mode)
 	J - join line below to the current one
 	cc - change (replace) an entire line
@@ -288,9 +322,9 @@
 
 
 
-************************************************************************
-* Cut and Paste                                                        *
-************************************************************************
+*************************************************************************
+* Cut and Paste															*
+*************************************************************************
 	dd - delete (cut) a line
 	dw - delete the current word
 	x - delete current character
@@ -307,9 +341,9 @@
 
 
 
-************************************************************************
-* Visual Mode - Marking text                                           *
-************************************************************************
+*************************************************************************
+* Visual Mode - Marking text											*
+*************************************************************************
 	v - start visual mode, mark lines, then do command (such as y-yank)
 	V - start Linewise visual mode
 	o - move to other end of marked area
@@ -325,9 +359,9 @@
 
 
 
-************************************************************************
-* Visual Mode - Commands                                               *
-************************************************************************
+*************************************************************************
+* Visual Mode - Commands												*
+*************************************************************************
 	> - shift right
 	< - shift left
 	c - change (replace) marked text
@@ -337,9 +371,9 @@
 
 
 
-************************************************************************
-* Visual Mode - Cut and paste                                          *
-************************************************************************
+*************************************************************************
+* Visual Mode - Cut and paste											*
+*************************************************************************
 	1. Place the cursor at the start of your text.
 	2. ma (marks the location as point 'a')
 	3. Place the cursor at the end of your text.
@@ -347,16 +381,16 @@
 
 
 
-************************************************************************
-* Visual Mode - Select columns                                         *
-************************************************************************
+*************************************************************************
+* Visual Mode - Select columns											*
+*************************************************************************
 	<C-v>
 
 
 
-************************************************************************
-* Exiting                                                              *
-************************************************************************
+*************************************************************************
+* Exiting																*
+*************************************************************************
 	:w - write (save) the file, but don't exit
 	:wq - write (save) and quit
 	:x - same as :wq
@@ -365,16 +399,16 @@
 
 
 
-************************************************************************
-* Search                                                               *
-************************************************************************
+*************************************************************************
+* Search																*
+*************************************************************************
 	/pattern - search for pattern
 	?pattern - search backward for pattern
 	n - repeat search in same direction
 	N - repeat search in opposite direction
 
-	/<C-R><C-W>         : Pull <cword> onto search/command line
-	/<C-R><C-A>         : Pull <CWORD> onto search/command line
+	/<C-R><C-W>			: Pull <cword> onto search/command line
+	/<C-R><C-A>			: Pull <CWORD> onto search/command line
 
 	Combo :
 		* - find the next occurrence of the word
@@ -382,87 +416,87 @@
 		n - find the next word
 		. - repeat the cw command
 
-	/joe/e                      : cursor set to End of match
-	/joe/e+1                    : cursor set to End of match plus 1
-	/joe/s-2                    : cursor set to Start of match minus 2
-	/^joe.*fred.*bill/          : normal
-	/^[A-J]\+/                  : search for lines beginning with one or more A-J
-	/begin\_.*end               : search over possible multiple lines
-	/fred\_s*joe/i              : any whitespace including newline
-	/fred\|joe                  : Search for FRED OR JOE
-	/\([^0-9]\|^\)%.*%          : Search for absence of a digit or beginning of line
-	/.*fred\&.*joe              : Search for FRED AND JOE in any ORDER!
-	/\<fred\>/i                 : search for fred but not alfred or frederick
-	/\<\d\d\d\d\>               : Search for exactly 4 digit numbers
-	/\D\d\d\d\d\D               : Search for exactly 4 digit numbers
-	/\<\d\{4}\>                 : same thing
+	/joe/e						: cursor set to End of match
+	/joe/e+1					: cursor set to End of match plus 1
+	/joe/s-2					: cursor set to Start of match minus 2
+	/^joe.*fred.*bill/			: normal
+	/^[A-J]\+/					: search for lines beginning with one or more A-J
+	/begin\_.*end				: search over possible multiple lines
+	/fred\_s*joe/i				: any whitespace including newline
+	/fred\|joe					: Search for FRED OR JOE
+	/\([^0-9]\|^\)%.*%			: Search for absence of a digit or beginning of line
+	/.*fred\&.*joe				: Search for FRED AND JOE in any ORDER!
+	/\<fred\>/i					: search for fred but not alfred or frederick
+	/\<\d\d\d\d\>				: Search for exactly 4 digit numbers
+	/\D\d\d\d\d\D				: Search for exactly 4 digit numbers
+	/\<\d\{4}\>					: same thing
 	# finding empty lines
-	/^\n\{3}                    : find 3 empty lines
+	/^\n\{3}					: find 3 empty lines
 	# Specify what you are NOT searching for (vowels)
-	/\c\v([^aeiou]&\a){4}       : search for 4 consecutive consanants
+	/\c\v([^aeiou]&\a){4}		: search for 4 consecutive consanants
 	# using rexexp memory in a search
 	/\(fred\).*\(joe\).*\2.*\1
 	# Repeating the Regexp (rather than what the Regexp finds)
 	/^\([^,]*,\)\{8}
 
 	searching over multiple lines \_ means including newline
-		/<!--\_p\{-}-->                   : search for multiple line comments
-		/fred\_s*joe/i                    : any whitespace including newline
-		/bugs\(\_.\)*bunny                : bugs followed by bunny anywhere in file
+		/<!--\_p\{-}-->					  : search for multiple line comments
+		/fred\_s*joe/i					  : any whitespace including newline
+		/bugs\(\_.\)*bunny				  : bugs followed by bunny anywhere in file
 
 
 
-************************************************************************
-* Replace                                                              *
-************************************************************************
+*************************************************************************
+* Replace																*
+*************************************************************************
 	:%s/old/new/g - replace all old with new throughout file
 	:%s/old/new/gc - replace all old with new throughout file with confirmations
-	:%s/fred/joe/igc            : general substitute command
-	:%s/\r//g                   : Delete DOS returns ^M
+	:%s/fred/joe/igc			: general substitute command
+	:%s/\r//g					: Delete DOS returns ^M
 
 	Is your Text File jumbled onto one line? use following
-		:%s/\r/\r/g                 : Turn DOS returns ^M into real returns
-		:%s=  *$==                  : delete end of line blanks
-		:%s= \+$==                  : Same thing
-		:%s#\s*\r\?$##              : Clean both trailing spaces AND DOS returns
-		:%s#\s*\r*$##               : same thing
+		:%s/\r/\r/g					: Turn DOS returns ^M into real returns
+		:%s=  *$==					: delete end of line blanks
+		:%s= \+$==					: Same thing
+		:%s#\s*\r\?$##				: Clean both trailing spaces AND DOS returns
+		:%s#\s*\r*$##				: same thing
 
 	deleting empty lines
-		:%s/^\n\{3}//               : delete blocks of 3 empty lines
-		:%s/^\n\+/\r/               : compressing empty lines
+		:%s/^\n\{3}//				: delete blocks of 3 empty lines
+		:%s/^\n\+/\r/				: compressing empty lines
 
 	substitute using a register
-		:s/fred/<c-r>a/g            : sub "fred" with contents of register "a"
-		:s/fred/\=@a/g              : better alternative as register not displayed
+		:s/fred/<c-r>a/g			: sub "fred" with contents of register "a"
+		:s/fred/\=@a/g				: better alternative as register not displayed
 
 
 
-************************************************************************
-* Global command display                                               *
-************************************************************************
-	:g/fred.*joe.*dick/         : display all lines fred,joe & dick
-	:g/\<fred\>/                : display all lines fred but not freddy
-	:g/<pattern>/z#.5           : display with context
+*************************************************************************
+* Global command display												*
+*************************************************************************
+	:g/fred.*joe.*dick/			: display all lines fred,joe & dick
+	:g/\<fred\>/				: display all lines fred but not freddy
+	:g/<pattern>/z#.5			: display with context
 	:g/<pattern>/z#.5|echo "=========="  : display beautifully
-	:g/^\s*$/d                  : delete all blank lines
-	:g!/^dd/d                   : delete lines not containing string
-	:v/^dd/d                    : delete lines not containing string
-	:g/fred/,/joe/d             : not line based (very powerfull)
-	:g/{/ ,/}/- s/\n\+/\r/g     : Delete empty lines but only between {...}
-	:v/./.,/./-1join            : compress empty lines
-	:g/^$/,/./-j                : compress empty lines
-	:g/<input\|<form/p          : ORing
-	:g/^/pu _                   : double space file (pu = put)
-	:g/^/m0                     : Reverse file (m = move)
-	:g/fred/t$                  : copy lines matching fred to EOF
-	:g/stage/t'a                : copy lines matching stage to marker a
-	:g/fred/y A                 : append all lines fred to register a
+	:g/^\s*$/d					: delete all blank lines
+	:g!/^dd/d					: delete lines not containing string
+	:v/^dd/d					: delete lines not containing string
+	:g/fred/,/joe/d				: not line based (very powerfull)
+	:g/{/ ,/}/- s/\n\+/\r/g		: Delete empty lines but only between {...}
+	:v/./.,/./-1join			: compress empty lines
+	:g/^$/,/./-j				: compress empty lines
+	:g/<input\|<form/p			: ORing
+	:g/^/pu _					: double space file (pu = put)
+	:g/^/m0						: Reverse file (m = move)
+	:g/fred/t$					: copy lines matching fred to EOF
+	:g/stage/t'a				: copy lines matching stage to marker a
+	:g/fred/y A					: append all lines fred to register a
 
 
 
-************************************************************************
-* Working with multiple files                                          *
-************************************************************************
+*************************************************************************
+* Working with multiple files											*
+*************************************************************************
 	:e filename - Edit a file in a new buffer
 	:n **/*.pl - Open all perl files under the current directory, recursively
 	:tabe filename - Edit a file in a new tab (Vim7, gVim)
@@ -478,9 +512,9 @@
 
 
 
-************************************************************************
-* Tabs (Vim7)                                                          *
-************************************************************************
+*************************************************************************
+* Tabs (Vim7)															*
+*************************************************************************
 	gt - Next tab
 	gT - Previous tab
 	:tabr - First tab
@@ -490,61 +524,76 @@
 
 
 
-************************************************************************
-* Command Line Options                                                 *
-************************************************************************
+*************************************************************************
+* Split windows															*
+*************************************************************************
+	To change two vertically split windows to horizonally split
+		Ctrl-W t Ctrl-W K
+	Horizontally to vertically:
+		Ctrl-W t Ctrl-W H
+	Explanations:
+		Ctrl-W t	 makes the first (topleft) window current
+		Ctrl-W K	 moves the current window to full-width at the very top
+		Ctrl-W H	 moves the current window to full-height at far left
+
+
+
+*************************************************************************
+* Command Line Options													*
+*************************************************************************
 	$vim -c "vim command" file - execute an editor command on startup
 
 
 
-************************************************************************
-* Commands                                                             *
-************************************************************************
+*************************************************************************
+* Commands																*
+*************************************************************************
 	:setlocal fileformat=dos|unix
 	:setlocal fileencoding=utf-8
 
 
 
-************************************************************************
-* Multiple files                                                       *
-************************************************************************
-	:bn              : goto next buffer
-	:bp              : goto previous buffer
-	:wn              : save file and move to next (super)
-	:wp              : save file and move to previous
-	:bd              : remove file from buffer list (super)
-	:bun             : Buffer unload (remove window but not from list)
-	:b 3             : go to buffer 3
-	:b main          : go to buffer with main in name eg main.c (ultra)
-	:sav php.html    : Save current file as php.html and "move" to php.html
-	:sav! %<.bak     : Save Current file to alternative extension
-	:sav! %:r.cfm    : Save Current file to alternative extension
-	:e!              : return to unmodified file
-	:w c:/aaa/%      : save file elsewhere
-	:e #             : edit alternative file
-	:rew             : return to beginning of editted files list (:args)
-	:brew            : buffer rewind
-	:sp fred.txt     : open fred.txt into a split
-	:sball,:sb       : Split all buffers (super)
-	:set hidden      : Allows to change buffer w/o saving current buffer
+*************************************************************************
+* Multiple files														*
+*************************************************************************
+	:bn				 : goto next buffer
+	:bp				 : goto previous buffer
+	:wn				 : save file and move to next (super)
+	:wp				 : save file and move to previous
+	:bd				 : remove file from buffer list (super)
+	:bun			 : Buffer unload (remove window but not from list)
+	:b 3			 : go to buffer 3
+	:b main			 : go to buffer with main in name eg main.c (ultra)
+	:sav php.html	 : Save current file as php.html and "move" to php.html
+	:sav! %<.bak	 : Save Current file to alternative extension
+	:sav! %:r.cfm	 : Save Current file to alternative extension
+	:e!				 : return to unmodified file
+	:w c:/aaa/%		 : save file elsewhere
+	:e #			 : edit alternative file
+	:rew			 : return to beginning of editted files list (:args)
+	:brew			 : buffer rewind
+	:sp fred.txt	 : open fred.txt into a split
+	:sball,:sb		 : Split all buffers (super)
+	:set hidden		 : Allows to change buffer w/o saving current buffer
 
 
 
-************************************************************************
-* More help                                                            *
-************************************************************************
+*************************************************************************
+* More help																*
+*************************************************************************
 	:help - main help portal (with links to more help pages)
 	:viusage - show a huge cheat sheet listing every command
 
 
-************************************************************************
-* Folding commands                                                     *
-************************************************************************
-	zf}                               : fold paragraph using motion
-	v}zf                              : fold paragraph using visual
-	zf'a                              : fold to mark
-	zo                                : open fold
-	zc                                : re-close fold
+
+*************************************************************************
+* Folding commands														*
+*************************************************************************
+	zf}								  : fold paragraph using motion
+	v}zf							  : fold paragraph using visual
+	zf'a							  : fold to mark
+	zo								  : open fold
+	zc								  : re-close fold
 
 	zf#j creates a fold from the cursor down # lines.
 	zf/string creates a fold from the cursor to string .
@@ -565,9 +614,10 @@
 	Or backward.
 
 
-************************************************************************
-* Shortcuts                                                            *
-************************************************************************
+
+*************************************************************************
+* Shortcuts																*
+*************************************************************************
 	<leader><F5> - CheckSyntax
 
 	" Switch to current dir
@@ -628,15 +678,49 @@
 	" Fast editing of the .vimrc (with autocmd to reload conf on saving)
 	<leader>vrc - open vimrc for editing
 
-	<C-F11> - TagbarToggle
-	<A-F11> - TlistToggle
-	<A-F12> - Flisttoggle
-
 	<space> - ToggleFold()
 
-************************************************************************
-* Plugins                                                              *
-************************************************************************
+
+
+*************************************************************************
+* Javascript snippets													*
+*************************************************************************
+	proto, sdf, sing
+	fun, f, (f, :f
+	if, ife, eif, el
+	ter
+	switch, case
+	for, forr, fori
+	wh, do
+	try
+	tout
+	get, gett
+	cl, ci, cw, ce, ct, cte
+	ret
+	has
+	@par, @ret
+	jsonp, jsons
+	capi, arrmax, arrmin, isarr, isobj, now, ts
+
+
+
+*************************************************************************
+* jQuery snippets														*
+*************************************************************************
+	Dini
+	ac, rc
+	atg, ats, atd, rat
+	ajax
+	bi, on
+	fi, fil, e
+	Dini, pipe, rej, res
+	hc, l, is, hop
+
+
+
+*************************************************************************
+* Plugins																*
+*************************************************************************
 	" delimitMate (https://github.com/Raimondi/delimitMate)
 		https://github.com/Raimondi/delimitMate/blob/master/doc/delimitMate.txt
 
@@ -762,9 +846,9 @@
 		AlignCtrl W= :=  retain all selected lines' initial white space
 		AlignCtrl I= :=  retain only the first line's initial white space and re-use it for subsequent lines
 
-		AlignCtrl -l    - : skip treating the separator as a separator. *alignctrl--*
-		AlignCtrl rl+   + : repeat use of the last "lrc" justification *alignctrl-+*
-		AlignCtrl rl+   : : treat the rest of the line as a single field *alignctrl-:*
+		AlignCtrl -l	- : skip treating the separator as a separator. *alignctrl--*
+		AlignCtrl rl+	+ : repeat use of the last "lrc" justification *alignctrl-+*
+		AlignCtrl rl+	: : treat the rest of the line as a single field *alignctrl-:*
 
 	" fugitive (https://github.com/tpope/vim-fugitive)
 		https://github.com/tpope/vim-fugitive/blob/master/doc/fugitive.txt
@@ -783,31 +867,19 @@
 		https://github.com/tpope/vim-surround/blob/master/doc/surround.txt
 
 		Old text				Command			New text ~
-		"Hello *world!" 		ds"				Hello world!
+		"Hello *world!"			ds"				Hello world!
 		<div>Yo!*</div>			dst				Yo!
-		[123+4*56]/2 			cs]) 			(123+456)/2
-		(123+4*56)/2 			cs)]			[123+456]/2
-		(123+4*56)/2 			cs)[ 			[ 123+456 ]/2
-		"Look ma, I'm *HTML!"	cs"<q> 			<q>Look ma, I'm HTML!</q>
-		if *x>3 { 				ysW( 			if ( x>3 ) {
+		[123+4*56]/2			cs])			(123+456)/2
+		(123+4*56)/2			cs)]			[123+456]/2
+		(123+4*56)/2			cs)[			[ 123+456 ]/2
+		"Look ma, I'm *HTML!"	cs"<q>			<q>Look ma, I'm HTML!</q>
+		if *x>3 {				ysW(			if ( x>3 ) {
 		Hello w*orld!			ysiw)			Hello (world)!
-		my $str = *whee!; 		vllllS' 		my $str = 'whee!';
+		my $str = *whee!;		vllllS'			my $str = 'whee!';
 		Hello w*orld!			yssB			{Hello world!}
 
 		As a special case, *yss* operates on the current line, ignoring leading whitespace.
 		There is also *yS* and *ySS* which indent the surrounded text and place it on a line of its own.
-
-	" taglist (https://github.com/pix/vim-taglist)
-		https://github.com/pix/vim-taglist/blob/master/doc/taglist.txt
-
-		:TlistToggle
-		:TlistUpdate
-		:TlistAddFilesRecursive /my/project/dir *.c
-
-	" function list
-		http://www.vim.org/scripts/script.php?script_id=3681
-
-		:Flisttoggle
 
 	" zen coding (https://github.com/mattn/zencoding-vim)
 		http://code.google.com/p/zen-coding/w/list
@@ -831,10 +903,6 @@
 	" MRU Most Recent Used files (https://github.com/vim-scripts/mru.vim)
 		:MRU
 
-	" xmledit (https://github.com/gmoulin/xmledit)
-		> or >> while typing (x)(ht)ml
-		need to create symbolic links in ftplugin folder (html.vim -> xml.vim, idem with javascript.vim and smarty.vim)
-
 	" Command-T (http://www.vim.org/scripts/script.php?script_id=3025)
 		<leader>t ou <leader>b (buffer)
 		ou :CommandT /...
@@ -842,23 +910,8 @@
 	" syntastic (http://github.com/scrooloose/syntastic/)
 		https://github.com/scrooloose/syntastic/blob/master/doc/syntastic.txt
 
-	" browser auto reload (https://github.com/lordm/vim-browser-reload-linux)
-		https://github.com/lordm/vim-browser-reload-linux/blob/master/README.rst
+	" vim-easymotion (https://github.com/Lokaltog/vim-easymotion.git)
+		https://github.com/Lokaltog/vim-easymotion/blob/master/doc/easymotion.txt
 
-		:ChromeReload      //reload "Google Chrome"
-		:FirefoxReload     //reload "Firefox"
-		:OperaReload       //reload "Opera"
-		:AllBrowserReload  //reload all browser
-
-		start auto reload:
-		:ChromeReloadStart
-		:FirefoxReloadStart
-		:OperaReloadStart
-		:AllBrowserReloadStart
-
-		stop auto reload:
-		:ChromeReloadStop
-		:FirefoxReloadStop
-		:OperaReloadStop
-		:AllBrowserReloadStart
+	" YouCompleteMe (https://github.com/Valloric/YouCompleteMe)
 

@@ -43,30 +43,18 @@
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/vim-taglist"]
-	path = .vim/bundle/vim-taglist
-	url = https://github.com/pix/vim-taglist.git
-[submodule ".vim/bundle/xmledit"]
-	path = .vim/bundle/xmledit
-	url = https://gmoulin@github.com/gmoulin/xmledit.git
 [submodule ".vim/bundle/command-t"]
 	path = .vim/bundle/command-t
 	url = git://git.wincent.com/command-t.git
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule ".vim/bundle/vim-browser-reload-linux"]
-	path = .vim/bundle/vim-browser-reload-linux
-	url = https://github.com/lordm/vim-browser-reload-linux.git
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule ".vim/bundle/vim-less"]
-	path = .vim/bundle/vim-less
-	url = https://github.com/groenewege/vim-less.git
-[submodule ".vim/bundle/csscomb"]
-	path = .vim/bundle/csscomb
-	url = https://github.com/miripiruni/CSScomb-for-Vim.git
 [submodule ".vim/bundle/youcompleteme"]
 	path = .vim/bundle/youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule ".vim/bundle/vim-easymotion"]
+	path = .vim/bundle/vim-easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git

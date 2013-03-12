@@ -98,6 +98,9 @@ set tags=./tags,tags,../tags,../../tags,../../../tags,../../../../tags,../../../
 	set smarttab				" smart tabulation and backspace
 	set noexpandtab|retab!		" keep tab as real tab and transform converted tab back
 
+" 2 spaces indentation for yaml files
+au FileType yaml setl sw=2 sts=2 et
+
 set splitbelow	  " A new window is put below of the current one
 set splitright	  " A new window is put right of the current one
 
@@ -135,8 +138,8 @@ set splitright	  " A new window is put right of the current one
 
 
 "syntax files for jquery and smarty
-	au BufRead,BufNewFile jquery.*.js set filetype=javascript syntax=jquery
-	au BufRead,BufNewFile *.tpl set filetype=html syntax=smarty
+	"au BufRead,BufNewFile *.js set filetype=javascript-jquery.javascript syntax=javascript
+	au BufRead,BufNewFile *.scss set filetype=scss syntax=scss
 
 "Plugin: NERDTree - use colors, cursorline and return/enter key
 	let NERDChristmasTree = 1
@@ -154,19 +157,11 @@ set splitright	  " A new window is put right of the current one
 	let g:session_default_to_last=1
 	set sessionoptions=blank,buffers,curdir,folds,tabpages
 
-"Plugin taglist
-	let Tlist_Use_Right_Window=1
-	let Tlist_Auto_Open=0
-	let Tlist_Enable_Fold_Column=0
-	let Tlist_Compact_Format=1
-	let Tlist_WinWidth=28
-	let Tlist_Exit_OnlyWindow=1
-	let Tlist_File_Fold_Auto_Close = 1
-
 let g:snips_author = 'Guillaume Moulin <gmoulin.dev@gmail.com>'
 
 "Plugins snipmates syntax
-	"let g:snipMate['no_match_completion_feedkeys_chars'] = "\<tab>"
+	let g:snips_trigger_key='<c-j>'
+	let g:snips_trigger_key_backwards='<c-k>'
 
 
 " When vimrc is edited, reload it
@@ -191,10 +186,10 @@ set wildignore+=*.o,*.obj,.git,.svn,*.php.tpl
 "let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings=0 "only errors prevents the save and popup the quickfix list
-let g:syntastic_javascript_checker = 'jslint' "gjslint, jslint, jsl, jshint
+let g:syntastic_javascript_checker = 'jsl' "gjslint, jslint, jsl, jshint
+let g:syntastic_javascript_jsl_conf = '-conf ~/gm-vim/jsl.conf'
 
-let g:syntastic_javascript_jslint_conf = '--white --undef --nomen --regexp --plusplus --bitwise --newcap --sloppy --vars --evil --indent --unparam'
-let g:syntastic_javascript_jshint_conf = '$HOME/gm-vim/.jshintrc'
+"let g:syntastic_javascript_jslint_conf = '--white --undef --nomen --regexp --plusplus --bitwise --newcap --sloppy --vars --evil --indent --unparam'
 
 " Plugin Browser reload
 "let g:returnAppFlag = 1 "default is 1
@@ -260,12 +255,7 @@ let g:syntastic_javascript_jshint_conf = '$HOME/gm-vim/.jshintrc'
 	nmap tl :tablast<CR>
 	nmap tw :tabclose<CR>
 	nmap te :tabedit
-
-	" Smart way to move btw. windows
-	map <C-j> <C-W>j
-	map <C-k> <C-W>k
-	map <C-h> <C-W>h
-	map <C-l> <C-W>l
+	nmap tn :tabnew<CR>
 
 	" add a new line without entering in insert mode
 	nmap <A-o> o<Esc>k
@@ -294,18 +284,11 @@ let g:syntastic_javascript_jshint_conf = '$HOME/gm-vim/.jshintrc'
 	nmap <leader>sl :ViewSession<CR>
 	nmap <leader>ss :SaveSession<CR>
 
-	nmap <leader>pd :call PhpDocSingle()<CR>
-	vmap <leader>pd :call PhpDocRange()<CR>
-
-	nmap <A-F11> :TlistToggle<CR>
-
-	nmap <A-F12> :Flisttoggle<CR>
-
 	" Fast editing of the .vimrc (with autocmd to reload conf on saving)
-	map <leader>vrc :e! ~/.vimrc<cr>
+	map <leader>vrc :tabnew ~/.vimrc<cr>
 
 	"Fast editing of the .vimrc (with autocmd to reload conf on saving)
-	map <leader>lcs :e! ~/gm-vim/vim_cheat_sheet.txt<cr>
+	map <leader>vcs :tabnew ~/gm-vim/vim_cheat_sheet.txt<cr>
 
 	"VISUAL MODE (easy to add other HTML Tags)
 	":vmap sb "zdi<b><C-R>z</b><ESC>  : wrap <b></b> around VISUALLY selected Text
@@ -318,3 +301,9 @@ let g:syntastic_javascript_jshint_conf = '$HOME/gm-vim/.jshintrc'
 	" Insert an empty line above or below the cursor
 	" nnoremap <D-j> o<Esc>
 	" nnoremap <D-k> O<Esc>
+
+	" unmap arrow keys
+	noremap <Up> <Nop>
+	noremap <Down> <Nop>
+	noremap <Left> <Nop>
+	noremap <Right> <Nop>
