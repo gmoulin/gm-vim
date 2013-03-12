@@ -64,3 +64,9 @@
 [submodule ".vim/bundle/vim-less"]
 	path = .vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less.git
+[submodule ".vim/bundle/csscomb"]
+	path = .vim/bundle/csscomb
+	url = https://github.com/miripiruni/CSScomb-for-Vim.git
+[submodule ".vim/bundle/youcompleteme"]
+	path = .vim/bundle/youcompleteme
+	url = https://github.com/Valloric/YouCompleteMe.git
