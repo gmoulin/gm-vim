@@ -152,9 +152,12 @@ set splitright	  " A new window is put right of the current one
 	let NERDTreeKeepTreeInNewTab=1
 
 "Plugin UltiSnips
-	let g:UltiSnipsExpandTrigger="<c-j>"
-	let g:UltiSnipsJumpForwardTrigger="<c-j>"
-	let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+	let g:UltiSnipsExpandTrigger="<C-j>"
+	let g:UltiSnipsJumpForwardTrigger="<C-j>"
+	let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+	let g:UltiSnipsListSnippets="<C-l>"
+	let g:UltiSnipsEditSplit='horizontal'
+	let g:UltiSnipsSnippetsDir='~/gm-vim/.vim/bundle/vim-snippets/UltiSnips'
 
 "Plugin session
 	let g:session_autoload='yes'
