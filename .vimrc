@@ -157,13 +157,6 @@ set splitright	  " A new window is put right of the current one
 	let g:session_default_to_last=1
 	set sessionoptions=blank,buffers,curdir,folds,tabpages
 
-let g:snips_author = 'Guillaume Moulin <gmoulin.dev@gmail.com>'
-
-"Plugins snipmates syntax
-	let g:snips_trigger_key='<c-j>'
-	let g:snips_trigger_key_backwards='<c-k>'
-
-
 " When vimrc is edited, reload it
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
