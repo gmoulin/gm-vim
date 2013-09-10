@@ -46,6 +46,9 @@
 	git submodule -q foreach git pull -q origin master
 
 
+	git remote add upstream https://github.com/honza/vim-snippets.git
+	git fetch upstream
+	git rebase upstream/master
 
 *************************************************************************
 * Git fork update														*
