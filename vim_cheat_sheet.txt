@@ -18,6 +18,15 @@
 
 
 *************************************************************************
+* SVN branche merging													*
+*************************************************************************
+	on branch
+	svn log --stop-on-copy https://scm.b-i.com/svn/Chopard_B2b/branches/parallel_sync
+	on trunk
+	svn merge -r15:61 https://scm.b-i.com/svn/Chopard_B2b/branches/parallel_sync
+
+
+*************************************************************************
 * mass recursive folder permissions										*
 *************************************************************************
 	find ./ -type d -exec chmod 755 {} \;
@@ -680,44 +689,6 @@
 
 	<space> - ToggleFold()
 
-
-
-*************************************************************************
-* Javascript snippets													*
-*************************************************************************
-	proto, sdf, sing
-	fun, f, (f, :f
-	if, ife, eif, el
-	ter
-	switch, case
-	for, forr, fori
-	wh, do
-	try
-	tout
-	get, gett
-	cl, ci, cw, ce, ct, cte
-	ret
-	has
-	@par, @ret
-	jsonp, jsons
-	capi, arrmax, arrmin, isarr, isobj, now, ts
-
-
-
-*************************************************************************
-* jQuery snippets														*
-*************************************************************************
-	Dini
-	ac, rc
-	atg, ats, atd, rat
-	ajax
-	bi, on
-	fi, fil, e
-	Dini, pipe, rej, res
-	hc, l, is, hop
-
-
-
 *************************************************************************
 * Plugins																*
 *************************************************************************
@@ -832,7 +803,8 @@
 
 		:SnipMateOpenSnippetFiles
 		<c-r><tab>: shows a list of available snippets
-		XX<tab> : will either show a list of all snippets starting with the characters XX or expand the snippet if it matches a snippet name.
+		XX<c-j> : will either show a list of all snippets starting with the characters XX or expand the snippet if it matches a snippet name.
+		<c-k> to go back in list
 
 	" align (https://github.com/tsaleh/vim-align)
 		https://github.com/tsaleh/vim-align/blob/master/doc/Align.txt
@@ -910,8 +882,10 @@
 	" syntastic (http://github.com/scrooloose/syntastic/)
 		https://github.com/scrooloose/syntastic/blob/master/doc/syntastic.txt
 
-	" vim-easymotion (https://github.com/Lokaltog/vim-easymotion.git)
-		https://github.com/Lokaltog/vim-easymotion/blob/master/doc/easymotion.txt
-
 	" YouCompleteMe (https://github.com/Valloric/YouCompleteMe)
 
+*************************************************************************
+* Helpers																*
+*************************************************************************
+	add a new ligne after each }, in the current line (\0 is for the searched pattern)
+	:.s/},/\0\r/

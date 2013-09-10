@@ -168,10 +168,11 @@ let g:snips_author = 'Guillaume Moulin <gmoulin.dev@gmail.com>'
 autocmd! bufwritepost .vimrc source ~/.vimrc
 
 " Plugin DelimitMate
-let delimitMate_nesting_quotes = ['`']
-let delimitMate_expand_cr = 1
-let delimitMate_expand_space = 1
-let delimitMate_matchpairs = '(:),[:],{:}'
+"let delimitMate_nesting_quotes = ['`']
+"let delimitMate_expand_cr = 0
+"let delimitMate_expand_space = 0
+"let delimitMate_matchpairs = '(:),[:],{:}'
+"let delimitMate_balance_matchpairs = 1
 
 
 " Plugin ZenCoding
@@ -186,10 +187,9 @@ set wildignore+=*.o,*.obj,.git,.svn,*.php.tpl
 "let g:syntastic_auto_jump=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings=0 "only errors prevents the save and popup the quickfix list
-let g:syntastic_javascript_checker = 'jsl' "gjslint, jslint, jsl, jshint
-let g:syntastic_javascript_jsl_conf = '-conf ~/gm-vim/jsl.conf'
-
-"let g:syntastic_javascript_jslint_conf = '--white --undef --nomen --regexp --plusplus --bitwise --newcap --sloppy --vars --evil --indent --unparam'
+let g:syntastic_javascript_checkers = ['jsl'] "gjslint, jslint, jsl, jshint
+let g:syntastic_javascript_jsl_conf = '/home/gmoulin/gm-vim/jsl.conf'
+let g:syntastic_javascript_jslint_conf = '--white --undef --nomen --regexp --plusplus --bitwise --newcap --sloppy --vars --evil --indent --unparam'
 
 " Plugin Browser reload
 "let g:returnAppFlag = 1 "default is 1
@@ -240,7 +240,7 @@ let g:syntastic_javascript_jsl_conf = '-conf ~/gm-vim/jsl.conf'
 	nmap <leader><F5> :CheckSyntax<cr>
 
 	" Switch to current dir
-	nmap <leader>d :lcd %:p:h<cr>
+	nmap <leader>x :lcd %:p:h<cr>
 	cmap cd. lcd %:p:h
 
 	nmap <leader>a <c-^> " Switch to alternate window (mnemonic: ,alternate)

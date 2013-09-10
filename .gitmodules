@@ -19,12 +19,6 @@
 [submodule ".vim/bundle/vim-snipmate"]
 	path = .vim/bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
-[submodule ".vim/bundle/vim-addon-mw-utils"]
-	path = .vim/bundle/vim-addon-mw-utils
-	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule ".vim/bundle/tlib_vim"]
-	path = .vim/bundle/tlib_vim
-	url = https://github.com/tomtom/tlib_vim.git
 [submodule ".vim/bundle/zencoding-vim"]
 	path = .vim/bundle/zencoding-vim
 	url = https://github.com/mattn/zencoding-vim.git
@@ -49,12 +43,9 @@
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule ".vim/bundle/tabular"]
-	path = .vim/bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
 [submodule ".vim/bundle/youcompleteme"]
 	path = .vim/bundle/youcompleteme
 	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule ".vim/bundle/vim-easymotion"]
-	path = .vim/bundle/vim-easymotion
-	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule ".vim/bundle/vim-misc"]
+	path = .vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc
