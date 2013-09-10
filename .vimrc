@@ -151,6 +151,11 @@ set splitright	  " A new window is put right of the current one
 	let NERDTreeShowHidden=1
 	let NERDTreeKeepTreeInNewTab=1
 
+"Plugin UltiSnips
+	let g:UltiSnipsExpandTrigger="<c-j>"
+	let g:UltiSnipsJumpForwardTrigger="<c-j>"
+	let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
 "Plugin session
 	let g:session_autoload='yes'
 	let g:session_autosave='yes'
