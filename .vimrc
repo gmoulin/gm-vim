@@ -176,10 +176,8 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 "let delimitMate_balance_matchpairs = 1
 
 
-" Plugin ZenCoding
-let g:user_zen_leader_key='<c-y>'
-let g:user_zen_expandabbr_key = '<c-y>'
-let g:use_zen_complete_tag = 1
+" Plugin Emmet
+let g:user_emmet_mode='a'
 
 " Plugin Command-T
 set wildignore+=*.o,*.obj,.git,.svn,*.php.tpl
